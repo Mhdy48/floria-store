@@ -209,6 +209,9 @@
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
   .grid-cols-\[1fr_1fr\] {
     grid-template-columns: 1fr 1fr;
   }
@@ -241,6 +244,9 @@
   .px-\[30px\] {
     padding-inline: 30px;
   }
+  .px-\[80px\] {
+    padding-inline: 80px;
+  }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
   }
@@ -250,8 +256,20 @@
   .pb-0 {
     padding-bottom: 0px;
   }
+  .text-left {
+    text-align: left;
+  }
   .text-right {
     text-align: right;
+  }
+  .font-\[\'\'\] {
+    font-family: '';
+  }
+  .font-\[\'vazirmatn\'\] {
+    font-family: 'vazirmatn';
+  }
+  .font-\[-\] {
+    font-family: -;
   }
   .text-\[\#F0E9E1\] {
     color: #F0E9E1;
