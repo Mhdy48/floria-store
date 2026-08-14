@@ -30,47 +30,79 @@
         <section></section>
 
         <!-- ==================== Categories Section ==================== -->
-        <section class="grid grid-cols-12 grid-rows-2 p-10 gap-3">
-          <!-- Air Plant Card -->
-          <article class="bg-[#fff5e6] p-3 flex items-center col-start-1 col-end-5 rounded-xl">
-            <div class="basis-[40%] flex items-center justify-center">
+        <!-- ==================== Categories Section ==================== -->
+        <section
+          class="grid grid-cols-6 grid-rows-3 p-5 gap-3 md:grid-rows-2 md:p-7 lg:grid-cols-12 lg:grid-rows-2 lg:p-10"
+        >
+          <!-- Hanging Plants Card -->
+          <article
+            class="bg-[#fff5e6] p-3 flex items-center col-start-1 col-end-4 row-start-3 row-end-4 rounded-xl flex-col md:col-start-1 md:col-end-4 md:row-start-auto md:row-end-auto md:flex-row lg:col-start-1 lg:col-end-5 lg:row-start-auto lg:row-end-auto"
+          >
+            <div
+              class="basis-[40%] flex items-center justify-center order-2 w-30 h-25 md:order-0 md:w-auto md:h-auto"
+            >
               <img
                 src="assets/image/categories/hanging-plants.webp"
                 alt="گیاهان آویز"
               />
             </div>
+
             <div
               class="flex flex-col justify-center items-center basis-[60%] gap-1"
             >
-              <h2 class="font-medium text-2xl">گیاهان آویز</h2>
-              <p class="text-md">زیبایی از ارتفاع</p>
-              <a class="text-xs" href="#"> مشاهده ← </a>
+              <h2 class="font-medium text-[1rem] md:text-xl lg:text-2xl">
+                گیاهان آویز
+              </h2>
+
+              <p class="text-[.6rem] md:text-[.7rem] lg:text-[.8rem]">
+                زیبایی از ارتفاع
+              </p>
+
+              <a class="text-[.6rem] md:text-[.7rem] lg:text-xs" href="#">
+                مشاهده ←
+              </a>
             </div>
           </article>
 
-          <article class="bg-[#fff5e6] p-3 flex items-center col-start-1 col-end-5 rounded-xl">
-            <div class="basis-[40%] flex items-center justify-center">
+          <!-- Air Plants Card -->
+          <article
+            class="bg-[#fff5e6] p-3 flex items-center col-start-4 col-end-7 row-start-3 row-end-4 rounded-xl flex-col md:col-start-4 md:col-end-7 md:row-start-auto md:row-end-auto md:flex-row lg:col-start-1 lg:col-end-5 lg:row-start-2 lg:row-end-3"
+          >
+            <div
+              class="basis-[40%] flex items-center justify-center order-2 w-35 h-30 md:order-0 md:w-auto md:h-auto"
+            >
               <img
                 class="w-[85%]"
                 src="assets/image/categories/air-plants.webp"
                 alt="گیاهان هوایی"
               />
             </div>
+
             <div
               class="flex flex-col justify-center items-center basis-[60%] gap-1"
             >
-              <h2 class="font-medium text-2xl">گیاهان هوایی</h2>
-              <p class="text-md">بدون خاک، بدون دردسر</p>
-              <a class="text-xs" href="#"> مشاهده ← </a>
+              <h2 class="font-medium text-[1rem] md:text-xl lg:text-2xl">
+                گیاهان هوایی
+              </h2>
+
+              <p class="text-[.6rem] md:text-[.7rem] lg:text-[.8rem]">
+                بدون خاک، بدون دردسر
+              </p>
+
+              <a class="text-[.6rem] md:text-[.7rem] lg:text-xs" href="#">
+                مشاهده ←
+              </a>
             </div>
           </article>
 
-          <!-- Plant Guide -->
+          <!-- Plant Guide Card -->
           <article
-            class="bg-[#121f1a] col-start-5 col-end-7 row-start-1 row-end-3 rounded-xl"
+            class="bg-[#121f1a] p-3 flex flex-col justify-evenly items-center col-start-1 col-end-7 row-start-2 row-end-3 rounded-xl md:col-start-3 md:col-end-5 md:row-start-1 md:row-end-3 lg:col-start-5 lg:col-end-7 lg:row-start-1 lg:row-end-3"
           >
             <div>
-              <h2 class="font-normal text-white text-center text-2xl">
+              <h2
+                class="font-light text-white text-center text-xl md:text-xl lg:text-2xl"
+              >
                 کدام گیاه
                 <br />
                 برای شما
@@ -79,43 +111,74 @@
               </h2>
             </div>
 
-            <a href="#">
-              راهنمای انتخاب
-              <span><img src="assets/" alt=""></span>
-            </a>
-          </article>
+            <div
+              class="bg-[#fff5e6] p-2 flex justify-evenly items-center rounded-xl gap-1"
+            >
+              <img
+                class="w-4 aspect-square lg:w-5"
+                src="assets/image/categories/leaves.png"
+                alt=""
+              />
 
-          <!-- Large Plant Card -->
-          <article
-            class="bg-[#fff5e6] col-start-7 col-end-9 row-start-1 row-end-3 rounded-xl"
-          >
-            <div>
-              <h2 class="font-medium">ساکولنت و کاکتوس</h2>
-
-              <p>کم دردسر و دوست داشتنی</p>
-
-              <a href="#"> مشاهده ← </a>
-            </div>
-
-            <div>
-              <img src="" alt="ساکولنت و کاکتوس" />
+              <a class="text-[10px] lg:text-xs font-medium" href="#">
+                راهنمای انتخاب ←
+              </a>
             </div>
           </article>
 
-          <!-- Large Plant Card -->
+          <!-- Cactus & Succulents Card -->
           <article
-            class="bg-[#fff5e6] col-start-9 col-end-13 row-start-1 row-end-3 rounded-xl"
+            class="bg-[#fff5e6] p-3 flex flex-col justify-evenly items-center col-start-1 col-end-4 row-start-1 row-end-2 rounded-xl md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 lg:col-start-7 lg:col-end-10 lg:row-start-1 lg:row-end-3"
           >
-            <div>
-              <h2 class="font-medium">گیاهان آپارتمانی</h2>
+            <div class="flex flex-col items-center gap-1">
+              <h2
+                class="font-medium text-[1rem] md:text-xl lg:text-2xl whitespace-nowrap"
+              >
+                ساکولنت و کاکتوس
+              </h2>
 
-              <p>زیبایی و ماندگاری در خانه</p>
+              <p class="text-[.6rem] md:text-[.7rem] lg:text-[.8rem]">
+                کم دردسر و دوست داشتنی
+              </p>
 
-              <a href="#"> مشاهده ← </a>
+              <a class="text-[.6rem] md:text-[.7rem] lg:text-xs" href="#">
+                مشاهده ←
+              </a>
             </div>
 
-            <div>
-              <img src="" alt="گیاه آپارتمانی" />
+            <div class="flex items-center justify-center">
+              <img
+                class="w-30 h-25 md:w-35 md:h-30 lg:w-50 lg:h-45"
+                src="assets/image/categories/cactus-succulents.webp"
+                alt="ساکولنت و کاکتوس"
+              />
+            </div>
+          </article>
+
+          <!-- Indoor Plants Card -->
+          <article
+            class="bg-[#fff5e6] p-3 flex flex-col justify-evenly items-center col-start-4 col-end-7 row-start-1 row-end-2 rounded-xl md:col-start-5 md:col-end-7 md:row-start-1 md:row-end-3 lg:col-start-10 lg:col-end-13 lg:row-start-1 lg:row-end-3"
+          >
+            <div class="flex flex-col items-center gap-1">
+              <h2 class="font-medium text-[1rem] md:text-xl lg:text-2xl">
+                گیاهان آپارتمانی
+              </h2>
+
+              <p class="text-[.6rem] md:text-[.7rem] lg:text-[.8rem]">
+                زیبایی و ماندگاری در خانه
+              </p>
+
+              <a class="text-[.6rem] md:text-[.7rem] lg:text-xs" href="#">
+                مشاهده ←
+              </a>
+            </div>
+
+            <div class="flex justify-center items-center">
+              <img
+                class="w-25 h-23 md:w-30 md:h-28 lg:w-40 lg:h-45"
+                src="assets/image/categories/indoor-plants.webp"
+                alt="گیاه آپارتمانی"
+              />
             </div>
           </article>
         </section>
