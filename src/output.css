@@ -8,6 +8,7 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-lalezar: "lalezar", sans-serif;
@@ -163,8 +164,41 @@
   }
 }
 @layer utilities {
+  .top-5 {
+    top: calc(var(--spacing) * 5);
+  }
+  .left-\[1501px\] {
+    left: 1501px;
+  }
+  .grid {
+    display: grid;
+  }
   .table {
     display: table;
+  }
+  .h-21 {
+    height: calc(var(--spacing) * 21);
+  }
+  .h-\[21\] {
+    height: 21;
+  }
+  .h-\[92px\] {
+    height: 92px;
+  }
+  .h-\[100px\] {
+    height: 100px;
+  }
+  .w-121 {
+    width: calc(var(--spacing) * 121);
+  }
+  .w-\[121\] {
+    width: 121;
+  }
+  .w-\[1728px\] {
+    width: 1728px;
+  }
+  .w-full {
+    width: 100%;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -172,18 +206,67 @@
   .resize {
     resize: both;
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-\[1fr_1fr\] {
+    grid-template-columns: 1fr 1fr;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .font-lalezar {
-    font-family: var(--font-lalezar);
+  .border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
   }
-  .font-vazir {
-    font-family: var(--font-vazir);
+  .bg-\[\#12\] {
+    background-color: #12;
+  }
+  .bg-\[\#121F1A\] {
+    background-color: #121F1A;
+  }
+  .bg-\[\#121\] {
+    background-color: #121;
+  }
+  .bg-\[\#\] {
+    background-color: #;
+  }
+  .bg-\[red\] {
+    background-color: red;
+  }
+  .px-\[30px\] {
+    padding-inline: 30px;
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
+  .pt-\[20px\] {
+    padding-top: 20px;
+  }
+  .pb-0 {
+    padding-bottom: 0px;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-\[\#F0E9E1\] {
+    color: #F0E9E1;
+  }
+  .text-\[\#xF0E9E1\] {
+    color: #xF0E9E1;
+  }
+  .text-\[F0E9E1\] {
+    color: F0E9E1;
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .opacity-100 {
+    opacity: 100%;
   }
   .outline {
     outline-style: var(--tw-outline-style);
