@@ -1,5 +1,4 @@
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
-@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -9,10 +8,14 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --font-lalezar: "lalezar", sans-serif;
-    --font-vazir: "vazirmatn", sans-serif;
   }
 }
 @layer base {
@@ -164,88 +167,32 @@
   }
 }
 @layer utilities {
-  .top-5 {
-    top: calc(var(--spacing) * 5);
-  }
-  .left-\[1501px\] {
-    left: 1501px;
-  }
   .grid {
     display: grid;
-  }
-  .table {
-    display: table;
-  }
-  .h-21 {
-    height: calc(var(--spacing) * 21);
-  }
-  .h-\[21\] {
-    height: 21;
   }
   .h-\[92px\] {
     height: 92px;
   }
-  .h-\[100px\] {
-    height: 100px;
-  }
-  .w-121 {
-    width: calc(var(--spacing) * 121);
-  }
-  .w-\[121\] {
-    width: 121;
-  }
-  .w-\[1728px\] {
-    width: 1728px;
+  .min-h-\[92px\] {
+    min-height: 92px;
   }
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-  .grid-cols-\[1fr_1fr\] {
-    grid-template-columns: 1fr 1fr;
   }
   .items-start {
     align-items: flex-start;
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .border-solid {
-    --tw-border-style: solid;
-    border-style: solid;
-  }
-  .bg-\[\#12\] {
-    background-color: #12;
-  }
   .bg-\[\#121F1A\] {
     background-color: #121F1A;
   }
-  .bg-\[\#121\] {
-    background-color: #121;
-  }
-  .bg-\[\#\] {
-    background-color: #;
-  }
-  .bg-\[red\] {
-    background-color: red;
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
   }
   .px-\[30px\] {
     padding-inline: 30px;
-  }
-  .px-\[80px\] {
-    padding-inline: 80px;
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
@@ -253,42 +200,50 @@
   .pt-\[20px\] {
     padding-top: 20px;
   }
-  .pb-0 {
-    padding-bottom: 0px;
-  }
   .text-left {
     text-align: left;
   }
   .text-right {
     text-align: right;
   }
-  .font-\[\'\'\] {
-    font-family: '';
-  }
   .font-\[\'vazirmatn\'\] {
     font-family: 'vazirmatn';
   }
-  .font-\[-\] {
-    font-family: -;
+  .text-\[10px\] {
+    font-size: 10px;
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
   }
   .text-\[\#F0E9E1\] {
     color: #F0E9E1;
   }
-  .text-\[\#xF0E9E1\] {
-    color: #xF0E9E1;
+  @media (width >= 40rem) {
+    .sm\:px-4 {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+    .sm\:text-xs {
+      font-size: var(--text-xs);
+      line-height: var(--tw-leading, var(--text-xs--line-height));
+    }
   }
-  .text-\[F0E9E1\] {
-    color: F0E9E1;
+  @media (width >= 48rem) {
+    .md\:px-6 {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+    .md\:text-sm {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .opacity-100 {
-    opacity: 100%;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  @media (width >= 64rem) {
+    .lg\:px-\[30px\] {
+      padding-inline: 30px;
+    }
+    .lg\:text-base {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
   }
 }
 @font-face {
@@ -314,22 +269,4 @@
   src: url("../assets/fonts/Vazirmatn/Vazirmatn-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
-    }
-  }
 }
