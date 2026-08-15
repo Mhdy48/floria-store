@@ -9,8 +9,6 @@
       "Courier New", monospace;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --font-lalezar: "lalezar", sans-serif;
-    --font-vazir: "vazirmatn", sans-serif;
   }
 }
 @layer base {
@@ -90,7 +88,6 @@
   }
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
-    vertical-align: middle;
   }
   img, video {
     max-width: 100%;
