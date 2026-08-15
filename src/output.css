@@ -16,6 +16,7 @@
     --text-base--line-height: calc(1.5 / 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-vazir: "vazirmatn", sans-serif;
   }
 }
 @layer base {
@@ -167,6 +168,9 @@
   }
 }
 @layer utilities {
+  .flex {
+    display: flex;
+  }
   .grid {
     display: grid;
   }
@@ -185,6 +189,9 @@
   .items-start {
     align-items: flex-start;
   }
+  .justify-between {
+    justify-content: space-between;
+  }
   .bg-\[\#121F1A\] {
     background-color: #121F1A;
   }
@@ -194,11 +201,17 @@
   .px-\[30px\] {
     padding-inline: 30px;
   }
+  .pt-1 {
+    padding-top: var(--spacing);
+  }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
   }
   .pt-\[20px\] {
     padding-top: 20px;
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
   }
   .text-left {
     text-align: left;
@@ -208,6 +221,12 @@
   }
   .font-\[\'vazirmatn\'\] {
     font-family: 'vazirmatn';
+  }
+  .font-vazir {
+    font-family: var(--font-vazir);
+  }
+  .text-\[\.8rem\] {
+    font-size: .8rem;
   }
   .text-\[10px\] {
     font-size: 10px;
