@@ -16,9 +16,8 @@ build/
 .DS_Store
 Thumbs.db
 
-# VS Code local settings
-.vscode/
-
 # Temporary files
 *.tmp
 *.temp
+
+src/output.css
