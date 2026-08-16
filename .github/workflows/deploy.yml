@@ -30,13 +30,21 @@ jobs:
       - name: Build Tailwind CSS
         run: npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css
 
+      - name: Create deployment folder
+        run: |
+          mkdir deploy
+          cp index.html deploy/
+          cp style.css deploy/
+          cp -r assets deploy/
+          cp -r src deploy/
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: ./deploy
 
   deploy:
     needs: build
