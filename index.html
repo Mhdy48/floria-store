@@ -11,6 +11,15 @@
     <!-- ==================== Favicon ==================== -->
     <link rel="shortcut icon" href="" type="image/x-icon" />
 
+    <!-- ==================== Font Awesome CDN ==================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- ==================== Stylesheets ==================== -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="src/output.css" />
@@ -277,10 +286,133 @@
       </main>
 
       <!-- ==================== Footer ==================== -->
-      <footer></footer>
+      <footer
+        class="w-full rounded-b-[0.9375rem] bg-[#2f4f3e] text-[#f0e9e1] selection:bg-[#f0e9e1] selection:text-[#2f4f3e] sm:p-5"
+      >
+        <div
+          class="grid grid-cols-2 gap-y-6 py-6 max-[500px]:grid-cols-1 max-[500px]:gap-y-3 max-[500px]:py-3 sm:grid-cols-2 sm:py-0 lg:grid-cols-4"
+        >
+          <!-- ================= BRAND ================= -->
+          <div
+            class="px-6 max-[500px]:mx-6 max-[500px]:border-b max-[500px]:border-[#0c2403] max-[500px]:px-0 max-[500px]:pb-3 max-lg:order-3"
+          >
+            <div class="mb-3 flex items-center">
+              <img
+                src="assets/image/logo/logo.webp"
+                alt="فلوریا لوگو"
+                class="h-17 w-17 object-contain select-none sm:h-20 sm:w-20"
+              />
 
+              <h2 class="text-3xl font-bold sm:text-4xl">فلوریا</h2>
+            </div>
+
+            <p class="max-w-xs text-xs mb-2 leading-8 sm:text-[15px]">
+              زیبایی طبیعت را به خانه شما می‌آوریم.
+              <br />
+              هر گیاه یک زندگی تازه
+            </p>
+            <a href="https://github.com/Mhdy48/floria-store" target="_blank"><i class="fa-brands fa-github text-2xl"></i></a>
+            <a href=""><i class="fa-brands fa-telegram text-2xl"></i></a>
+            <a href=""><i class="fa-brands fa-instagram text-2xl"></i></a>
+          </div>
+
+          <!-- ================= QUICK ACCESS ================= -->
+          <div
+            class="px-6 selection:bg-[#f0e9e1] selection:text-[#2f4f3e] max-[500px]:mx-6 max-[500px]:border-b max-[500px]:border-[#0c2403] max-[500px]:px-0 max-[500px]:pb-3 max-lg:order-1 lg:border-r lg:border-[#0c2403] lg:px-10"
+          >
+            <h3 class="mb-2.5 text-lg font-bold sm:mb-4 sm:text-xl">
+              دسترسی سریع
+            </h3>
+
+            <ul class="space-y-2.5 text-xs sm:space-y-4 sm:text-sm">
+              <li>
+                <a href="#"> خانه </a>
+              </li>
+
+              <li>
+                <a href="#"> گیاهان </a>
+              </li>
+
+              <li>
+                <a href="#"> مراقبت </a>
+              </li>
+
+              <li>
+                <a href="#"> درباره </a>
+              </li>
+
+              <li>
+                <a href="#"> تماس با ما </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ================= SERVICES ================= -->
+          <div
+            class="px-6 selection:bg-[#f0e9e1] selection:text-[#2f4f3e] max-[500px]:mx-6 max-[500px]:border-b max-[500px]:border-[#0c2403] max-[500px]:px-0 max-[500px]:pb-3 max-lg:order-2 min-[500px]:border-r min-[500px]:border-[#0c2403] lg:px-10"
+          >
+            <h3 class="mb-2.5 text-lg font-bold sm:mb-4 sm:text-xl">
+              خدمات مشتریان
+            </h3>
+
+            <ul class="space-y-2.5 text-xs sm:space-y-4 sm:text-sm">
+              <li>
+                <a href="#"> پرسش های متداول </a>
+              </li>
+
+              <li>
+                <a href="#"> ارسال و تحویل </a>
+              </li>
+
+              <li>
+                <a href="#"> بازگشت کالا </a>
+              </li>
+
+              <li>
+                <a href="#"> شرایط و قوانین </a>
+              </li>
+
+              <li>
+                <a href="#"> حریم خصوصی </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ================= NEWSLETTER ================= -->
+          <div
+            class="px-6 selection:bg-[#f0e9e1] selection:text-[#2f4f3e] max-[500px]:mx-6 max-[500px]:px-0 max-lg:order-4 min-[500px]:border-r min-[500px]:border-[#0c2403] lg:px-10"
+          >
+            <h3 class="mb-2.5 text-lg font-bold sm:mb-4 sm:text-xl">
+              خبرنامه فلوریا
+            </h3>
+
+            <p class="mb-4 max-w-xs text-xs leading-7 sm:mb-7 sm:text-sm">
+              برای دریافت تخفیف ها و نکات مراقبتی عضو خبرنامه ما شوید.
+            </p>
+
+            <form
+              class="flex h-8 w-full max-w-xs overflow-hidden rounded-xl bg-[#F5EEE5] sm:h-10"
+            >
+              <button
+                type="submit"
+                aria-label="عضویت در خبرنامه"
+                class="text-md m-0 flex w-11 shrink-0 items-center justify-center bg-[#426b58] pt-0.5 text-white"
+              >
+                ➜
+              </button>
+              <input
+                type="email"
+                placeholder="ایمیل شما..."
+                class="min-w-0 flex-1 bg-transparent px-4 text-right text-sm text-[#101714] outline-none placeholder:text-[#8B8B83]"
+              />
+            </form>
+          </div>
+        </div>
+      </footer>
       <!-- ==================== Bottom Bar ==================== -->
-      <div></div>
+      <div class="bg-[#121F1A] w-full text-[#F0E9E1] text-center text-[10px] sm:text-[15px]">
+        <p>تمام حقوق این سایت متعلق به فلوریا است.</p>
+      </div>
     </div>
 
     <!-- ==================== JavaScript ==================== -->
