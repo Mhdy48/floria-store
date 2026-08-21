@@ -208,3 +208,13 @@
   background-size: 250% 250%;
   animation: guide-light 5s ease-in-out infinite;
 }
+@keyframes arrow-move {
+    0%,
+    100% {
+      transform: translateX(0) scale(1);
+    }
+
+    50% {
+      transform: translateX(2.3px) scale(1.01);
+    }
+  }
