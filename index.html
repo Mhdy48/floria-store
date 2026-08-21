@@ -84,7 +84,7 @@
           class="flex items-center justify-center gap-[0.2rem] md:gap-[0.4rem] lg:gap-[0.6rem] xl:gap-[0.8rem] 2xl:gap-4"
         >
           <button
-            class="hidden h-[1.8rem] w-[1.8rem] items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:flex md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem]"
+            class="hidden h-[1.8rem] w-[1.8rem] items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:flex md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem] cursor-pointer"
           >
             <svg
               class="h-4.5 w-4.5 text-[#121f1a] md:h-4.5 md:w-4.5 lg:h-5.5 lg:w-5.5"
@@ -100,7 +100,7 @@
           </button>
 
           <button
-            class="hidden h-[1.8rem] w-[1.8rem] items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:flex md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem]"
+            class="hidden h-[1.8rem] w-[1.8rem] items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:flex md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem] cursor-pointer"
           >
             <svg
               class="h-4.5 w-4.5 text-[#121f1a] md:h-4.5 md:w-4.5 lg:h-5.5 lg:w-5.5"
@@ -116,7 +116,7 @@
           </button>
 
           <button
-            class="flex h-[1.8rem] w-[1.8rem] items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem]"
+            class="flex h-[1.8rem] w-[1.8rem] items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem] cursor-pointer"
           >
             <svg
               class="h-4.5 w-4.5 text-[#121f1a] md:h-4.5 md:w-4.5 lg:h-5.5 lg:w-5.5"
@@ -159,17 +159,27 @@
 
             <!-- Hero CTA Button -->
             <button
-              class="flex w-60 items-center gap-7 rounded-xl bg-[#121F1A] p-1 text-[#EFE9E2] selection:bg-[#F0E9E1] selection:text-[#121F1A] max-[850px]:w-50 max-[850px]:gap-5 max-[850px]:text-sm max-[650px]:w-42 max-[650px]:text-xs"
-            >
-              <!-- Arrow Icon -->
-              <span
-                class="flex h-8 w-8 items-center justify-center rounded-[10.5px] bg-[#F0E9E1] pt-0.75 text-4xl text-black max-[850px]:h-6 max-[850px]:w-8 max-[850px]:text-3xl max-[650px]:h-5 max-[650px]:w-6"
-              >
-                ‹
-              </span>
+  class="group relative z-2 flex w-60 items-center gap-7 overflow-hidden rounded-xl bg-[#121F1A] p-1 text-[#EFE9E2] max-[850px]:w-50 max-[850px]:gap-5 max-[850px]:text-sm max-[650px]:w-42 max-[650px]:text-xs cursor-pointer"
+>
+  <!-- Hover Effect -->
+  <span
+    class="absolute left-54 top-1/2 z-2 h-56 w-80 -translate-x-1/2 -translate-y-1/2 scale-0 rounded-full bg-[#2F4F3E] transition-transform duration-500 ease-out group-hover:scale-150"
+  ></span>
 
-              همین الان خرید کنید
-            </button>
+  <!-- Arrow -->
+  <span
+    class="relative z-3 flex h-8 w-8 items-center justify-center rounded-[10.5px] bg-[#F0E9E1] pt-0.75 text-4xl text-black max-[850px]:h-6 max-[850px]:w-8 max-[850px]:text-3xl max-[650px]:h-5 max-[650px]:w-6"
+  >
+    <span class="animate-[arrow-move_1.5s_ease-in-out_infinite]">
+      ‹
+    </span>
+  </span>
+
+  <!-- Text -->
+  <span class="relative z-3">
+    همین الان خرید کنید
+  </span>
+</button>
           </div>
 
           <!-- Hero Image -->
