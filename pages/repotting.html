@@ -16,9 +16,11 @@
 <link rel="stylesheet" href="../src/output.css">
   </head>
 
-  <body >
-    <section
-  class="w-full min-h-screen bg-[#f5f1e8] px-3 py-5
+  <body class="font-vazir" >
+<section
+  class="w-full min-h-screen
+        bg-[#1b3025]
+         px-3 py-5
          sm:px-5 sm:py-7
          md:px-8 md:py-10
          lg:px-10 lg:py-12
@@ -26,32 +28,48 @@
          2xl:px-20 2xl:py-16"
   dir="rtl"
 >
-  <div class="w-full max-w-7xl 2xl:max-w-[1500px] mx-auto">
-
+  <div
+    class="w-full
+           max-w-7xl
+           2xl:max-w-[1500px]
+           mx-auto">
     <div
-      class="w-full rounded-2xl border-2 border-[#3d4938]
-             bg-[#faf8f2]
+      class="w-full
+             rounded-2xl
+             sm:rounded-3xl
+             md:rounded-[30px]
+             lg:rounded-[35px]
+             bg-[#2f4f3e]
              p-4
-             sm:rounded-3xl sm:p-6
-             md:rounded-[30px] md:p-8
-             lg:rounded-[35px] lg:p-10
+             sm:p-6
+             md:p-8
+             lg:p-10
              xl:p-12
-             2xl:p-14"
-    >
-
+             2xl:p-14">
       <div
-        class="grid grid-cols-1 md:grid-cols-2
-               gap-8 sm:gap-10 md:gap-10 lg:gap-14
-               xl:gap-16 2xl:gap-20
-               items-center">
+        class="flex
+               flex-col
+               md:flex-row
+               items-center
+               justify-between
+               gap-8
+               sm:gap-10
+               md:gap-12
+               lg:gap-14
+               xl:gap-16
+               2xl:gap-20">
 <div
-          class="order-1 w-full
-                 flex flex-col items-center
-                 gap-4 sm:gap-5 md:gap-5 lg:gap-6"
-        >
-
-          <!-- Home circle -->
-          <div
+          class="w-full
+                 md:w-1/2
+                 flex
+                 flex-col
+                 items-center
+                 gap-4
+                 sm:gap-5
+                 md:gap-5
+                 lg:gap-6">
+<a
+            href="../index.html"
             class="w-16 h-16
                    sm:w-[70px] sm:h-[70px]
                    md:w-20 md:h-20
@@ -59,132 +77,150 @@
                    xl:w-24 xl:h-24
                    2xl:w-28 2xl:h-28
                    rounded-full
-                   border-2 border-[#3d4938]
-                   flex items-center justify-center
-                   bg-[#eef2e9]
-                   text-[#3d4938]
-                   text-sm sm:text-base md:text-lg
-                   lg:text-xl xl:text-2xl
-                   font-bold shrink-0"
-          >
-            خانه
-          </div>
-
-          <!-- Page title -->
-          <div
-            class="w-full max-w-sm
-                   sm:max-w-md lg:max-w-lg xl:max-w-xl
-                   rounded-xl sm:rounded-2xl
-                   border-2 border-[#3d4938]
-                   bg-white
+                   bg-white/20
+                   backdrop-blur-md
+                   flex
+                   items-center
+                   justify-center
+                   text-white
+                   text-sm
+                   sm:text-base
+                   md:text-lg
+                   lg:text-xl
+                   xl:text-2xl
+                   font-bold
+                   transition-all
+                   duration-300
+                   hover:bg-white/30
+                   hover:shadow-[0_0_25px_rgba(255,255,255,0.9)]
+                   cursor-pointer">خانه</a>
+                   <div
+            class="w-full
+                   max-w-sm
+                   sm:max-w-md
+                   lg:max-w-lg
+                   xl:max-w-xl
+                   rounded-xl
+                   sm:rounded-2xl
+                   bg-white/20
+                   backdrop-blur-md
                    px-4 py-3
                    sm:px-5 sm:py-4
                    md:px-6 md:py-5
                    lg:px-7 lg:py-5
                    xl:px-8 xl:py-6
-                   text-center"
-          >
-
+                   text-center">
             <h1
-              class="text-xl sm:text-2xl md:text-2xl
-                     lg:text-3xl xl:text-4xl
-                     font-bold text-[#3d4938]"
-            >
-              تعویض گلدان
-            </h1>
-
-          </div>
-<!-- Plant repotting tips -->
-          <div
-            class="w-full max-w-sm
-                   sm:max-w-md lg:max-w-lg xl:max-w-xl
-                   rounded-xl sm:rounded-2xl
-                   border-2 border-[#3d4938]
-                   bg-white
-                   p-4 sm:p-5 md:p-6
-                   lg:p-7 xl:p-8"
-          >
-
+              class="text-xl
+                     sm:text-2xl
+                     md:text-2xl
+                     lg:text-3xl
+                     xl:text-4xl
+                     font-bold
+                     text-white">تعویض گلدان</h1></div>
+<div
+            class="w-full
+                   max-w-sm
+                   sm:max-w-md
+                   lg:max-w-lg
+                   xl:max-w-xl
+                   rounded-xl
+                   sm:rounded-2xl
+                   bg-white/20
+                   backdrop-blur-md p-4
+                   sm:p-5 md:p-6 lg:p-7 xl:p-8 overflow-hidden">
             <h2
-              class="mb-4 sm:mb-5 md:mb-6
-                     text-base sm:text-lg md:text-xl
+              class="mb-4
+                     sm:mb-5
+                     md:mb-6
+                     text-base
+                     sm:text-lg
+                     md:text-xl
                      lg:text-2xl
-                     font-bold text-[#3d4938]
-                     text-center leading-7"
+                     font-bold
+                     text-white
+                     text-center
+                     leading-7"
             >
               ۱۳ نکته و آموزش تعویض گلدان
             </h2>
-
             <ol
-              class="space-y-2 sm:space-y-2.5 md:space-y-3
-                     text-xs sm:text-sm md:text-base
+              class="space-y-2
+                     sm:space-y-2.5
+                     md:space-y-3
+                     text-xs
+                     sm:text-sm
+                     md:text-base
                      lg:text-[17px]
-                     leading-6 sm:leading-7 md:leading-8
-                     text-gray-700"
+                     leading-6
+                     sm:leading-7
+                     md:leading-8
+                     text-white"
             >
-
-              <li><span class="font-bold text-[#3d4938]">۱.</span> بهترین زمان تعویض گلدان را انتخاب کنید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۲.</span> گلدان جدید را فقط کمی بزرگ‌تر از قبلی انتخاب کنید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۳.</span> مطمئن شوید گلدان جدید سوراخ‌های زهکشی دارد.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۴.</span> قبل از تعویض، گیاه را به آرامی از گلدان خارج کنید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۵.</span> ریشه‌های آسیب‌دیده و پوسیده را جدا کنید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۶.</span> از خاک مناسب برای نوع گیاه استفاده کنید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۷.</span> مقداری خاک تازه کف گلدان بریزید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۸.</span> گیاه را در مرکز گلدان قرار دهید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۹.</span> اطراف ریشه‌ها را با خاک تازه پر کنید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۱۰.</span> خاک را بیش از حد فشرده نکنید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۱۱.</span> بعد از تعویض، گیاه را به آرامی آبیاری کنید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۱۲.</span> چند روز اول گیاه را در نور شدید قرار ندهید.</li>
-
-              <li><span class="font-bold text-[#3d4938]">۱۳.</span> بعد از تعویض، وضعیت برگ‌ها و رشد گیاه را بررسی کنید.</li>
-
+              <li>
+                <span class="font-bold text-white">۱.</span>
+                بهترین زمان تعویض گلدان را انتخاب کنید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۲.</span>
+                گلدان جدید را فقط کمی بزرگ‌تر از قبلی انتخاب کنید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۳.</span>
+                مطمئن شوید گلدان جدید سوراخ‌های زهکشی دارد.
+              </li>
+              <li>
+                <span class="font-bold text-white">۴.</span>
+                قبل از تعویض، گیاه را به آرامی از گلدان خارج کنید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۵.</span>
+                ریشه‌های آسیب‌دیده و پوسیده را جدا کنید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۶.</span>
+                از خاک مناسب برای نوع گیاه استفاده کنید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۷.</span>
+                مقداری خاک تازه کف گلدان بریزید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۸.</span>
+                گیاه را در مرکز گلدان قرار دهید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۹.</span>
+                اطراف ریشه‌ها را با خاک تازه پر کنید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۱۰.</span>
+                خاک را بیش از حد فشرده نکنید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۱۱.</span>
+                بعد از تعویض، گیاه را به آرامی آبیاری کنید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۱۲.</span>
+                چند روز اول گیاه را در نور شدید قرار ندهید.
+              </li>
+              <li>
+                <span class="font-bold text-white">۱۳.</span>
+                بعد از تعویض، وضعیت برگ‌ها و رشد گیاه را بررسی کنید.
+              </li>
             </ol>
-
           </div>
-
         </div>
-<!-- Plant image -->
-        <div
-          class="order-2
-                 w-full
-                 min-h-[260px]
-                 sm:min-h-[320px]
-                 md:min-h-[450px]
-                 lg:min-h-[500px]
-                 xl:min-h-[550px]
-                 2xl:min-h-[600px]
-                 flex items-center justify-center
-                 overflow-hidden"
-        >
+<div
+          class="w-full
+                 md:w-1/2 min-h-[260px] sm:min-h-[320px] md:min-h-[450px] 
+                 lg:min-h-[500px] xl:min-h-[550px] 2xl:min-h-[600px] flex items-center justify-center overflow-hidden">
           <img
-            src="../assets/images/plant.png"
+            src="../assets/image/popular-plants/aloe-vera.webp"
             alt="گلدان و گیاه"
-            class="block
-                   w-auto h-auto
-                   max-w-[85%]
-                   max-h-[280px]
-                   sm:max-w-[80%]
-                   sm:max-h-[340px]
-                   md:max-w-[90%]
-                   md:max-h-[420px]
-                   lg:max-w-[95%]
-                   lg:max-h-[480px]
-                   xl:max-w-full
-                   xl:max-h-[550px]
-                   2xl:max-h-[600px]
-                   object-contain"
-          />
+            class="block w-auto h-auto max-w-[85%] max-h-[280px]  sm:max-w-[80%] sm:max-h-[340px] 
+            md:max-w-[90%] md:max-h-[420px] lg:max-w-[95%] lg:max-h-[480px] xl:max-w-full xl:max-h-[550px] 2xl:max-h-[600px] object-contain">
         </div>
 </div>
     </div>
