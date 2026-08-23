@@ -33,7 +33,1148 @@
         <section></section>
 
         <!-- ==================== Amazing Deals Section ==================== -->
-        <section></section>
+
+        <section
+          class="m-5 overflow-hidden rounded-[20px] bg-[#9e0d17] p-4 sm:p-6 lg:p-8"
+        >
+          <!-- Section Header -->
+          <div
+            class="mb-5 flex items-center justify-between gap-4 max-[450px]:flex-col max-[450px]:gap-4"
+          >
+            <!-- Section Title -->
+            <div>
+              <h2
+                class="text-x font-bold text-white max-[550px]:text-lg max-[450px]:text-center sm:text-2xl"
+              >
+                تخفیف‌های شگفت‌انگیز
+              </h2>
+
+              <p
+                class="mt-1 text-xs text-white/80 max-[550px]:text-[12px] max-[450px]:text-xs sm:text-sm"
+              >
+                فرصت محدود، بهترین پیشنهادها با تخفیف ویژه
+              </p>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div
+              id="countdown"
+              dir="rtl"
+              class="flex flex-row items-center gap-4 max-[700px]:flex-col max-[700px]:gap-2"
+            >
+              <span
+                class="mt-2.5 self-start text-sm font-medium text-white max-[700px]:self-center max-[450px]:hidden"
+              >
+                فرصت باقی‌مانده
+              </span>
+
+              <div class="flex items-start gap-1.5" dir="ltr">
+                <!-- Days -->
+                <div class="flex flex-col items-center gap-1">
+                  <span
+                    id="days"
+                    class="flex h-9 min-w-10 items-center justify-center rounded-lg bg-white px-2 text-lg font-bold text-[#e30613] shadow-sm max-[550px]:h-8 max-[550px]:min-w-9 max-[550px]:text-sm"
+                  >
+                    ۰۰
+                  </span>
+
+                  <span
+                    dir="rtl"
+                    class="text-[12px] font-medium text-white/80 max-[550px]:text-[10px]"
+                  >
+                    روز
+                  </span>
+                </div>
+
+                <span class="mt-1 text-white/70">:</span>
+
+                <!-- Hours -->
+                <div class="flex flex-col items-center gap-1">
+                  <span
+                    id="hours"
+                    class="flex h-9 min-w-10 items-center justify-center rounded-lg bg-white px-2 text-lg font-bold text-[#e30613] shadow-sm max-[550px]:h-8 max-[550px]:min-w-9 max-[550px]:text-sm"
+                  >
+                    ۰۰
+                  </span>
+
+                  <span
+                    dir="rtl"
+                    class="text-[12px] font-medium text-white/80 max-[550px]:text-[10px]"
+                  >
+                    ساعت
+                  </span>
+                </div>
+
+                <span class="mt-1 text-white/70">:</span>
+
+                <!-- Minutes -->
+                <div class="flex flex-col items-center gap-1">
+                  <span
+                    id="minutes"
+                    class="flex h-9 min-w-10 items-center justify-center rounded-lg bg-white px-2 text-lg font-bold text-[#e30613] shadow-sm max-[550px]:h-8 max-[550px]:min-w-9 max-[550px]:text-sm"
+                  >
+                    ۰۰
+                  </span>
+
+                  <span
+                    dir="rtl"
+                    class="text-[12px] font-medium text-white/80 max-[550px]:text-[10px]"
+                  >
+                    دقیقه
+                  </span>
+                </div>
+
+                <span class="mt-1 text-white/70">:</span>
+
+                <!-- Seconds -->
+                <div class="flex flex-col items-center gap-1">
+                  <span
+                    id="seconds"
+                    class="flex h-9 min-w-10 items-center justify-center rounded-lg bg-white px-2 text-lg font-bold text-[#e30613] shadow-sm max-[550px]:h-8 max-[550px]:min-w-9 max-[550px]:text-sm"
+                  >
+                    ۰۰
+                  </span>
+
+                  <span
+                    dir="rtl"
+                    class="text-[12px] font-medium text-white/80 max-[550px]:text-[10px]"
+                  >
+                    ثانیه
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sale Status -->
+            <div
+              id="sale-status"
+              dir="rtl"
+              class="hidden items-center justify-center text-sm font-medium text-white"
+            ></div>
+          </div>
+
+          <!-- Deals Products Slider -->
+          <div class="relative overflow-hidden px-2">
+            <!-- Right Fade -->
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 z-20 w-5 bg-linear-to-l from-[#9e0d17] to-transparent"
+            ></div>
+
+            <!-- Left Fade -->
+            <div
+              class="pointer-events-none absolute inset-y-0 left-0 z-20 w-5 bg-linear-to-r from-[#9e0d17] to-transparent"
+            ></div>
+
+            <!-- Products Track -->
+            <div
+              id="deals-slider"
+              dir="rtl"
+              class="flex gap-2 transition-transform duration-700 ease-out min-[550px]:gap-3 min-[900px]:gap-4 min-[1200px]:gap-5"
+            >
+              <!-- Card 1 -->
+              <div
+                class="deal-card group flex w-[calc((100%-8px)/2)] shrink-0 flex-col min-[550px]:w-[calc((100%-24px)/3)] min-[900px]:w-[calc((100%-48px)/4)] min-[1100px]:w-[calc((100%-64px)/5)] min-[1200px]:w-[calc((100%-80px)/5)] min-[1300px]:w-[calc((100%-100px)/6)]"
+                dir="rtl"
+              >
+                <!-- Product Image -->
+                <div
+                  class="relative flex h-28 w-full items-end justify-center overflow-hidden rounded-t-[14px] bg-[#F0E9E1] p-3 pb-1 transition-colors duration-300 select-none group-hover:bg-[#E3EDD9] min-[550px]:h-36 min-[900px]:h-42 min-[1100px]:h-46 min-[1300px]:h-50"
+                >
+                  <!-- Hanging Discount Tag -->
+                  <div
+                    class="absolute top-0 left-2 z-10 origin-top animate-[discount-swing_3s_linear_infinite] min-[550px]:left-2.5 min-[900px]:left-3"
+                  >
+                    <div
+                      class="mx-auto h-2.5 w-px bg-[#2F4F3E]/40 min-[450px]:h-4 min-[900px]:h-4.5"
+                    ></div>
+
+                    <div
+                      class="relative flex flex-col items-center justify-center rounded-t-sm rounded-b-lg bg-[#e30613] p-1 text-white shadow-[2px_4px_8px_rgba(0,0,0,0.2)] min-[350px]:p-1.5 min-[550px]:rounded-b-xl min-[900px]:px-3"
+                    >
+                      <span
+                        class="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-[#e30613] bg-[#F0E9E1] min-[550px]:h-3 min-[550px]:w-3"
+                      ></span>
+
+                      <span
+                        class="text-[7px] font-medium min-[350px]:text-[8px] min-[900px]:text-[9px]"
+                      >
+                        تخفیف
+                      </span>
+
+                      <span
+                        class="text-[11px] leading-none font-black min-[550px]:text-[14px] min-[900px]:text-[16px] min-[1200px]:text-[19px]"
+                      >
+                        ۱۵٪
+                      </span>
+                    </div>
+                  </div>
+
+                  <img
+                    src="assets/image/Amazing-Deals/African-violet.webp"
+                    alt="بنفشه آفریقایی"
+                    class="h-full w-full object-contain drop-shadow-[3px_2px_3px_rgba(0,0,0,0.25)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <!-- Product Info -->
+                <div
+                  class="flex w-full flex-col rounded-b-[14px] bg-[#2F4F3E] px-2 py-2 text-[#F0E9E1] shadow-[0_-4px_7px_rgba(0,0,0,0.25)] min-[550px]:px-2.5 min-[900px]:px-3 min-[1200px]:px-3.5"
+                >
+                  <!-- Product Details & Cart -->
+                  <div
+                    class="flex w-full flex-row items-center justify-between gap-1.5"
+                  >
+                    <!-- Product Name & Original Price -->
+                    <div>
+                      <h3
+                        class="mb-1 truncate text-[11px] font-medium min-[376px]:text-[13px] min-[550px]:text-[15px] min-[900px]:text-[17px] min-[1200px]:text-[19px]"
+                      >
+                        بنفشه آفریقایی
+                      </h3>
+
+                      <p
+                        class="mb-1 text-[8px] text-white/70 line-through min-[320px]:text-[10px] min-[376px]:text-[12px]"
+                      >
+                        ۱۹۰,۰۰۰
+                        <span>تومان</span>
+                      </p>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <a
+                      href="#"
+                      aria-label="افزودن به سبد خرید"
+                      class="group/cart flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-transparent bg-[#F0E9E1] transition-all duration-300 hover:border-[#AADFB8] hover:shadow-[0_0_6px_rgba(138,255,168,0.4)] min-[550px]:h-8 min-[550px]:w-8 min-[900px]:h-9 min-[900px]:w-9 min-[1200px]:h-10 min-[1200px]:w-10 min-[1200px]:rounded-[15px]"
+                    >
+                      <img
+                        src="./assets/image/icon/shopping-cart.png"
+                        alt=""
+                        class="h-4.5 w-4.5 select-none group-hover/cart:animate-[cart-shake_0.4s_ease-in-out] min-[550px]:h-5 min-[550px]:w-5 min-[900px]:h-6 min-[900px]:w-6 min-[1200px]:h-7 min-[1200px]:w-7"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Final Price -->
+                  <div>
+                    <p
+                      class="text-base font-medium min-[330px]:text-lg min-[376px]:text-xl min-[700px]:text-2xl"
+                    >
+                      ۱۶۱,۵۰۰
+                      <span
+                        class="text-[9px] min-[350px]:text-[12px] min-[900px]:text-[10px] min-[1200px]:text-[12px]"
+                      >
+                        تومان
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div
+                class="deal-card group flex w-[calc((100%-8px)/2)] shrink-0 flex-col min-[550px]:w-[calc((100%-24px)/3)] min-[900px]:w-[calc((100%-48px)/4)] min-[1100px]:w-[calc((100%-64px)/5)] min-[1200px]:w-[calc((100%-80px)/5)] min-[1300px]:w-[calc((100%-100px)/6)]"
+                dir="rtl"
+              >
+                <!-- Product Image -->
+                <div
+                  class="relative flex h-28 w-full items-end justify-center overflow-hidden rounded-t-[14px] bg-[#F0E9E1] p-3 pb-1 transition-colors duration-300 select-none group-hover:bg-[#E3EDD9] min-[550px]:h-36 min-[900px]:h-42 min-[1100px]:h-46 min-[1300px]:h-50"
+                >
+                  <!-- Hanging Discount Tag -->
+                  <div
+                    class="absolute top-0 left-2 z-10 origin-top animate-[discount-swing_3s_linear_infinite] min-[550px]:left-2.5 min-[900px]:left-3"
+                  >
+                    <div
+                      class="mx-auto h-2.5 w-px bg-[#2F4F3E]/40 min-[450px]:h-4 min-[900px]:h-4.5"
+                    ></div>
+
+                    <div
+                      class="relative flex flex-col items-center justify-center rounded-t-sm rounded-b-lg bg-[#e30613] p-1 text-white shadow-[2px_4px_8px_rgba(0,0,0,0.2)] min-[350px]:p-1.5 min-[550px]:rounded-b-xl min-[900px]:px-3"
+                    >
+                      <span
+                        class="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-[#e30613] bg-[#F0E9E1] min-[550px]:h-3 min-[550px]:w-3"
+                      ></span>
+
+                      <span
+                        class="text-[7px] font-medium min-[350px]:text-[8px] min-[900px]:text-[9px]"
+                      >
+                        تخفیف
+                      </span>
+
+                      <span
+                        class="text-[11px] leading-none font-black min-[550px]:text-[14px] min-[900px]:text-[16px] min-[1200px]:text-[19px]"
+                      >
+                        ۶۰٪
+                      </span>
+                    </div>
+                  </div>
+
+                  <img
+                    src="assets/image/Amazing-Deals/Anthurium.webp"
+                    alt="آنتوریوم"
+                    class="h-full w-full object-contain drop-shadow-[3px_2px_3px_rgba(0,0,0,0.25)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <!-- Product Info -->
+                <div
+                  class="flex w-full flex-col rounded-b-[14px] bg-[#2F4F3E] px-2 py-2 text-[#F0E9E1] shadow-[0_-4px_7px_rgba(0,0,0,0.25)] min-[550px]:px-2.5 min-[900px]:px-3 min-[1200px]:px-3.5"
+                >
+                  <!-- Product Details & Cart -->
+                  <div
+                    class="flex w-full flex-row items-center justify-between gap-1.5"
+                  >
+                    <!-- Product Name & Original Price -->
+                    <div>
+                      <h3
+                        class="mb-1 truncate text-[11px] font-medium min-[376px]:text-[13px] min-[550px]:text-[15px] min-[900px]:text-[17px] min-[1200px]:text-[19px]"
+                      >
+                        آنتوریوم
+                      </h3>
+
+                      <p
+                        class="mb-1 text-[8px] text-white/70 line-through min-[320px]:text-[10px] min-[376px]:text-[12px]"
+                      >
+                        ۷۸۰,۰۰۰
+                        <span>تومان</span>
+                      </p>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <a
+                      href="#"
+                      aria-label="افزودن به سبد خرید"
+                      class="group/cart flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-transparent bg-[#F0E9E1] transition-all duration-300 hover:border-[#AADFB8] hover:shadow-[0_0_6px_rgba(138,255,168,0.4)] min-[550px]:h-8 min-[550px]:w-8 min-[900px]:h-9 min-[900px]:w-9 min-[1200px]:h-10 min-[1200px]:w-10 min-[1200px]:rounded-[15px]"
+                    >
+                      <img
+                        src="./assets/image/icon/shopping-cart.png"
+                        alt=""
+                        class="h-4.5 w-4.5 select-none group-hover/cart:animate-[cart-shake_0.4s_ease-in-out] min-[550px]:h-5 min-[550px]:w-5 min-[900px]:h-6 min-[900px]:w-6 min-[1200px]:h-7 min-[1200px]:w-7"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Final Price -->
+                  <div>
+                    <p
+                      class="text-base font-medium min-[330px]:text-lg min-[376px]:text-xl min-[700px]:text-2xl"
+                    >
+                      ۳۴۵,۰۰۰
+                      <span
+                        class="text-[9px] min-[350px]:text-[12px] min-[900px]:text-[10px] min-[1200px]:text-[12px]"
+                      >
+                        تومان
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div
+                class="deal-card group flex w-[calc((100%-8px)/2)] shrink-0 flex-col min-[550px]:w-[calc((100%-24px)/3)] min-[900px]:w-[calc((100%-48px)/4)] min-[1100px]:w-[calc((100%-64px)/5)] min-[1200px]:w-[calc((100%-80px)/5)] min-[1300px]:w-[calc((100%-100px)/6)]"
+                dir="rtl"
+              >
+                <!-- Product Image -->
+                <div
+                  class="relative flex h-28 w-full items-end justify-center overflow-hidden rounded-t-[14px] bg-[#F0E9E1] p-3 pb-1 transition-colors duration-300 select-none group-hover:bg-[#E3EDD9] min-[550px]:h-36 min-[900px]:h-42 min-[1100px]:h-46 min-[1300px]:h-50"
+                >
+                  <!-- Hanging Discount Tag -->
+                  <div
+                    class="absolute top-0 left-2 z-10 origin-top animate-[discount-swing_3s_linear_infinite] min-[550px]:left-2.5 min-[900px]:left-3"
+                  >
+                    <div
+                      class="mx-auto h-2.5 w-px bg-[#2F4F3E]/40 min-[450px]:h-4 min-[900px]:h-4.5"
+                    ></div>
+
+                    <div
+                      class="relative flex flex-col items-center justify-center rounded-t-sm rounded-b-lg bg-[#e30613] p-1 text-white shadow-[2px_4px_8px_rgba(0,0,0,0.2)] min-[350px]:p-1.5 min-[550px]:rounded-b-xl min-[900px]:px-3"
+                    >
+                      <span
+                        class="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-[#e30613] bg-[#F0E9E1] min-[550px]:h-3 min-[550px]:w-3"
+                      ></span>
+
+                      <span
+                        class="text-[7px] font-medium min-[350px]:text-[8px] min-[900px]:text-[9px]"
+                      >
+                        تخفیف
+                      </span>
+
+                      <span
+                        class="text-[11px] leading-none font-black min-[550px]:text-[14px] min-[900px]:text-[16px] min-[1200px]:text-[19px]"
+                      >
+                        ۱۰٪
+                      </span>
+                    </div>
+                  </div>
+
+                  <img
+                    src="assets/image/Amazing-Deals/English-lvy.webp"
+                    alt="عشقه انگلیسی"
+                    class="h-full w-full object-contain drop-shadow-[3px_2px_3px_rgba(0,0,0,0.25)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <!-- Product Info -->
+                <div
+                  class="flex w-full flex-col rounded-b-[14px] bg-[#2F4F3E] px-2 py-2 text-[#F0E9E1] shadow-[0_-4px_7px_rgba(0,0,0,0.25)] min-[550px]:px-2.5 min-[900px]:px-3 min-[1200px]:px-3.5"
+                >
+                  <div
+                    class="flex w-full flex-row items-center justify-between gap-1.5"
+                  >
+                    <div>
+                      <!-- Product Name & Original Price -->
+                      <h3
+                        class="mb-1 truncate text-[11px] font-medium min-[376px]:text-[13px] min-[550px]:text-[15px] min-[900px]:text-[17px] min-[1200px]:text-[19px]"
+                      >
+                        عشقه انگلیسی
+                      </h3>
+
+                      <p
+                        class="mb-1 text-[8px] text-white/70 line-through min-[320px]:text-[10px] min-[376px]:text-[12px]"
+                      >
+                        ۱,۰۵۰,۰۰۰
+                        <span>تومان</span>
+                      </p>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <a
+                      href="#"
+                      aria-label="افزودن به سبد خرید"
+                      class="group/cart flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-transparent bg-[#F0E9E1] transition-all duration-300 hover:border-[#AADFB8] hover:shadow-[0_0_6px_rgba(138,255,168,0.4)] min-[550px]:h-8 min-[550px]:w-8 min-[900px]:h-9 min-[900px]:w-9 min-[1200px]:h-10 min-[1200px]:w-10 min-[1200px]:rounded-[15px]"
+                    >
+                      <img
+                        src="./assets/image/icon/shopping-cart.png"
+                        alt=""
+                        class="h-4.5 w-4.5 select-none group-hover/cart:animate-[cart-shake_0.4s_ease-in-out] min-[550px]:h-5 min-[550px]:w-5 min-[900px]:h-6 min-[900px]:w-6 min-[1200px]:h-7 min-[1200px]:w-7"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Final Price -->
+                  <div>
+                    <p
+                      class="text-base font-medium min-[330px]:text-lg min-[376px]:text-xl min-[700px]:text-2xl"
+                    >
+                      ۹۰۰,۰۰۰
+                      <span
+                        class="text-[9px] min-[350px]:text-[12px] min-[900px]:text-[10px] min-[1200px]:text-[12px]"
+                      >
+                        تومان
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div
+                class="deal-card group flex w-[calc((100%-8px)/2)] shrink-0 flex-col min-[550px]:w-[calc((100%-24px)/3)] min-[900px]:w-[calc((100%-48px)/4)] min-[1100px]:w-[calc((100%-64px)/5)] min-[1200px]:w-[calc((100%-80px)/5)] min-[1300px]:w-[calc((100%-100px)/6)]"
+                dir="rtl"
+              >
+                <!-- Product Image -->
+                <div
+                  class="relative flex h-28 w-full items-end justify-center overflow-hidden rounded-t-[14px] bg-[#F0E9E1] p-3 pb-1 transition-colors duration-300 select-none group-hover:bg-[#E3EDD9] min-[550px]:h-36 min-[900px]:h-42 min-[1100px]:h-46 min-[1300px]:h-50"
+                >
+                  <!-- Hanging Discount Tag -->
+                  <div
+                    class="absolute top-0 left-2 z-10 origin-top animate-[discount-swing_3s_linear_infinite] min-[550px]:left-2.5 min-[900px]:left-3"
+                  >
+                    <div
+                      class="mx-auto h-2.5 w-px bg-[#2F4F3E]/40 min-[450px]:h-4 min-[900px]:h-4.5"
+                    ></div>
+
+                    <!-- Discount Tag Content -->
+                    <div
+                      class="relative flex flex-col items-center justify-center rounded-t-sm rounded-b-lg bg-[#e30613] p-1 text-white shadow-[2px_4px_8px_rgba(0,0,0,0.2)] min-[350px]:p-1.5 min-[550px]:rounded-b-xl min-[900px]:px-3"
+                    >
+                      <!-- Tag Pin -->
+                      <span
+                        class="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-[#e30613] bg-[#F0E9E1] min-[550px]:h-3 min-[550px]:w-3"
+                      ></span>
+
+                      <!-- Discount Label -->
+                      <span
+                        class="text-[7px] font-medium min-[350px]:text-[8px] min-[900px]:text-[9px]"
+                      >
+                        تخفیف
+                      </span>
+
+                      <!-- Discount Percentage -->
+                      <span
+                        class="text-[11px] leading-none font-black min-[550px]:text-[14px] min-[900px]:text-[16px] min-[1200px]:text-[19px]"
+                      >
+                        ۲۸٪
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Product Image -->
+                  <img
+                    src="assets/image/Amazing-Deals/Boston-fern.webp"
+                    alt="سرخس بوستون"
+                    class="h-full w-full object-contain drop-shadow-[3px_2px_3px_rgba(0,0,0,0.25)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <!-- Product Info -->
+                <div
+                  class="flex w-full flex-col rounded-b-[14px] bg-[#2F4F3E] px-2 py-2 text-[#F0E9E1] shadow-[0_-4px_7px_rgba(0,0,0,0.25)] min-[550px]:px-2.5 min-[900px]:px-3 min-[1200px]:px-3.5"
+                >
+                  <!-- Product Name, Old Price & Cart Button -->
+                  <div
+                    class="flex w-full flex-row items-center justify-between gap-1.5"
+                  >
+                    <!-- Product Name & Old Price -->
+                    <div>
+                      <!-- Product Name -->
+                      <h3
+                        class="mb-1 truncate text-[11px] font-medium min-[376px]:text-[13px] min-[550px]:text-[15px] min-[900px]:text-[17px] min-[1200px]:text-[19px]"
+                      >
+                        سرخس بوستون
+                      </h3>
+
+                      <!-- Old Price -->
+                      <p
+                        class="mb-1 text-[8px] text-white/70 line-through min-[320px]:text-[10px] min-[376px]:text-[12px]"
+                      >
+                        ۳۹۰,۰۰۰
+                        <span>تومان</span>
+                      </p>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <a
+                      href="#"
+                      aria-label="افزودن به سبد خرید"
+                      class="group/cart flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-transparent bg-[#F0E9E1] transition-all duration-300 hover:border-[#AADFB8] hover:shadow-[0_0_6px_rgba(138,255,168,0.4)] min-[550px]:h-8 min-[550px]:w-8 min-[900px]:h-9 min-[900px]:w-9 min-[1200px]:h-10 min-[1200px]:w-10 min-[1200px]:rounded-[15px]"
+                    >
+                      <!-- Shopping Cart Icon -->
+                      <img
+                        src="./assets/image/icon/shopping-cart.png"
+                        alt=""
+                        class="h-4.5 w-4.5 select-none group-hover/cart:animate-[cart-shake_0.4s_ease-in-out] min-[550px]:h-5 min-[550px]:w-5 min-[900px]:h-6 min-[900px]:w-6 min-[1200px]:h-7 min-[1200px]:w-7"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Final Price -->
+                  <div>
+                    <p
+                      class="text-base font-medium min-[330px]:text-lg min-[376px]:text-xl min-[700px]:text-2xl"
+                    >
+                      ۲۸۵,۰۰۰
+                      <span
+                        class="text-[9px] min-[350px]:text-[12px] min-[900px]:text-[10px] min-[1200px]:text-[12px]"
+                      >
+                        تومان
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 5 -->
+              <div
+                class="deal-card group flex w-[calc((100%-8px)/2)] shrink-0 flex-col min-[550px]:w-[calc((100%-24px)/3)] min-[900px]:w-[calc((100%-48px)/4)] min-[1100px]:w-[calc((100%-64px)/5)] min-[1200px]:w-[calc((100%-80px)/5)] min-[1300px]:w-[calc((100%-100px)/6)]"
+                dir="rtl"
+              >
+                <!-- Product Image -->
+                <div
+                  class="relative flex h-28 w-full items-end justify-center overflow-hidden rounded-t-[14px] bg-[#F0E9E1] p-3 pb-1 transition-colors duration-300 select-none group-hover:bg-[#E3EDD9] min-[550px]:h-36 min-[900px]:h-42 min-[1100px]:h-46 min-[1300px]:h-50"
+                >
+                  <!-- Hanging Discount Tag -->
+                  <div
+                    class="absolute top-0 left-2 z-10 origin-top animate-[discount-swing_3s_linear_infinite] min-[550px]:left-2.5 min-[900px]:left-3"
+                  >
+                    <div
+                      class="mx-auto h-2.5 w-px bg-[#2F4F3E]/40 min-[450px]:h-4 min-[900px]:h-4.5"
+                    ></div>
+
+                    <!-- Discount Tag Content -->
+                    <div
+                      class="relative flex flex-col items-center justify-center rounded-t-sm rounded-b-lg bg-[#e30613] p-1 text-white shadow-[2px_4px_8px_rgba(0,0,0,0.2)] min-[350px]:p-1.5 min-[550px]:rounded-b-xl min-[900px]:px-3"
+                    >
+                      <!-- Tag Pin -->
+                      <span
+                        class="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-[#e30613] bg-[#F0E9E1] min-[550px]:h-3 min-[550px]:w-3"
+                      ></span>
+
+                      <!-- Discount Label -->
+                      <span
+                        class="text-[7px] font-medium min-[350px]:text-[8px] min-[900px]:text-[9px]"
+                      >
+                        تخفیف
+                      </span>
+
+                      <!-- Discount Percentage -->
+                      <span
+                        class="text-[11px] leading-none font-black min-[550px]:text-[14px] min-[900px]:text-[16px] min-[1200px]:text-[19px]"
+                      >
+                        ۵٪
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Product Image -->
+                  <img
+                    src="assets/image/Amazing-Deals/Calathea.webp"
+                    alt="کالاتیا"
+                    class="h-full w-full object-contain drop-shadow-[3px_2px_3px_rgba(0,0,0,0.25)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <!-- Product Info -->
+                <div
+                  class="flex w-full flex-col rounded-b-[14px] bg-[#2F4F3E] px-2 py-2 text-[#F0E9E1] shadow-[0_-4px_7px_rgba(0,0,0,0.25)] min-[550px]:px-2.5 min-[900px]:px-3 min-[1200px]:px-3.5"
+                >
+                  <!-- Product Name, Old Price & Cart Button -->
+                  <div
+                    class="flex w-full flex-row items-center justify-between gap-1.5"
+                  >
+                    <!-- Product Name & Old Price -->
+                    <div>
+                      <!-- Product Name -->
+                      <h3
+                        class="mb-1 truncate text-[11px] font-medium min-[376px]:text-[13px] min-[550px]:text-[15px] min-[900px]:text-[17px] min-[1200px]:text-[19px]"
+                      >
+                        کالاتیا
+                      </h3>
+
+                      <!-- Old Price -->
+                      <p
+                        class="mb-1 text-[8px] text-white/70 line-through min-[320px]:text-[10px] min-[376px]:text-[12px]"
+                      >
+                        ۶۷۵,۰۰۰
+                        <span>تومان</span>
+                      </p>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <a
+                      href="#"
+                      aria-label="افزودن به سبد خرید"
+                      class="group/cart flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-transparent bg-[#F0E9E1] transition-all duration-300 hover:border-[#AADFB8] hover:shadow-[0_0_6px_rgba(138,255,168,0.4)] min-[550px]:h-8 min-[550px]:w-8 min-[900px]:h-9 min-[900px]:w-9 min-[1200px]:h-10 min-[1200px]:w-10 min-[1200px]:rounded-[15px]"
+                    >
+                      <!-- Shopping Cart Icon -->
+                      <img
+                        src="./assets/image/icon/shopping-cart.png"
+                        alt=""
+                        class="h-4.5 w-4.5 select-none group-hover/cart:animate-[cart-shake_0.4s_ease-in-out] min-[550px]:h-5 min-[550px]:w-5 min-[900px]:h-6 min-[900px]:w-6 min-[1200px]:h-7 min-[1200px]:w-7"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Final Price -->
+                  <div>
+                    <p
+                      class="text-base font-medium min-[330px]:text-lg min-[376px]:text-xl min-[700px]:text-2xl"
+                    >
+                      ۶۴۶,۰۰۰
+                      <span
+                        class="text-[9px] min-[350px]:text-[12px] min-[900px]:text-[10px] min-[1200px]:text-[12px]"
+                      >
+                        تومان
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 6 -->
+              <div
+                class="deal-card group flex w-[calc((100%-8px)/2)] shrink-0 flex-col min-[550px]:w-[calc((100%-24px)/3)] min-[900px]:w-[calc((100%-48px)/4)] min-[1100px]:w-[calc((100%-64px)/5)] min-[1200px]:w-[calc((100%-80px)/5)] min-[1300px]:w-[calc((100%-100px)/6)]"
+                dir="rtl"
+              >
+                <!-- Product Image -->
+                <div
+                  class="relative flex h-28 w-full items-end justify-center overflow-hidden rounded-t-[14px] bg-[#F0E9E1] p-3 pb-1 transition-colors duration-300 select-none group-hover:bg-[#E3EDD9] min-[550px]:h-36 min-[900px]:h-42 min-[1100px]:h-46 min-[1300px]:h-50"
+                >
+                  <!-- Hanging Discount Tag -->
+                  <div
+                    class="absolute top-0 left-2 z-10 origin-top animate-[discount-swing_3s_linear_infinite] min-[550px]:left-2.5 min-[900px]:left-3"
+                  >
+                    <div
+                      class="mx-auto h-2.5 w-px bg-[#2F4F3E]/40 min-[450px]:h-4 min-[900px]:h-4.5"
+                    ></div>
+
+                    <div
+                      class="relative flex flex-col items-center justify-center rounded-t-sm rounded-b-lg bg-[#e30613] p-1 text-white shadow-[2px_4px_8px_rgba(0,0,0,0.2)] min-[350px]:p-1.5 min-[550px]:rounded-b-xl min-[900px]:px-3"
+                    >
+                      <span
+                        class="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-[#e30613] bg-[#F0E9E1] min-[550px]:h-3 min-[550px]:w-3"
+                      ></span>
+
+                      <span
+                        class="text-[7px] font-medium min-[350px]:text-[8px] min-[900px]:text-[9px]"
+                      >
+                        تخفیف
+                      </span>
+
+                      <span
+                        class="text-[11px] leading-none font-black min-[550px]:text-[14px] min-[900px]:text-[16px] min-[1200px]:text-[19px]"
+                      >
+                        ۳۰٪
+                      </span>
+                    </div>
+                  </div>
+
+                  <img
+                    src="assets/image/Amazing-Deals/Pilea-peperomioides.webp"
+                    alt="پیرومیا پیله‌آ"
+                    class="h-full w-full object-contain drop-shadow-[3px_2px_3px_rgba(0,0,0,0.25)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <!-- Product Info -->
+                <div
+                  class="flex w-full flex-col rounded-b-[14px] bg-[#2F4F3E] px-2 py-2 text-[#F0E9E1] shadow-[0_-4px_7px_rgba(0,0,0,0.25)] min-[550px]:px-2.5 min-[900px]:px-3 min-[1200px]:px-3.5"
+                >
+                  <div
+                    class="flex w-full flex-row items-center justify-between gap-1.5"
+                  >
+                    <div>
+                      <!-- Product Name & Original Price -->
+                      <h3
+                        class="mb-1 truncate text-[11px] font-medium min-[376px]:text-[13px] min-[550px]:text-[15px] min-[900px]:text-[17px] min-[1200px]:text-[19px]"
+                      >
+                        پیرومیا پیله‌آ
+                      </h3>
+
+                      <p
+                        class="mb-1 text-[8px] text-white/70 line-through min-[320px]:text-[10px] min-[376px]:text-[12px]"
+                      >
+                        ۵۵۰,۰۰۰
+                        <span>تومان</span>
+                      </p>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <a
+                      href="#"
+                      aria-label="افزودن به سبد خرید"
+                      class="group/cart flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-transparent bg-[#F0E9E1] transition-all duration-300 hover:border-[#AADFB8] hover:shadow-[0_0_6px_rgba(138,255,168,0.4)] min-[550px]:h-8 min-[550px]:w-8 min-[900px]:h-9 min-[900px]:w-9 min-[1200px]:h-10 min-[1200px]:w-10 min-[1200px]:rounded-[15px]"
+                    >
+                      <img
+                        src="./assets/image/icon/shopping-cart.png"
+                        alt=""
+                        class="h-4.5 w-4.5 select-none group-hover/cart:animate-[cart-shake_0.4s_ease-in-out] min-[550px]:h-5 min-[550px]:w-5 min-[900px]:h-6 min-[900px]:w-6 min-[1200px]:h-7 min-[1200px]:w-7"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Final Price -->
+                  <div>
+                    <p
+                      class="text-base font-medium min-[330px]:text-lg min-[376px]:text-xl min-[700px]:text-2xl"
+                    >
+                      ۳۹۵,۰۰۰
+                      <span
+                        class="text-[9px] min-[350px]:text-[12px] min-[900px]:text-[10px] min-[1200px]:text-[12px]"
+                      >
+                        تومان
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 7 -->
+              <div
+                class="deal-card group flex w-[calc((100%-8px)/2)] shrink-0 flex-col min-[550px]:w-[calc((100%-24px)/3)] min-[900px]:w-[calc((100%-48px)/4)] min-[1100px]:w-[calc((100%-64px)/5)] min-[1200px]:w-[calc((100%-80px)/5)] min-[1300px]:w-[calc((100%-100px)/6)]"
+                dir="rtl"
+              >
+                <!-- Product Image -->
+                <div
+                  class="relative flex h-28 w-full items-end justify-center overflow-hidden rounded-t-[14px] bg-[#F0E9E1] p-3 pb-1 transition-colors duration-300 select-none group-hover:bg-[#E3EDD9] min-[550px]:h-36 min-[900px]:h-42 min-[1100px]:h-46 min-[1300px]:h-50"
+                >
+                  <!-- Hanging Discount Tag -->
+                  <div
+                    class="absolute top-0 left-2 z-10 origin-top animate-[discount-swing_3s_linear_infinite] min-[550px]:left-2.5 min-[900px]:left-3"
+                  >
+                    <div
+                      class="mx-auto h-2.5 w-px bg-[#2F4F3E]/40 min-[450px]:h-4 min-[900px]:h-4.5"
+                    ></div>
+
+                    <div
+                      class="relative flex flex-col items-center justify-center rounded-t-sm rounded-b-lg bg-[#e30613] p-1 text-white shadow-[2px_4px_8px_rgba(0,0,0,0.2)] min-[350px]:p-1.5 min-[550px]:rounded-b-xl min-[900px]:px-3"
+                    >
+                      <span
+                        class="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-[#e30613] bg-[#F0E9E1] min-[550px]:h-3 min-[550px]:w-3"
+                      ></span>
+
+                      <span
+                        class="text-[7px] font-medium min-[350px]:text-[8px] min-[900px]:text-[9px]"
+                      >
+                        تخفیف
+                      </span>
+
+                      <span
+                        class="text-[11px] leading-none font-black min-[550px]:text-[14px] min-[900px]:text-[16px] min-[1200px]:text-[19px]"
+                      >
+                        ۶۰٪
+                      </span>
+                    </div>
+                  </div>
+
+                  <img
+                    src="assets/image/Amazing-Deals/Anthurium.webp"
+                    alt="آنتوریوم"
+                    class="h-full w-full object-contain drop-shadow-[3px_2px_3px_rgba(0,0,0,0.25)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <!-- Product Info -->
+                <div
+                  class="flex w-full flex-col rounded-b-[14px] bg-[#2F4F3E] px-2 py-2 text-[#F0E9E1] shadow-[0_-4px_7px_rgba(0,0,0,0.25)] min-[550px]:px-2.5 min-[900px]:px-3 min-[1200px]:px-3.5"
+                >
+                  <!-- Product Details & Cart -->
+                  <div
+                    class="flex w-full flex-row items-center justify-between gap-1.5"
+                  >
+                    <!-- Product Name & Original Price -->
+                    <div>
+                      <h3
+                        class="mb-1 truncate text-[11px] font-medium min-[376px]:text-[13px] min-[550px]:text-[15px] min-[900px]:text-[17px] min-[1200px]:text-[19px]"
+                      >
+                        آنتوریوم
+                      </h3>
+
+                      <p
+                        class="mb-1 text-[8px] text-white/70 line-through min-[320px]:text-[10px] min-[376px]:text-[12px]"
+                      >
+                        ۷۸۰,۰۰۰
+                        <span>تومان</span>
+                      </p>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <a
+                      href="#"
+                      aria-label="افزودن به سبد خرید"
+                      class="group/cart flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-transparent bg-[#F0E9E1] transition-all duration-300 hover:border-[#AADFB8] hover:shadow-[0_0_6px_rgba(138,255,168,0.4)] min-[550px]:h-8 min-[550px]:w-8 min-[900px]:h-9 min-[900px]:w-9 min-[1200px]:h-10 min-[1200px]:w-10 min-[1200px]:rounded-[15px]"
+                    >
+                      <img
+                        src="./assets/image/icon/shopping-cart.png"
+                        alt=""
+                        class="h-4.5 w-4.5 select-none group-hover/cart:animate-[cart-shake_0.4s_ease-in-out] min-[550px]:h-5 min-[550px]:w-5 min-[900px]:h-6 min-[900px]:w-6 min-[1200px]:h-7 min-[1200px]:w-7"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Final Price -->
+                  <div>
+                    <p
+                      class="text-base font-medium min-[330px]:text-lg min-[376px]:text-xl min-[700px]:text-2xl"
+                    >
+                      ۳۴۵,۰۰۰
+                      <span
+                        class="text-[9px] min-[350px]:text-[12px] min-[900px]:text-[10px] min-[1200px]:text-[12px]"
+                      >
+                        تومان
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 8 -->
+              <div
+                class="deal-card group flex w-[calc((100%-8px)/2)] shrink-0 flex-col min-[550px]:w-[calc((100%-24px)/3)] min-[900px]:w-[calc((100%-48px)/4)] min-[1100px]:w-[calc((100%-64px)/5)] min-[1200px]:w-[calc((100%-80px)/5)] min-[1300px]:w-[calc((100%-100px)/6)]"
+                dir="rtl"
+              >
+                <!-- Product Image -->
+                <div
+                  class="relative flex h-28 w-full items-end justify-center overflow-hidden rounded-t-[14px] bg-[#F0E9E1] p-3 pb-1 transition-colors duration-300 select-none group-hover:bg-[#E3EDD9] min-[550px]:h-36 min-[900px]:h-42 min-[1100px]:h-46 min-[1300px]:h-50"
+                >
+                  <!-- Hanging Discount Tag -->
+                  <div
+                    class="absolute top-0 left-2 z-10 origin-top animate-[discount-swing_3s_linear_infinite] min-[550px]:left-2.5 min-[900px]:left-3"
+                  >
+                    <div
+                      class="mx-auto h-2.5 w-px bg-[#2F4F3E]/40 min-[450px]:h-4 min-[900px]:h-4.5"
+                    ></div>
+
+                    <!-- Discount Tag Content -->
+                    <div
+                      class="relative flex flex-col items-center justify-center rounded-t-sm rounded-b-lg bg-[#e30613] p-1 text-white shadow-[2px_4px_8px_rgba(0,0,0,0.2)] min-[350px]:p-1.5 min-[550px]:rounded-b-xl min-[900px]:px-3"
+                    >
+                      <!-- Tag Pin -->
+                      <span
+                        class="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-[#e30613] bg-[#F0E9E1] min-[550px]:h-3 min-[550px]:w-3"
+                      ></span>
+
+                      <!-- Discount Label -->
+                      <span
+                        class="text-[7px] font-medium min-[350px]:text-[8px] min-[900px]:text-[9px]"
+                      >
+                        تخفیف
+                      </span>
+
+                      <!-- Discount Percentage -->
+                      <span
+                        class="text-[11px] leading-none font-black min-[550px]:text-[14px] min-[900px]:text-[16px] min-[1200px]:text-[19px]"
+                      >
+                        ۲۸٪
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Product Image -->
+                  <img
+                    src="assets/image/Amazing-Deals/Boston-fern.webp"
+                    alt="سرخس بوستون"
+                    class="h-full w-full object-contain drop-shadow-[3px_2px_3px_rgba(0,0,0,0.25)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <!-- Product Info -->
+                <div
+                  class="flex w-full flex-col rounded-b-[14px] bg-[#2F4F3E] px-2 py-2 text-[#F0E9E1] shadow-[0_-4px_7px_rgba(0,0,0,0.25)] min-[550px]:px-2.5 min-[900px]:px-3 min-[1200px]:px-3.5"
+                >
+                  <!-- Product Name, Old Price & Cart Button -->
+                  <div
+                    class="flex w-full flex-row items-center justify-between gap-1.5"
+                  >
+                    <!-- Product Name & Old Price -->
+                    <div>
+                      <!-- Product Name -->
+                      <h3
+                        class="mb-1 truncate text-[11px] font-medium min-[376px]:text-[13px] min-[550px]:text-[15px] min-[900px]:text-[17px] min-[1200px]:text-[19px]"
+                      >
+                        سرخس بوستون
+                      </h3>
+
+                      <!-- Old Price -->
+                      <p
+                        class="mb-1 text-[8px] text-white/70 line-through min-[320px]:text-[10px] min-[376px]:text-[12px]"
+                      >
+                        ۳۹۰,۰۰۰
+                        <span>تومان</span>
+                      </p>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <a
+                      href="#"
+                      aria-label="افزودن به سبد خرید"
+                      class="group/cart flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-transparent bg-[#F0E9E1] transition-all duration-300 hover:border-[#AADFB8] hover:shadow-[0_0_6px_rgba(138,255,168,0.4)] min-[550px]:h-8 min-[550px]:w-8 min-[900px]:h-9 min-[900px]:w-9 min-[1200px]:h-10 min-[1200px]:w-10 min-[1200px]:rounded-[15px]"
+                    >
+                      <!-- Shopping Cart Icon -->
+                      <img
+                        src="./assets/image/icon/shopping-cart.png"
+                        alt=""
+                        class="h-4.5 w-4.5 select-none group-hover/cart:animate-[cart-shake_0.4s_ease-in-out] min-[550px]:h-5 min-[550px]:w-5 min-[900px]:h-6 min-[900px]:w-6 min-[1200px]:h-7 min-[1200px]:w-7"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Final Price -->
+                  <div>
+                    <p
+                      class="text-base font-medium min-[330px]:text-lg min-[376px]:text-xl min-[700px]:text-2xl"
+                    >
+                      ۲۸۵,۰۰۰
+                      <span
+                        class="text-[9px] min-[350px]:text-[12px] min-[900px]:text-[10px] min-[1200px]:text-[12px]"
+                      >
+                        تومان
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 9 -->
+              <div
+                class="deal-card group flex w-[calc((100%-8px)/2)] shrink-0 flex-col min-[550px]:w-[calc((100%-24px)/3)] min-[900px]:w-[calc((100%-48px)/4)] min-[1100px]:w-[calc((100%-64px)/5)] min-[1200px]:w-[calc((100%-80px)/5)] min-[1300px]:w-[calc((100%-100px)/6)]"
+                dir="rtl"
+              >
+                <!-- Product Image -->
+                <div
+                  class="relative flex h-28 w-full items-end justify-center overflow-hidden rounded-t-[14px] bg-[#F0E9E1] p-3 pb-1 transition-colors duration-300 select-none group-hover:bg-[#E3EDD9] min-[550px]:h-36 min-[900px]:h-42 min-[1100px]:h-46 min-[1300px]:h-50"
+                >
+                  <!-- Hanging Discount Tag -->
+                  <div
+                    class="absolute top-0 left-2 z-10 origin-top animate-[discount-swing_3s_linear_infinite] min-[550px]:left-2.5 min-[900px]:left-3"
+                  >
+                    <div
+                      class="mx-auto h-2.5 w-px bg-[#2F4F3E]/40 min-[450px]:h-4 min-[900px]:h-4.5"
+                    ></div>
+
+                    <div
+                      class="relative flex flex-col items-center justify-center rounded-t-sm rounded-b-lg bg-[#e30613] p-1 text-white shadow-[2px_4px_8px_rgba(0,0,0,0.2)] min-[350px]:p-1.5 min-[550px]:rounded-b-xl min-[900px]:px-3"
+                    >
+                      <span
+                        class="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-[#e30613] bg-[#F0E9E1] min-[550px]:h-3 min-[550px]:w-3"
+                      ></span>
+
+                      <span
+                        class="text-[7px] font-medium min-[350px]:text-[8px] min-[900px]:text-[9px]"
+                      >
+                        تخفیف
+                      </span>
+
+                      <span
+                        class="text-[11px] leading-none font-black min-[550px]:text-[14px] min-[900px]:text-[16px] min-[1200px]:text-[19px]"
+                      >
+                        ۱۵٪
+                      </span>
+                    </div>
+                  </div>
+
+                  <img
+                    src="assets/image/Amazing-Deals/African-violet.webp"
+                    alt="بنفشه آفریقایی"
+                    class="h-full w-full object-contain drop-shadow-[3px_2px_3px_rgba(0,0,0,0.25)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <!-- Product Info -->
+                <div
+                  class="flex w-full flex-col rounded-b-[14px] bg-[#2F4F3E] px-2 py-2 text-[#F0E9E1] shadow-[0_-4px_7px_rgba(0,0,0,0.25)] min-[550px]:px-2.5 min-[900px]:px-3 min-[1200px]:px-3.5"
+                >
+                  <!-- Product Details & Cart -->
+                  <div
+                    class="flex w-full flex-row items-center justify-between gap-1.5"
+                  >
+                    <!-- Product Name & Original Price -->
+                    <div>
+                      <h3
+                        class="mb-1 truncate text-[11px] font-medium min-[376px]:text-[13px] min-[550px]:text-[15px] min-[900px]:text-[17px] min-[1200px]:text-[19px]"
+                      >
+                        بنفشه آفریقایی
+                      </h3>
+
+                      <p
+                        class="mb-1 text-[8px] text-white/70 line-through min-[320px]:text-[10px] min-[376px]:text-[12px]"
+                      >
+                        ۱۹۰,۰۰۰
+                        <span>تومان</span>
+                      </p>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <a
+                      href="#"
+                      aria-label="افزودن به سبد خرید"
+                      class="group/cart flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-transparent bg-[#F0E9E1] transition-all duration-300 hover:border-[#AADFB8] hover:shadow-[0_0_6px_rgba(138,255,168,0.4)] min-[550px]:h-8 min-[550px]:w-8 min-[900px]:h-9 min-[900px]:w-9 min-[1200px]:h-10 min-[1200px]:w-10 min-[1200px]:rounded-[15px]"
+                    >
+                      <img
+                        src="./assets/image/icon/shopping-cart.png"
+                        alt=""
+                        class="h-4.5 w-4.5 select-none group-hover/cart:animate-[cart-shake_0.4s_ease-in-out] min-[550px]:h-5 min-[550px]:w-5 min-[900px]:h-6 min-[900px]:w-6 min-[1200px]:h-7 min-[1200px]:w-7"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Final Price -->
+                  <div>
+                    <p
+                      class="text-base font-medium min-[330px]:text-lg min-[376px]:text-xl min-[700px]:text-2xl"
+                    >
+                      ۱۶۱,۵۰۰
+                      <span
+                        class="text-[9px] min-[350px]:text-[12px] min-[900px]:text-[10px] min-[1200px]:text-[12px]"
+                      >
+                        تومان
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 10 -->
+              <div
+                class="deal-card group flex w-[calc((100%-8px)/2)] shrink-0 flex-col min-[550px]:w-[calc((100%-24px)/3)] min-[900px]:w-[calc((100%-48px)/4)] min-[1100px]:w-[calc((100%-64px)/5)] min-[1200px]:w-[calc((100%-80px)/5)] min-[1300px]:w-[calc((100%-100px)/6)]"
+                dir="rtl"
+              >
+                <!-- Product Image -->
+                <div
+                  class="relative flex h-28 w-full items-end justify-center overflow-hidden rounded-t-[14px] bg-[#F0E9E1] p-3 pb-1 transition-colors duration-300 select-none group-hover:bg-[#E3EDD9] min-[550px]:h-36 min-[900px]:h-42 min-[1100px]:h-46 min-[1300px]:h-50"
+                >
+                  <!-- Hanging Discount Tag -->
+                  <div
+                    class="absolute top-0 left-2 z-10 origin-top animate-[discount-swing_3s_linear_infinite] min-[550px]:left-2.5 min-[900px]:left-3"
+                  >
+                    <div
+                      class="mx-auto h-2.5 w-px bg-[#2F4F3E]/40 min-[450px]:h-4 min-[900px]:h-4.5"
+                    ></div>
+
+                    <div
+                      class="relative flex flex-col items-center justify-center rounded-t-sm rounded-b-lg bg-[#e30613] p-1 text-white shadow-[2px_4px_8px_rgba(0,0,0,0.2)] min-[350px]:p-1.5 min-[550px]:rounded-b-xl min-[900px]:px-3"
+                    >
+                      <span
+                        class="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-[#e30613] bg-[#F0E9E1] min-[550px]:h-3 min-[550px]:w-3"
+                      ></span>
+
+                      <span
+                        class="text-[7px] font-medium min-[350px]:text-[8px] min-[900px]:text-[9px]"
+                      >
+                        تخفیف
+                      </span>
+
+                      <span
+                        class="text-[11px] leading-none font-black min-[550px]:text-[14px] min-[900px]:text-[16px] min-[1200px]:text-[19px]"
+                      >
+                        ۱۰٪
+                      </span>
+                    </div>
+                  </div>
+
+                  <img
+                    src="assets/image/Amazing-Deals/English-lvy.webp"
+                    alt="عشقه انگلیسی"
+                    class="h-full w-full object-contain drop-shadow-[3px_2px_3px_rgba(0,0,0,0.25)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <!-- Product Info -->
+                <div
+                  class="flex w-full flex-col rounded-b-[14px] bg-[#2F4F3E] px-2 py-2 text-[#F0E9E1] shadow-[0_-4px_7px_rgba(0,0,0,0.25)] min-[550px]:px-2.5 min-[900px]:px-3 min-[1200px]:px-3.5"
+                >
+                  <div
+                    class="flex w-full flex-row items-center justify-between gap-1.5"
+                  >
+                    <div>
+                      <!-- Product Name & Original Price -->
+                      <h3
+                        class="mb-1 truncate text-[11px] font-medium min-[376px]:text-[13px] min-[550px]:text-[15px] min-[900px]:text-[17px] min-[1200px]:text-[19px]"
+                      >
+                        عشقه انگلیسی
+                      </h3>
+
+                      <p
+                        class="mb-1 text-[8px] text-white/70 line-through min-[320px]:text-[10px] min-[376px]:text-[12px]"
+                      >
+                        ۱,۰۵۰,۰۰۰
+                        <span>تومان</span>
+                      </p>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <a
+                      href="#"
+                      aria-label="افزودن به سبد خرید"
+                      class="group/cart flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-transparent bg-[#F0E9E1] transition-all duration-300 hover:border-[#AADFB8] hover:shadow-[0_0_6px_rgba(138,255,168,0.4)] min-[550px]:h-8 min-[550px]:w-8 min-[900px]:h-9 min-[900px]:w-9 min-[1200px]:h-10 min-[1200px]:w-10 min-[1200px]:rounded-[15px]"
+                    >
+                      <img
+                        src="./assets/image/icon/shopping-cart.png"
+                        alt=""
+                        class="h-4.5 w-4.5 select-none group-hover/cart:animate-[cart-shake_0.4s_ease-in-out] min-[550px]:h-5 min-[550px]:w-5 min-[900px]:h-6 min-[900px]:w-6 min-[1200px]:h-7 min-[1200px]:w-7"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Final Price -->
+                  <div>
+                    <p
+                      class="text-base font-medium min-[330px]:text-lg min-[376px]:text-xl min-[700px]:text-2xl"
+                    >
+                      ۹۰۰,۰۰۰
+                      <span
+                        class="text-[9px] min-[350px]:text-[12px] min-[900px]:text-[10px] min-[1200px]:text-[12px]"
+                      >
+                        تومان
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- ==================== Popular Products Section ==================== -->
         <section></section>
