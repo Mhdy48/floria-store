@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../src/output.css" />
   </head>
   
-  <body class="min-h-screen w-full overflow-x-hidden bg-[url('../assets/image/login-page/bg-login-page.webp')] bg-cover bg-center bg-no-repeat px-4 py-6 font-vazir sm:px-6 lg:px-8 xl:px-8 2xl:px-10">
+  <body class="min-h-screen w-full overflow-x-hidden bg-[url('../assets/image/bg-login/bg-login-page.webp')] bg-cover bg-center bg-no-repeat px-4 py-6 font-vazir sm:px-6 lg:px-8 xl:px-8 2xl:px-10">
 
     <main class="mx-auto flex min-h-[calc(100vh-3rem)] w-full max-w-[106.25rem] items-center justify-evenly gap-8 sm:flex-row sm:gap-5 md:gap-7 lg:gap-9 xl:gap-12">
 
@@ -93,7 +93,125 @@
 
         </div>
       </section>
+
+      <!-- Login Form -->
+      <form class="group/form flex w-full max-w-120 shrink-0 flex-col items-center gap-y-5 rounded-3xl bg-[#F0E9E1] px-5 py-8 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)] transition-[transform,box-shadow] duration-300 hover:shadow-[0_24px_70px_-20px_rgba(0,0,0,0.42)] sm:w-90 sm:px-6 md:w-100 lg:w-107.5 lg:px-8 xl:w-115 xl:px-9 2xl:w-120 2xl:px-10">
+
+        <!-- Form Header -->
+        <div class="w-full text-center">
+          <h1 class="text-xl font-bold text-[#24251f] sm:text-2xl">
+            به فلوریا خوش آمدید
+          </h1>
+
+          <p class="pt-3 text-sm leading-relaxed text-[#24251f]/80">
+            لطفا برای ادامه، وارد حساب کاربری خود شوید
+          </p>
+        </div>
+
+
+        <!-- Username -->
+        <div class="group/input relative w-full">
+          <label for="username" class="sr-only">
+            ایمیل یا شماره موبایل
+          </label>
+
+          <input id="username" name="username" type="text" autocomplete="username" placeholder="ایمیل یا شماره موبایل" class="peer w-full rounded-full border-[1.5px] border-[#AAA79F] bg-transparent py-4 pl-4.5 pr-12.5 text-[0.95rem] text-[#24251f] outline-none transition-[border-color,box-shadow,background-color] duration-200 placeholder:font-medium placeholder:text-[#77746d] hover:border-[#7f7c73] hover:bg-white focus:border-[#2F4F3E] focus:bg-white focus:ring-4 focus:ring-[#2F4F3E]/10 focus:shadow-[0_0_0_1px_rgba(47,79,62,0.08)]">
+
+          <span aria-hidden="true" class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#555] transition-colors duration-200 peer-focus:text-[#2F4F3E]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5"><path d="M0 0h24v24H0z" fill="none"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></g></svg>
+          </span>
+        </div>
+
+
+        <!-- Password -->
+        <div class="relative w-full">
+          <label for="passwordInput" class="sr-only">
+            رمز عبور
+          </label>
+
+          <input id="passwordInput" name="password" type="password" autocomplete="current-password" placeholder="رمز عبور" class="peer w-full rounded-full border-[1.5px] border-[#AAA79F] bg-transparent py-4 pl-12 pr-12.5 text-[0.95rem] text-[#24251f] outline-none transition-[border-color,box-shadow,background-color] duration-200 placeholder:font-medium placeholder:text-[#77746d] hover:border-[#7f7c73] hover:bg-white focus:border-[#2F4F3E] focus:bg-white focus:ring-4 focus:ring-[#2F4F3E]/10 focus:shadow-[0_0_0_1px_rgba(47,79,62,0.08)]">
+
+          <span aria-hidden="true" class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#555] transition-colors duration-200 peer-focus:text-[#2F4F3E]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5"><path d="M0 0h24v24H0z" fill="none" /><path fill="currentColor" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2M9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9zm9 14H6V10h12zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2" /></svg>
+          </span>
+
+          <button id="toggleEye" type="button" aria-label="نمایش رمز عبور" class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full p-2 text-[#555] transition-[color,background-color,transform] duration-200 hover:bg-[#2F4F3E]/8 hover:text-[#2F4F3E] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30">
+            <svg id="eyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/><line id="eyeSlash" x1="3" y1="21" x2="21" y2="3"/></svg>
+          </button>
+        </div>
+
+
+        <!-- Remember / Forgot Password -->
+        <div class="flex w-full items-center justify-between gap-2 py-2 text-[0.72rem] sm:text-[0.85rem]">
+          <label class="group/remember flex shrink-0 cursor-pointer select-none items-center gap-2">
+            <input id="rememberMe" type="checkbox" class="peer sr-only">
+
+            <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-md border-[1.5px] border-[#AAA79F] bg-transparent transition-[border-color,background-color,box-shadow] duration-200 hover:border-[#7f7c73] peer-focus-visible:ring-2 peer-focus-visible:ring-[#2F4F3E]/20 peer-checked:border-[#2F4F3E] peer-checked:bg-[#2F4F3E]">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 scale-0 transition-transform duration-200 peer-checked:scale-100"><path d="m5 12 4 4L19 6"/></svg>
+            </span>
+
+            <span class="whitespace-nowrap transition-colors duration-200 group-hover/remember:text-[#2F4F3E]">
+              مرا به خاطر بسپار
+            </span>
+          </label>
+
+          <a href="#" class="shrink-0 whitespace-nowrap font-bold text-[#2F4F3E] underline-offset-4 transition-[color,text-decoration-color] duration-200 hover:text-[#1f3c2d] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/25 focus-visible:ring-offset-2">
+            رمز عبور را فراموش کرده‌اید؟
+          </a>
+        </div>
+
+
+        <!-- Login Button -->
+        <button type="submit" class="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-full bg-[#121F1A] py-4 font-bold text-[#f4f1e8] shadow-[0_10px_20px_-8px_rgba(22,61,36,0.55)] transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_25px_-8px_rgba(22,61,36,0.65)] active:translate-y-0 active:scale-[0.99] active:shadow-[0_8px_15px_-8px_rgba(22,61,36,0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/40 focus-visible:ring-offset-2">
+          <!-- Hover Effect -->
+          <span class="absolute left-1/2 top-1/2 z-0 h-56 w-80 -translate-x-1/2 -translate-y-1/2 scale-0 rounded-full bg-[#2F4F3E] transition-transform duration-500 ease-out group-hover:scale-150"></span>
+
+          <!-- Button Text -->
+          <span class="relative z-10">
+            ورود
+          </span>
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="relative z-10 h-5 w-5 transition-transform duration-300 group-hover/form:scale-105" fill="none"><g fill="#fff"><path d="M59.2 102.8C42.2 99.8 25.5 91.7 18.2 76.1C12.4 63.7 11.7 48.1 12.7 34.3C27.4 35.1 43.1 37.2 53.4 45.1C65.6 54.5 67.2 68.8 65.7 82.4C64.6 92.3 61.7 98.9 59.2 102.8Z"/><path d="M64.1 66.1C62.1 49.3 66.1 31.5 77.1 18.9C86.1 8.7 99.8 3.1 115.7 2.3C115.3 17.6 112.2 32.9 105.1 44.5C97.3 57.3 84.5 64.5 69.6 69.2C67.5 69.9 65.6 68.3 64.1 66.1Z"/><path d="M65.2 103.7C73.4 89.1 84.1 75.7 98.2 69.5C106.5 65.9 115.1 65.1 123.1 66.1C121.3 80.7 116.3 91.9 108.1 99.4C98.2 108.5 84.7 111.7 68.5 108.4C66.1 107.9 64.2 105.9 65.2 103.7Z"/><path d="M48.1 112.1C58.5 99.5 63.2 87.8 66.7 72.8C68.1 66.9 70.2 59.9 73.9 52.2C75.1 49.7 77.8 48.7 79.6 50.1C81.5 51.5 81.2 54.2 80.1 56.6C75.6 66.2 73.4 74.1 71.7 81.8C68.5 96.1 62.2 108.1 51.9 119.1C49.5 121.6 46.4 121.1 45.5 118.8C44.8 116.9 46.2 114.4 48.1 112.1Z"/></g></svg>
+
+        </button>
+
+
+        <!-- Divider -->
+        <div class="flex w-full items-center gap-3.5 text-[0.85rem] text-[#555]">
+          <span aria-hidden="true" class="h-px flex-1 bg-[#b3b3b3]"></span>
+          <span>یا</span>
+          <span aria-hidden="true" class="h-px flex-1 bg-[#b3b3b3]"></span>
+        </div>
+
+
+        <!-- Signup Button -->
+        <button type="button" class="flex w-full items-center justify-center gap-2.5 rounded-full border-[1.5px] border-[#2F4F3E] bg-transparent py-4 text-[0.95rem] font-bold text-[#2F4F3E] shadow-[0_8px_18px_-10px_rgba(22,61,36,0.5)] transition-[transform,box-shadow,background-color,color] duration-200 hover:-translate-y-0.5 hover:bg-[#121F1A] hover:text-white hover:shadow-[0_12px_22px_-10px_rgba(22,61,36,0.6)] active:translate-y-0 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:ring-offset-2">
+          ثبت نام در فلوریا
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 transition-transform duration-200"><path d="M0 0h24v24H0z" fill="none"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="M19 16v6m3-3h-6"/></g></svg>
+        </button>
+
+      </form>
     </main>
+
+
+    <script>
+      const toggleEye = document.getElementById('toggleEye');
+      const passwordInput = document.getElementById('passwordInput');
+      const eyeSlash = document.getElementById('eyeSlash');
+
+      toggleEye.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+
+        passwordInput.type = isPassword ? 'text' : 'password';
+        eyeSlash.style.display = isPassword ? 'none' : 'block';
+
+        toggleEye.setAttribute(
+          'aria-label',
+          isPassword ? 'مخفی کردن رمز عبور' : 'نمایش رمز عبور'
+        );
+      });
+    </script>
   </body>
 
 </html>
