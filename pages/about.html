@@ -21,16 +21,14 @@
     <!-- ==================== Main Content ==================== -->
     <main>
       <!-- ==================== Hero Section ==================== -->
-      <section></section>
-      <!-- ==================== about us Section ==================== -->
       <section dir="rtl" class="flex min-h-120 w-full items-center justify-center px-4 py-6 sm:px-6 md:px-8 lg:h-120 lg:min-h-0 lg:py-8 selection:bg-[#2F4F3E] selection:text-[#FFF5E6]">
-        <div class="grid w-full max-w-300 grid-cols-1 items-center gap-7 sm:gap-8 lg:grid-cols-[1fr_1.2fr_1fr] lg:gap-6 xl:gap-8">
+        <div class="relative grid w-full max-w-300 grid-cols-1 items-center gap-7 sm:gap-8 md:grid-cols-2 md:gap-0 md:before:absolute md:before:left-1/2 md:before:top-1/2 md:before:h-56 md:before:w-px md:before:-translate-x-1/2 md:before:-translate-y-1/2 md:before:bg-[#D9E2D5] lg:grid-cols-[1fr_1.2fr_1fr] lg:gap-6 lg:before:hidden xl:gap-8">
 
           <!-- About Us -->
-          <article class="order-1 flex flex-col items-center text-center lg:order-3 text-[#121F1A]">
-            <h2 class="mb-2 text-lg font-medium sm:text-xl">ما کی هستیم؟</h2>
+          <article class="order-1 flex flex-col items-center text-center md:order-2 md:-translate-x-6 lg:order-3 lg:translate-x-0">
+            <h2 class="mb-2 text-lg font-medium text-[#151515] sm:text-xl">ما کی هستیم؟</h2>
             <div class="mb-3 h-0.5 w-10 rounded-full bg-[#70A47B] sm:mb-4 sm:w-12"></div>
-            <p class="max-w-77.5 text-sm leading-7 sm:text-[14px] sm:leading-7">
+            <p class="max-w-77.5 text-right text-sm leading-7 text-[#222222] sm:text-[14px] sm:leading-7">
               ما لیمو از علاقه‌مندان به گیاهان هستیم که باور داریم هر گیاه
               می‌تواند حال و هوای زندگی را بهتر کند. به همین دلیل تلاش
               می‌کنیم بهترین گیاهان و لوازم نگهداری را همراه با آموزش‌های
@@ -39,49 +37,49 @@
           </article>
 
           <!-- Plant Image -->
-          <article class="order-2 flex items-center justify-center lg:order-2">
+          <article class="order-2 hidden items-center justify-center lg:order-2 lg:flex select-none">
             <div class="group flex h-80 w-60 items-center justify-center overflow-hidden rounded-3xl bg-[#F0E9E1] shadow-[0_6px_20px_rgba(0,0,0,0.08)] transition-[transform,box-shadow] duration-700 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(49,95,59,0.16)] sm:h-88 sm:w-68 md:h-92 md:w-[18rem] lg:h-96 lg:w-[18rem] xl:h-100 xl:w-76">
               <img src="../assets/image/about-us/about-us-section.webp" alt="گیاه" class="h-full w-full object-contain transition-transform duration-700 ease-in-out group-hover:scale-105" />
             </div>
           </article>
 
           <!-- Services -->
-          <article class="order-3 flex flex-col items-center lg:order-1 text-[#121F1A]">
-            <h2 class="mb-2 text-lg font-medium sm:text-xl">ما چه ارائه می‌دهیم؟</h2>
+          <article class="order-3 flex flex-col items-center pt-7 md:order-1 md:translate-x-6 md:pt-0 lg:order-1 lg:translate-x-0 lg:pt-0">
+            <h2 class="mb-2 text-lg font-medium text-[#151515] sm:text-xl">ما چه ارائه می‌دهیم؟</h2>
             <div class="mb-3 h-0.5 w-10 rounded-full bg-[#70A47B] sm:mb-4 sm:w-12"></div>
 
             <div class="flex w-full max-w-75 flex-col gap-2.5 sm:max-w-[320px] sm:gap-3">
 
               <!-- Free Consultation -->
-              <div class="group flex h-14 w-full items-center justify-between rounded-full bg-white px-2 shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-[transform,box-shadow,background-color] duration-500 ease-in-out hover:-translate-y-0.5 hover:bg-[#FAFCF8] hover:shadow-[0_8px_20px_rgba(49,95,59,0.14)] sm:h-16 sm:px-2.5">
+              <div class="group flex h-14 w-full items-center justify-between gap-3 rounded-full bg-white px-2 shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-[transform,box-shadow,background-color] duration-500 ease-in-out hover:-translate-y-0.5 hover:bg-[#FAFCF8] hover:shadow-[0_8px_20px_rgba(49,95,59,0.14)] sm:h-16 sm:px-2.5">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E3EDD9] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-12 sm:w-12">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-[#2F4F3E] stroke-[1.5] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-6 sm:w-6"><path d="M12 21V10"/><path d="M12 13C7 13 4 10 4 5c5 0 8 3 8 8Z"/><path d="M12 11c0-5 3-8 8-8 0 5-3 8-8 8Z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-[#315f3b] stroke-[1.5] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-6 sm:w-6"><path d="M12 21V10"/><path d="M12 13C7 13 4 10 4 5c5 0 8 3 8 8Z"/><path d="M12 11c0-5 3-8 8-8 0 5-3 8-8 8Z"/></svg>
                 </div>
-                <span class="flex-1 px-5 text-center text-sm transition-colors duration-500 ease-in-out group-hover:text-[#315f3b] sm:px-6 sm:text-[15px]">مشاوره رایگان</span>
+                <span class="flex-1 px-2 text-right text-sm text-[#151515] transition-colors duration-500 ease-in-out group-hover:text-[#315f3b] sm:text-[15px]">مشاوره رایگان</span>
               </div>
 
               <!-- Quality Products -->
-              <div class="group flex h-14 w-full items-center justify-between rounded-full bg-white px-2 shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-[transform,box-shadow,background-color] duration-500 ease-in-out hover:-translate-y-0.5 hover:bg-[#FAFCF8] hover:shadow-[0_8px_20px_rgba(49,95,59,0.14)] sm:h-16 sm:px-2.5">
+              <div class="group flex h-14 w-full items-center justify-between gap-3 rounded-full bg-white px-2 shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-[transform,box-shadow,background-color] duration-500 ease-in-out hover:-translate-y-0.5 hover:bg-[#FAFCF8] hover:shadow-[0_8px_20px_rgba(49,95,59,0.14)] sm:h-16 sm:px-2.5">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E3EDD9] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-12 sm:w-12">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-[#2F4F3E] stroke-[1.5] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-6 sm:w-6"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 8v12"/><path d="M3 12h18"/><path d="M12 8c-2.5 0-5-1.2-5-3a2 2 0 0 1 2-2c2 0 3 2.5 3 5Z"/><path d="M12 8c2.5 0 5-1.2 5-3a2 2 0 0 0-2-2c-2 0-3 2.5-3 5Z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-[#315f3b] stroke-[1.5] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-6 sm:w-6"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 8v12"/><path d="M3 12h18"/><path d="M12 8c-2.5 0-5-1.2-5-3a2 2 0 0 1 2-2c2 0 3 2.5 3 5Z"/><path d="M12 8c2.5 0 5-1.2 5-3a2 2 0 0 0-2-2c-2 0-3 2.5-3 5Z"/></svg>
                 </div>
-                <span class="flex-1 px-5 text-center text-sm transition-colors duration-500 ease-in-out group-hover:text-[#315f3b] sm:px-6 sm:text-[15px]">محصولات با کیفیت</span>
+                <span class="flex-1 px-2 text-right text-sm text-[#151515] transition-colors duration-500 ease-in-out group-hover:text-[#315f3b] sm:text-[15px]">محصولات با کیفیت</span>
               </div>
 
               <!-- Fast Delivery -->
-              <div class="group flex h-14 w-full items-center justify-between rounded-full bg-white px-2 shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-[transform,box-shadow,background-color] duration-500 ease-in-out hover:-translate-y-0.5 hover:bg-[#FAFCF8] hover:shadow-[0_8px_20px_rgba(49,95,59,0.14)] sm:h-16 sm:px-2.5">
+              <div class="group flex h-14 w-full items-center justify-between gap-3 rounded-full bg-white px-2 shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-[transform,box-shadow,background-color] duration-500 ease-in-out hover:-translate-y-0.5 hover:bg-[#FAFCF8] hover:shadow-[0_8px_20px_rgba(49,95,59,0.14)] sm:h-16 sm:px-2.5">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E3EDD9] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-12 sm:w-12">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-[#2F4F3E] stroke-[1.5] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-6 sm:w-6"><path d="M5 19h14"/><path d="M7 19V9h10v10"/><path d="M9 9c0-3 2-5 3-6 1 1 3 3 3 6"/><path d="M12 13c-2 0-4-1-4-3 2 0 4 1 4 3Z"/><path d="M12 16c2 0 4-1 4-3-2 0-4-1-4 3Z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-[#315f3b] stroke-[1.5] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-6 sm:w-6"><path d="M5 19h14"/><path d="M7 19V9h10v10"/><path d="M9 9c0-3 2-5 3-6 1 1 3 3 3 6"/><path d="M12 13c-2 0-4-1-4-3 2 0 4 1 4 3Z"/><path d="M12 16c2 0 4-1 4-3-2 0 4 1 4 3Z"/></svg>
                 </div>
-                <span class="flex-1 px-5 text-center text-sm transition-colors duration-500 ease-in-out group-hover:text-[#315f3b] sm:px-6 sm:text-[15px]">ارسال سریع</span>
+                <span class="flex-1 px-2 text-right text-sm text-[#151515] transition-colors duration-500 ease-in-out group-hover:text-[#315f3b] sm:text-[15px]">ارسال سریع</span>
               </div>
 
               <!-- Customer Satisfaction -->
-              <div class="group flex h-14 w-full items-center justify-between rounded-full bg-white px-2 shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-[transform,box-shadow,background-color] duration-500 ease-in-out hover:-translate-y-0.5 hover:bg-[#FAFCF8] hover:shadow-[0_8px_20px_rgba(49,95,59,0.14)] sm:h-16 sm:px-2.5">
+              <div class="group flex h-14 w-full items-center justify-between gap-3 rounded-full bg-white px-2 shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-[transform,box-shadow,background-color] duration-500 ease-in-out hover:-translate-y-0.5 hover:bg-[#FAFCF8] hover:shadow-[0_8px_20px_rgba(49,95,59,0.14)] sm:h-16 sm:px-2.5">
                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E3EDD9] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-12 sm:w-12">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-[#2F4F3E] stroke-[1.5] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-6 sm:w-6"><path d="M20.8 8.8c0 5.5-8.8 11.2-8.8 11.2S3.2 14.3 3.2 8.8A4.8 4.8 0 0 1 12 6.1a4.8 4.8 0 0 1 8.8 2.7Z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-[#315f3b] stroke-[1.5] transition-transform duration-500 ease-in-out group-hover:scale-105 sm:h-6 sm:w-6"><path d="M20.8 8.8c0 5.5-8.8 11.2-8.8 11.2S3.2 14.3 3.2 8.8A4.8 4.8 0 0 1 12 6.1a4.8 4.8 0 0 1 8.8 2.7Z"/></svg>
                 </div>
-                <span class="flex-1 px-5 text-center text-sm transition-colors duration-500 ease-in-out group-hover:text-[#315f3b] sm:px-6 sm:text-[15px]">رضایت مشتری</span>
+                <span class="flex-1 px-2 text-right text-sm text-[#151515] transition-colors duration-500 ease-in-out group-hover:text-[#315f3b] sm:text-[15px]">رضایت مشتری</span>
               </div>
 
             </div>
