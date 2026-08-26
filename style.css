@@ -1,3 +1,16 @@
+@keyframes discount-swing {
+  0% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(4deg);
+  }
+
+  100% {
+    transform: rotate(-4deg);
+  }
+}
   @keyframes cart-shake {
     0%,
     100% {
