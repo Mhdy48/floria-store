@@ -34,6 +34,7 @@ jobs:
         run: |
           mkdir deploy
           cp index.html deploy/
+          cp index.js deploy/
           cp style.css deploy/
           cp -r assets deploy/
           cp -r src deploy/
