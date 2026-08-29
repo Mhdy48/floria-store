@@ -38,6 +38,7 @@ jobs:
           cp style.css deploy/
           cp -r assets deploy/
           cp -r src deploy/
+          cp -r pages deploy/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
