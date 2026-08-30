@@ -16,76 +16,114 @@
     <link rel="stylesheet" href="../src/output.css" />
   </head>
   <body class="font-vazir">
+    <!-- ==================== Top Bar ==================== -->
+    <div class="flex w-full justify-between bg-[#121F1A] px-3 pt-1 pb-4">
+      <div class="text-[.5rem] text-[#F0E9E1] sm:text-[.8rem]">
+        <p class="selection:bg-[#F0E9E1] selection:text-[#121F1A]">
+          پشتیبانی 24 ساعته
+        </p>
+      </div>
+      <div class="text-[.5rem] text-[#F0E9E1] sm:text-[.8rem]">
+        <p class="selection:bg-[#F0E9E1] selection:text-[#121F1A]">
+          ارسال رایگان برای خرید های بالای 500هزار تومان
+        </p>
+      </div>
+    </div>
+
     <!-- ==================== Header ==================== -->
     <header
-        class=" flex h-14 w-full items-center justify-between bg-[#2F4F3E] px-[0.7rem] md:px-8">
-        <button
-          class="flex h-[1.8rem] w-[1.8rem] items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:hidden">
+      class="-mt-3.5 flex h-14 w-full items-center justify-between rounded-tl-[0.9375rem] rounded-tr-[0.9375rem] bg-[#2F4F3E] px-[0.7rem] md:px-8"
+    >
+      <button
+        class="flex h-[1.8rem] w-[1.8rem] items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:hidden"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 21 21"
+          class="h-[1.9rem] w-[1.7rem]"
+        >
+          <!-- Icon from System UIcons by Corey Ginnivan - https://github.com/CoreyGinnivan/system-uicons/blob/master/LICENSE -->
+          <path
+            fill="none"
+            stroke="#000000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 6.5h12m-12.002 4h11.997M4.5 14.5h11.995"
+          />
+        </svg>
+      </button>
+
+      <h1
+        class="text-[1.8rem] text-[#F0E9E1] selection:bg-[#F0E9E1] selection:text-[#2F4F3E] md:text-[1.1rem] lg:text-[1.2rem] xl:text-[1.4rem] 2xl:text-[1.7rem]"
+      >
+        فلوریا
+      </h1>
+
+      <nav
+        class="hidden h-11.25 items-center justify-between text-[#F0E9E1] selection:bg-[#F0E9E1] selection:text-[#2F4F3E] md:flex md:w-104 md:text-[0.85rem] lg:w-124 lg:text-[0.9rem] xl:w-xl xl:text-[1rem] 2xl:w-164 2xl:text-[1.1rem]"
+      >
+        <a href="">خانه</a>
+        <a href="">گیاهان</a>
+        <a href="">مراقبت</a>
+        <a href="">درباره ما</a>
+        <a href="">تماس با ما</a>
+      </nav>
+
+      <div
+        class="flex items-center justify-center gap-2 md:gap-[0.4rem] lg:gap-[0.6rem] xl:gap-[0.8rem] 2xl:gap-4"
+      >
+        <a
+          href="/"
+          class="hidden h-[1.8rem] w-[1.8rem] cursor-pointer items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:flex md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem]"
+        >
           <svg
+            class="h-4.5 w-4.5 text-[#121f1a] md:h-4.5 md:w-4.5 lg:h-5.5 lg:w-5.5"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 21 21"
-            class="h-[1.9rem] w-[1.7rem]">
-            <!-- Icon from System UIcons by Corey Ginnivan - https://github.com/CoreyGinnivan/system-uicons/blob/master/LICENSE -->
+            viewBox="0 0 576 576"
+          >
+            <!-- Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. -->
             <path
-              fill="none"
-              stroke="#000000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4.5 6.5h12m-12.002 4h11.997M4.5 14.5h11.995" />
+              fill="currentColor"
+              d="M36 252C36 132.7 132.7 36 252 36C371.3 36 468 132.7 468 252C468 287.1 459.6 320.2 444.8 349.5C441.1 356.8 442.2 365.8 448 371.6L524.2 447.8C545.3 468.9 545.3 503.1 524.2 524.2C503.1 545.3 468.9 545.3 447.8 524.2L371.6 448C365.8 442.2 356.8 441.1 349.5 444.8C320.2 459.6 287.1 468 252 468C132.7 468 36 371.3 36 252zM252 144C192.4 144 144 192.4 144 252C144 311.6 192.4 360 252 360C311.6 360 360 311.6 360 252C360 192.4 311.6 144 252 144zM90 252C90 162.5 162.5 90 252 90C259.5 90 265.5 84 265.5 76.5C265.5 69 259.5 63 252 63C147.6 63 63 147.6 63 252C63 259.5 69 265.5 76.5 265.5C84 265.5 90 259.5 90 252zM414 252C414 244.5 408 238.5 400.5 238.5C393 238.5 387 244.5 387 252C387 326.6 326.6 387 252 387C244.5 387 238.5 393 238.5 400.5C238.5 408 244.5 414 252 414C341.5 414 414 341.5 414 252z"
+            />
           </svg>
-        </button>
-        <h1
-          class="text-[1.8rem] text-[#F0E9E1] selection:bg-[#F0E9E1] selection:text-[#2F4F3E] md:text-[1.1rem] lg:text-[1.2rem] xl:text-[1.4rem] 2xl:text-[1.7rem]">
-          فلوریا
-        </h1>
-        <nav
-          class="hidden h-11.25 items-center justify-between text-[#F0E9E1] selection:bg-[#F0E9E1] selection:text-[#2F4F3E] md:flex md:w-104 md:text-[0.85rem] lg:w-124 lg:text-[0.9rem] xl:w-xl xl:text-[1rem] 2xl:w-164 2xl:text-[1.1rem]">
-          <a href="">خانه</a>
-          <a href="">گیاهان</a>
-          <a href="">مراقبت</a>
-          <a href="">درباره ما</a>
-          <a href="">تماس با ما</a>
-        </nav>
-        <div
-          class="flex items-center justify-center gap-[0.2rem] md:gap-[0.4rem] lg:gap-[0.6rem] xl:gap-[0.8rem] 2xl:gap-4">
-          <button
-            class="hidden h-[1.8rem] w-[1.8rem] cursor-pointer items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:flex md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem]">
-            <svg
-              class="h-4.5 w-4.5 text-[#121f1a] md:h-4.5 md:w-4.5 lg:h-5.5 lg:w-5.5"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 576 576" >
-              <!-- Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. -->
-              <path
-                fill="currentColor"
-                d="M36 252C36 132.7 132.7 36 252 36C371.3 36 468 132.7 468 252C468 287.1 459.6 320.2 444.8 349.5C441.1 356.8 442.2 365.8 448 371.6L524.2 447.8C545.3 468.9 545.3 503.1 524.2 524.2C503.1 545.3 468.9 545.3 447.8 524.2L371.6 448C365.8 442.2 356.8 441.1 349.5 444.8C320.2 459.6 287.1 468 252 468C132.7 468 36 371.3 36 252zM252 144C192.4 144 144 192.4 144 252C144 311.6 192.4 360 252 360C311.6 360 360 311.6 360 252C360 192.4 311.6 144 252 144zM90 252C90 162.5 162.5 90 252 90C259.5 90 265.5 84 265.5 76.5C265.5 69 259.5 63 252 63C147.6 63 63 147.6 63 252C63 259.5 69 265.5 76.5 265.5C84 265.5 90 259.5 90 252zM414 252C414 244.5 408 238.5 400.5 238.5C393 238.5 387 244.5 387 252C387 326.6 326.6 387 252 387C244.5 387 238.5 393 238.5 400.5C238.5 408 244.5 414 252 414C341.5 414 414 341.5 414 252z"
-              />
-            </svg>
-          </button>
-          <button
-            class="hidden h-[1.8rem] w-[1.8rem] cursor-pointer items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:flex md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem]">
-            <svg
-              class="h-4.5 w-4.5 text-[#121f1a] md:h-4.5 md:w-4.5 lg:h-5.5 lg:w-5.5"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 672 672" >
-              <!-- Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. -->
-              <path
-                fill="currentColor"
-                d="M336.2 56C295.9 56 260.3 68.9 234.7 94.5C209.1 120.1 196.2 155.7 196.2 196C196.2 236.3 209.1 271.9 234.7 297.5C260.3 323.1 295.9 336 336.2 336C376.5 336 412 323.1 437.7 297.5C463.4 271.9 476.2 236.3 476.2 196C476.2 155.7 463.3 120.1 437.7 94.5C412.1 68.9 376.4 56 336.2 56zM308.2 392C274.7 392 246 393.5 221.9 398C197.7 402.5 176.4 410.2 159.1 423.7C123.3 451.7 114.3 496.8 112.5 551.2C111.6 577.7 130.2 601.5 157.5 605.6C186.7 610 243.6 616 336.2 616C428.8 616 485.7 610 514.9 605.6C542.2 601.5 560.7 577.7 559.9 551.2C558.1 496.8 549.2 451.7 513.3 423.7C496 410.1 474.7 402.4 450.5 398C426.4 393.5 397.7 392 364.2 392L308.2 392z"/>
-            </svg>
-          </button>
-          <button
-            class="flex h-[1.8rem] w-[1.8rem] cursor-pointer items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem]">
-            <svg
-              class="h-4.5 w-4.5 text-[#121f1a] md:h-4.5 md:w-4.5 lg:h-5.5 lg:w-5.5"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 640 640">
-              <!-- Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. -->
-              <path
-                fill="currentColor"
-                d="M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z"/>
-            </svg>
-          </button>
-        </div>
+        </a>
+
+        <a
+          href="pages/login-page.html"
+          target="_blank"
+          class="h-[1.8rem] w-[1.8rem] cursor-pointer flex items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem]"
+        >
+          <svg
+            class="h-4.5 w-4.5 text-[#121f1a] md:h-4.5 md:w-4.5 lg:h-5.5 lg:w-5.5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 672 672"
+          >
+            <!-- Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. -->
+            <path
+              fill="currentColor"
+              d="M336.2 56C295.9 56 260.3 68.9 234.7 94.5C209.1 120.1 196.2 155.7 196.2 196C196.2 236.3 209.1 271.9 234.7 297.5C260.3 323.1 295.9 336 336.2 336C376.5 336 412 323.1 437.7 297.5C463.4 271.9 476.2 236.3 476.2 196C476.2 155.7 463.3 120.1 437.7 94.5C412.1 68.9 376.4 56 336.2 56zM308.2 392C274.7 392 246 393.5 221.9 398C197.7 402.5 176.4 410.2 159.1 423.7C123.3 451.7 114.3 496.8 112.5 551.2C111.6 577.7 130.2 601.5 157.5 605.6C186.7 610 243.6 616 336.2 616C428.8 616 485.7 610 514.9 605.6C542.2 601.5 560.7 577.7 559.9 551.2C558.1 496.8 549.2 451.7 513.3 423.7C496 410.1 474.7 402.4 450.5 398C426.4 393.5 397.7 392 364.2 392L308.2 392z"
+            />
+          </svg>
+        </a>
+
+        <a
+          href="/"
+          class="flex h-[1.8rem] w-[1.8rem] cursor-pointer items-center justify-center rounded-[0.6rem] bg-[#F0E9E1] md:h-[1.6rem] md:w-[1.6rem] md:rounded-[0.6rem] lg:h-[1.8rem] lg:w-[1.8rem] lg:rounded-[0.7rem] xl:h-8 xl:w-8 xl:rounded-[0.7rem] 2xl:h-[2.2rem] 2xl:w-[2.2rem] 2xl:rounded-[0.8rem]"
+        >
+          <svg
+            class="h-4.5 w-4.5 text-[#121f1a] md:h-4.5 md:w-4.5 lg:h-5.5 lg:w-5.5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640"
+          >
+            <!-- Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. -->
+            <path
+              fill="currentColor"
+              d="M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z"
+            />
+          </svg>
+        </a>
+      </div>
     </header>
     <!-- ==================== Main Content ==================== -->
     <main>
@@ -97,7 +135,7 @@
               bg-[#2F4F3E]
               sm:min-h-162.5
               lg:min-h-175
-              2xl:min-h-200">
+              2xl:min-h-200"> 
         <!-- IMAGE -->
         <section
           class="absolute inset-0
@@ -127,7 +165,7 @@
         <section
           class="relative z-10
                 flex w-full max-w-7xl
-                items-center justify-end
+                items-center justify-start
                 px-6 py-24
                 sm:px-10
                 lg:px-16
@@ -452,164 +490,216 @@
         </div>
       </section>
     </main>
+
     <!-- ==================== Footer ==================== -->
-      <footer
-        class="relative -mb-5 w-full rounded-b-[0.9375rem] bg-[#2f4f3e] text-[#f0e9e1] selection:bg-[#f0e9e1] selection:text-[#2f4f3e] sm:p-5">
+    <footer
+      class="relative -mb-5 w-full rounded-b-[0.9375rem] bg-[#2f4f3e] text-[#f0e9e1] selection:bg-[#f0e9e1] selection:text-[#2f4f3e] sm:p-5"
+    >
+      <div
+        class="grid grid-cols-2 gap-y-6 py-6 max-[500px]:grid-cols-1 max-[500px]:gap-y-3 max-[500px]:py-3 sm:grid-cols-2 sm:py-0 lg:grid-cols-4"
+      >
+        <!-- ================= BRAND ================= -->
         <div
-          class="grid grid-cols-2 gap-y-6 py-6 max-[500px]:grid-cols-1 max-[500px]:gap-y-3 max-[500px]:py-3 sm:grid-cols-2 sm:py-0 lg:grid-cols-4" >
-          <!-- ================= BRAND ================= -->
-          <div
-            class="px-6 max-[500px]:mx-6 max-[500px]:border-b max-[500px]:border-[#0c2403] max-[500px]:px-0 max-[500px]:pb-3 max-lg:order-3" >
-            <div class="mb-3 flex items-center">
-              <img
-                src="../assets/image/logo/logo.webp"
-                alt="فلوریا لوگو"
-                class="h-17 w-17 object-contain select-none sm:h-20 sm:w-20" />
-              <h2 class="text-3xl font-bold sm:text-4xl">فلوریا</h2>
-            </div>
-            <p class="mb-4 max-w-xs text-xs leading-8 sm:text-[15px]">
-              زیبایی طبیعت را به خانه شما می‌آوریم.
-              <br />
-              هر گیاه یک زندگی تازه
-            </p>
-            <div class="flex gap-1.5">
-              <a
-                class="group"
-                href="https://github.com/Mhdy48/floria-store"
-                target="_blank">
-                <svg
-                  stroke-linejoin="round"
-                  stroke-linecap="round"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  class="w-6.5 duration-300 hover:scale-125 hover:text-[#9fe2c8]">
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-              <a
-                class="duration-300 hover:scale-125 hover:text-[#9fe2c8]"
-                href=""><i class="fa-brands fa-telegram text-2xl"></i></a>
-                <a
-                class="duration-300 hover:scale-125 hover:text-[#9fe2c8]"
-                href=""><i class="fa-brands fa-instagram text-2xl"></i></a>
-            </div>
+          class="px-6 max-[500px]:mx-6 max-[500px]:border-b max-[500px]:border-[#0c2403] max-[500px]:px-0 max-[500px]:pb-3 max-lg:order-3"
+        >
+          <div class="mb-3 flex items-center">
+            <img
+              src="../assets/image/logo/logo.webp"
+              alt="فلوریا لوگو"
+              class="h-17 w-17 object-contain select-none sm:h-20 sm:w-20"
+            />
+
+            <h2 class="text-3xl font-bold sm:text-4xl">فلوریا</h2>
           </div>
-          <!-- ================= QUICK ACCESS ================= -->
-          <div
-            class="px-6 selection:bg-[#f0e9e1] border-l selection:text-[#2f4f3e] max-[500px]:mx-6 max-[500px]:border-b max-[500px]:border-[#0c2403] max-[500px]:px-0 max-[500px]:pb-3 max-lg:order-1 lg:border-r lg:border-[#0c2403] lg:px-10" >
-            <h3 class="mb-2.5 text-lg font-bold sm:mb-4 sm:text-xl">
-              دسترسی سریع
-            </h3>
-            <ul class="space-y-2.5 text-xs sm:space-y-4 sm:text-sm">
-              <li>
-                <a
-                  href="#"
-                  class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5">
-                  خانه
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5">
-                  گیاهان
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5">
-                  مراقبت
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5" >
-                  درباره
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5">
-                  تماس با ما
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- ================= SERVICES ================= -->
-          <div
-            class="px-6 selection:bg-[#f0e9e1] selection:text-[#2f4f3e] max-[500px]:mx-6 max-[500px]:border-b max-[500px]:border-[#0c2403] max-[500px]:px-0 max-[500px]:pb-3 max-lg:order-2 min-[500px]:border-r min-[500px]:border-[#0c2403] lg:px-10">
-            <h3 class="mb-2.5 text-lg font-bold sm:mb-4 sm:text-xl">
-              خدمات مشتریان
-            </h3>
-            <ul class="space-y-2.5 text-xs sm:space-y-4 sm:text-sm">
-              <li>
-                <a
-                  href="#"
-                  class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5">
-                  پرسش های متداول
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5">
-                  ارسال و تحویل
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5">
-                  بازگشت کالا
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5">
-                  شرایط و قوانین
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5">
-                  حریم خصوصی
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- ================= NEWSLETTER ================= -->
-          <div
-            class="px-6 selection:bg-[#f0e9e1] selection:text-[#2f4f3e] max-[500px]:mx-6 max-[500px]:px-0 max-lg:order-4 min-[500px]:border-r min-[500px]:border-[#0c2403] lg:px-10" >
-            <h3 class="mb-2.5 text-lg font-bold sm:mb-4 sm:text-xl">
-              خبرنامه فلوریا
-            </h3>
-            <p class="mb-4 max-w-xs text-xs leading-7 sm:mb-7 sm:text-sm">
-              برای دریافت تخفیف ها و نکات مراقبتی عضو خبرنامه ما شوید.
-            </p>
-            <form
-              class="flex h-8 w-full max-w-xs overflow-hidden rounded-xl border border-transparent bg-[#F5EEE5] transition-all duration-500 focus-within:border-[#AADFB8] focus-within:shadow-[0_0_12px_rgba(170,223,184,0.35)] sm:h-10">
-              <button
-                type="submit"
-                aria-label="عضویت در خبرنامه"
-                class="text-md m-0 flex w-11 shrink-0 items-center justify-center bg-[#426b58] pt-0.5 text-white">
-                ➜
-              </button>
-              <input
-                type="email"
-                placeholder="ایمیل شما..."
-                class="min-w-0 flex-1 bg-transparent px-4 text-right text-sm text-[#101714] outline-none placeholder:text-[#8B8B83]"/>
-            </form>
+
+          <p class="mb-4 max-w-xs text-xs leading-8 sm:text-[15px]">
+            زیبایی طبیعت را به خانه شما می‌آوریم.
+            <br />
+            هر گیاه یک زندگی تازه
+          </p>
+          <div class="flex gap-1.5">
+            <a
+              class="group"
+              href="https://github.com/Mhdy48/floria-store"
+              target="_blank"
+            >
+              <svg
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="w-6.5 duration-300 hover:scale-125 hover:text-[#9fe2c8]"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="duration-300 hover:scale-125 hover:text-[#9fe2c8]"
+              href=""
+              ><i class="fa-brands fa-telegram text-2xl"></i
+            ></a>
+            <a
+              class="duration-300 hover:scale-125 hover:text-[#9fe2c8]"
+              href=""
+              ><i class="fa-brands fa-instagram text-2xl"></i
+            ></a>
           </div>
         </div>
-      </footer>
+
+        <!-- ================= QUICK ACCESS ================= -->
+        <div
+          class="px-6 selection:bg-[#f0e9e1] selection:text-[#2f4f3e] max-[500px]:mx-6 max-[500px]:border-b max-[500px]:border-[#0c2403] max-[500px]:px-0 max-[500px]:pb-3 max-lg:order-1 lg:border-r lg:border-[#0c2403] lg:px-10"
+        >
+          <h3 class="mb-2.5 text-lg font-bold sm:mb-4 sm:text-xl">
+            دسترسی سریع
+          </h3>
+
+          <ul class="space-y-2.5 text-xs sm:space-y-4 sm:text-sm">
+            <li>
+              <a
+                href="#"
+                class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5"
+              >
+                خانه
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5"
+              >
+                گیاهان
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5"
+              >
+                مراقبت
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5"
+              >
+                درباره
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5"
+              >
+                تماس با ما
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ================= SERVICES ================= -->
+        <div
+          class="px-6 selection:bg-[#f0e9e1] selection:text-[#2f4f3e] max-[500px]:mx-6 max-[500px]:border-b max-[500px]:border-[#0c2403] max-[500px]:px-0 max-[500px]:pb-3 max-lg:order-2 min-[500px]:border-r min-[500px]:border-[#0c2403] lg:px-10"
+        >
+          <h3 class="mb-2.5 text-lg font-bold sm:mb-4 sm:text-xl">
+            خدمات مشتریان
+          </h3>
+
+          <ul class="space-y-2.5 text-xs sm:space-y-4 sm:text-sm">
+            <li>
+              <a
+                href="#"
+                class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5"
+              >
+                پرسش های متداول
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5"
+              >
+                ارسال و تحویل
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5"
+              >
+                بازگشت کالا
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5"
+              >
+                شرایط و قوانین
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-2.5"
+              >
+                حریم خصوصی
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ================= NEWSLETTER ================= -->
+        <div
+          class="px-6 selection:bg-[#f0e9e1] selection:text-[#2f4f3e] max-[500px]:mx-6 max-[500px]:px-0 max-lg:order-4 min-[500px]:border-r min-[500px]:border-[#0c2403] lg:px-10"
+        >
+          <h3 class="mb-2.5 text-lg font-bold sm:mb-4 sm:text-xl">
+            خبرنامه فلوریا
+          </h3>
+
+          <p class="mb-4 max-w-xs text-xs leading-7 sm:mb-7 sm:text-sm">
+            برای دریافت تخفیف ها و نکات مراقبتی عضو خبرنامه ما شوید.
+          </p>
+
+          <form
+            class="flex h-8 w-full max-w-xs overflow-hidden rounded-xl border border-transparent bg-[#F5EEE5] transition-all duration-500 focus-within:border-[#AADFB8] focus-within:shadow-[0_0_12px_rgba(170,223,184,0.35)] sm:h-10"
+          >
+            <button
+              type="submit"
+              aria-label="عضویت در خبرنامه"
+              class="text-md m-0 flex w-11 shrink-0 items-center justify-center bg-[#426b58] pt-0.5 text-white"
+            >
+              ➜
+            </button>
+            <input
+              type="email"
+              placeholder="ایمیل شما..."
+              class="min-w-0 flex-1 bg-transparent px-4 text-right text-sm text-[#101714] outline-none placeholder:text-[#8B8B83]"
+            />
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!-- ==================== Bottom Bar ==================== -->
+    <div
+      class="w-full bg-[#121F1A] pt-5 text-center text-[10px] text-[#F0E9E1] sm:text-[11.5px]"
+    >
+      <p>تمام حقوق این سایت متعلق به فلوریا است.</p>
+    </div>
+  
     <!-- ==================== JavaScript ==================== -->
     <script src="index.js"></script>
   </body>
