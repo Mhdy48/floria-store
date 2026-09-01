@@ -812,7 +812,80 @@
         </div>
       </section>
     </main>
+    <button
+      id="backToTop"
+      type="button"
+      aria-label="بازگشت به بالای صفحه"
+      class="group invisible fixed right-6 bottom-6 z-50 flex h-11 w-11 translate-y-3 cursor-pointer items-center justify-start overflow-hidden rounded-full bg-[#2F4F3E] px-3 text-[#FFF5E6] opacity-0 shadow-[0_6px_20px_rgba(47,79,62,0.25)] transition-all duration-300 ease-out hover:w-37.5 hover:bg-[#121F1A] hover:shadow-[0_0_10px_rgba(112,164,123,0.8),0_0_20px_rgba(112,164,123,0.4)] active:scale-95 sm:right-8 sm:bottom-8"
+    >
+      <!-- Arrow -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        class="h-5 w-5 shrink-0 transition-transform duration-300 ease-out group-hover:-translate-y-0.5"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+
+      <!-- Text -->
+      <span
+        class="max-w-0 overflow-hidden text-sm font-medium whitespace-nowrap opacity-0 transition-all duration-300 ease-out group-hover:mr-2 group-hover:max-w-27.5 group-hover:opacity-100"
+      >
+        بازگشت به بالا
+      </span>
+    </button>
     <!-- ==================== JavaScript ==================== -->
-    <script src="../index.js"></script>
+    <script>
+      const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+
+  const isAtTop = scrollTop <= 10;
+  const isAtBottom = scrollTop + windowHeight >= documentHeight - 5;
+
+  if (isAtTop || isAtBottom) {
+    backToTop.classList.remove(
+      "opacity-100",
+      "visible",
+      "translate-y-0"
+    );
+
+    backToTop.classList.add(
+      "opacity-0",
+      "invisible",
+      "translate-y-3"
+    );
+  } else {
+    backToTop.classList.remove(
+      "opacity-0",
+      "invisible",
+      "translate-y-3"
+    );
+
+    backToTop.classList.add(
+      "opacity-100",
+      "visible",
+      "translate-y-0"
+    );
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+    </script>
   </body>
 </html>
