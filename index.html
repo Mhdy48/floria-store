@@ -192,7 +192,7 @@
           </div>
         </header>
       </div>
-      
+
       <!-- ==================== Mobile Menu ==================== -->
       <!-- Overlay -->
       <div
@@ -204,7 +204,7 @@
         id="mobileMenu"
         dir="rtl"
         aria-hidden="true"
-        class="fixed top-0 right-0 z-70 h-dvh w-[84%] max-w-92.5 translate-x-full overflow-y-auto bg-[#F0E9E1] shadow-[-20px_0_50px_rgba(18,31,26,0.25)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden"
+        class="fixed top-0 right-0 z-70 h-dvh w-[84%] max-w-92.5 translate-x-full scrollbar-gutter-stable overflow-y-auto bg-[#F0E9E1] shadow-[-20px_0_50px_rgba(18,31,26,0.25)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden"
       >
         <div class="flex min-h-full flex-col">
           <!-- ==================== Menu Header ==================== -->
@@ -384,57 +384,109 @@
               </svg>
             </a>
 
-            <!-- مقالات -->
-
-            <a
-              href="#care"
-              class="mobile-menu-link group flex cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
-            >
-              <span
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/55 text-[#2F4F3E] max-[399px]:h-9 max-[399px]:w-9 max-[399px]:rounded-lg"
+            <!-- مقالات و نکات مراقبتی -->
+            <div class="mobile-care-menu">
+              <button
+                id="careMenuButton"
+                type="button"
+                aria-expanded="false"
+                aria-controls="careSubmenu"
+                class="flex w-full cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
               >
+                <!-- آیکون -->
+                <span
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/55 text-[#2F4F3E] max-[399px]:h-9 max-[399px]:w-9 max-[399px]:rounded-lg"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    class="h-5 w-5 max-[399px]:h-4.5 max-[399px]:w-4.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v17H7.5A2.5 2.5 0 0 0 5 21.5v-17Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 4.5v17"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 6h7M9 9.5h7M9 13h5"
+                    />
+                  </svg>
+                </span>
+
+                <!-- متن -->
+                <span
+                  class="min-w-0 flex-1 text-right text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+                >
+                  مقالات و نکات مراقبتی
+                </span>
+
+                <!-- فلش -->
                 <svg
+                  id="careMenuArrow"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.7"
-                  class="h-5 w-5 max-[399px]:h-4.5 max-[399px]:w-4.5"
+                  class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 transition-transform duration-300 max-[399px]:h-3.5 max-[399px]:w-3.5"
                 >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M6 4h9a3 3 0 0 1 3 3v13H8a2 2 0 0 1-2-2V4Z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 17c0-1.1.9-2 2-2h10M10 8h5M10 11h4"
+                    d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </span>
+              </button>
 
-              <span
-                class="menu-text min-w-0 flex-1 text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+              <!-- چهار مقاله -->
+              <div
+                id="careSubmenu"
+                class="overflow-hidden opacity-0 transition-[max-height,opacity] duration-300 ease-out"
+                style="max-height: 0px"
               >
-                مقالات و نکات مراقبتی
-              </span>
+                <div
+                  class="mr-14 border-r border-[#2F4F3E]/15 pr-4 pb-1 max-[399px]:mr-11 max-[399px]:pr-3"
+                >
+                  <a
+                    href="pages/repotting.html"
+                    class="mobile-menu-link block cursor-pointer py-2.5 text-right text-[13px] leading-6 text-[#121F1A] max-[399px]:py-2 max-[399px]:text-[11px] max-[399px]:leading-5"
+                  >
+                    آموزش تعویض گلدان
+                  </a>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 max-[399px]:h-3.5 max-[399px]:w-3.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </a>
+                  <a
+                    href="pages/Houseplants.html"
+                    class="mobile-menu-link block cursor-pointer py-2.5 text-right text-[13px] leading-6 text-[#121F1A] max-[399px]:py-2 max-[399px]:text-[11px] max-[399px]:leading-5"
+                  >
+                    بهترین گیاهان آپارتمانی
+                  </a>
+
+                  <a
+                    href="pages/Irrigation.html"
+                    class="mobile-menu-link block cursor-pointer py-2.5 text-right text-[13px] leading-6 text-[#121F1A] max-[399px]:py-2 max-[399px]:text-[11px] max-[399px]:leading-5"
+                  >
+                    راهنمای آبیاری گیاهان
+                  </a>
+
+                  <a
+                    href="#"
+                    class="mobile-menu-link block cursor-pointer py-2.5 text-right text-[13px] leading-6 text-[#121F1A] max-[399px]:py-2 max-[399px]:text-[11px] max-[399px]:leading-5"
+                  >
+                    راهنمای کامل نور برای گیاهان
+                  </a>
+                </div>
+              </div>
+            </div>
 
             <!-- درباره ما -->
 
