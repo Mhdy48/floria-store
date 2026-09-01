@@ -1,83 +1,376 @@
 // ========================================
-// Deals Slider
+// Deals Slider - Professional RTL Carousel
 // ========================================
 
 const slider = document.querySelector("#deals-slider");
 
-const cards = [...slider.querySelectorAll(".deal-card")];
+if (slider) {
+  const originalCards = [...slider.querySelectorAll(".deal-card")];
 
-let currentIndex = 0;
-let autoPlay;
+  let currentIndex = 0;
+  let autoPlay = null;
+  let resizeTimer = null;
 
-// تعداد کارت‌های قابل نمایش
-function getCardsPerView() {
-  const width = window.innerWidth;
+  let isDragging = false;
+  let hasDragged = false;
 
-  if (width >= 1300) return 6;
-  if (width >= 900) return 4;
-  if (width >= 550) return 3;
-  return 2;
-}
+  let startX = 0;
+  let startTranslate = 0;
+  let currentTranslate = 0;
 
-// فاصله بین کارت‌ها
-function getGap() {
-  const width = window.innerWidth;
+  // ========================================
+  // Responsive
+  // ========================================
 
-  if (width >= 1200) return 20;
-  if (width >= 900) return 16;
-  if (width >= 550) return 12;
-  return 8;
-}
+  function getCardsPerView() {
+    const width = window.innerWidth;
 
-// حرکت اسلایدر به کارت بعدی
-function slideNext() {
-  const cardsPerView = getCardsPerView();
-  const lastIndex = Math.max(cards.length - cardsPerView, 0);
+    if (width >= 1300) return 6;
+    if (width >= 900) return 4;
+    if (width >= 550) return 3;
 
-  currentIndex++;
-
-  // بازگشت به ابتدای لیست پس از رسیدن به آخرین موقعیت
-  if (currentIndex > lastIndex) {
-    currentIndex = 0;
+    return 2;
   }
 
-  const cardWidth = cards[0].offsetWidth;
-  const gap = getGap();
+  function getGap() {
+    const width = window.innerWidth;
 
-  // محاسبه فاصله حرکت بر اساس عرض کارت و فاصله بین کارت‌ها
-  const distance = currentIndex * (cardWidth + gap);
+    if (width >= 1200) return 20;
+    if (width >= 900) return 16;
+    if (width >= 550) return 12;
 
-  slider.style.transform = `translate3d(${distance}px, 0, 0)`;
-}
+    return 8;
+  }
 
-// شروع حرکت خودکار اسلایدر
-function startAutoPlay() {
-  stopAutoPlay();
+  // ========================================
+  // اندازه هر کارت
+  // ========================================
 
-  autoPlay = setInterval(slideNext, 3000);
-}
+  function getStep() {
+    const card = slider.querySelector(".deal-card");
 
-// توقف حرکت خودکار اسلایدر
-function stopAutoPlay() {
-  clearInterval(autoPlay);
-}
+    if (!card) return 0;
 
-// توقف اسلایدر هنگام قرار گرفتن نشانگر روی کارت
-cards.forEach((card) => {
-  card.addEventListener("mouseenter", stopAutoPlay);
-  card.addEventListener("mouseleave", startAutoPlay);
-});
+    return card.getBoundingClientRect().width + getGap();
+  }
 
-// تنظیم مجدد اسلایدر هنگام تغییر اندازه صفحه
-window.addEventListener("resize", () => {
-  currentIndex = 0;
-  slider.style.transform = "translate3d(0, 0, 0)";
+  // ========================================
+  // محدودیت حرکت
+  // ========================================
+
+  function getMaxIndex() {
+    const cardsPerView = getCardsPerView();
+
+    return Math.max(originalCards.length - cardsPerView, 0);
+  }
+
+  // ========================================
+  // اعمال Transform
+  // ========================================
+
+  function setPosition(index, animate = true) {
+    const step = getStep();
+
+    if (!step) return;
+
+    currentIndex = Math.max(0, Math.min(index, getMaxIndex()));
+
+    const distance = currentIndex * step;
+
+    slider.style.transition = animate
+      ? "transform 500ms cubic-bezier(0.22, 1, 0.36, 1)"
+      : "none";
+
+    slider.style.transform = `translate3d(${distance}px, 0, 0)`;
+
+    currentTranslate = distance;
+  }
+
+  // ========================================
+  // حرکت بعدی
+  // ========================================
+
+  function slideNext() {
+    if (isDragging) return;
+
+    const maxIndex = getMaxIndex();
+
+    if (currentIndex >= maxIndex) {
+      setPosition(0, true);
+      return;
+    }
+
+    setPosition(currentIndex + 1, true);
+  }
+
+  // ========================================
+  // حرکت قبلی
+  // ========================================
+
+  function slidePrevious() {
+    if (isDragging) return;
+
+    if (currentIndex <= 0) {
+      setPosition(0, true);
+      return;
+    }
+
+    setPosition(currentIndex - 1, true);
+  }
+
+  // ========================================
+  // Auto Play
+  // ========================================
+
+  function startAutoPlay() {
+    stopAutoPlay();
+
+    autoPlay = setInterval(() => {
+      slideNext();
+    }, 3500);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlay !== null) {
+      clearInterval(autoPlay);
+      autoPlay = null;
+    }
+  }
+
+  // ========================================
+  // Hover
+  // ========================================
+
+  slider.addEventListener("mouseenter", () => {
+    stopAutoPlay();
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    if (!isDragging) {
+      startAutoPlay();
+    }
+  });
+
+  // ========================================
+  // Mouse Drag
+  // ========================================
+
+  slider.addEventListener("mousedown", (event) => {
+    if (event.button !== 0) return;
+
+    isDragging = true;
+    hasDragged = false;
+
+    startX = event.clientX;
+
+    startTranslate = currentTranslate;
+
+    stopAutoPlay();
+
+    slider.style.transition = "none";
+    slider.style.cursor = "grabbing";
+  });
+
+  window.addEventListener("mousemove", (event) => {
+    if (!isDragging) return;
+
+    const deltaX = event.clientX - startX;
+
+    if (Math.abs(deltaX) > 5) {
+      hasDragged = true;
+    }
+
+    currentTranslate = startTranslate + deltaX;
+
+    // جلوگیری از کشیدن بیش از حد در ابتدا و انتها
+    const maxTranslate = getMaxIndex() * getStep();
+
+    if (currentTranslate < 0) {
+      currentTranslate = currentTranslate * 0.35;
+    }
+
+    if (currentTranslate > maxTranslate) {
+      const overflow = currentTranslate - maxTranslate;
+
+      currentTranslate = maxTranslate + overflow * 0.35;
+    }
+
+    slider.style.transform = `translate3d(${currentTranslate}px, 0, 0)`;
+  });
+
+  window.addEventListener("mouseup", () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    slider.style.cursor = "grab";
+
+    const step = getStep();
+
+    if (!step) return;
+
+    // ========================================
+    // پیدا کردن نزدیک‌ترین کارت
+    // ========================================
+
+    let targetIndex = Math.round(currentTranslate / step);
+
+    targetIndex = Math.max(0, Math.min(targetIndex, getMaxIndex()));
+
+    const movedDistance = currentTranslate - startTranslate;
+
+    const threshold = Math.max(step * 0.15, 40);
+
+    // اگر حرکت خیلی کم بود،
+    // همان کارت قبلی را نگه دار
+    if (Math.abs(movedDistance) < threshold) {
+      targetIndex = currentIndex;
+    }
+
+    setPosition(targetIndex, true);
+
+    startAutoPlay();
+  });
+
+  // ========================================
+  // Touch Swipe
+  // ========================================
+
+  slider.addEventListener(
+    "touchstart",
+    (event) => {
+      const touch = event.touches[0];
+
+      isDragging = true;
+      hasDragged = false;
+
+      startX = touch.clientX;
+      startTranslate = currentTranslate;
+
+      stopAutoPlay();
+
+      slider.style.transition = "none";
+    },
+    { passive: true },
+  );
+
+  slider.addEventListener(
+    "touchmove",
+    (event) => {
+      if (!isDragging) return;
+
+      const touch = event.touches[0];
+
+      const deltaX = touch.clientX - startX;
+
+      if (Math.abs(deltaX) > 5) {
+        hasDragged = true;
+      }
+
+      currentTranslate = startTranslate + deltaX;
+
+      const maxTranslate = getMaxIndex() * getStep();
+
+      // محدود کردن حرکت در ابتدا
+      if (currentTranslate < 0) {
+        currentTranslate *= 0.35;
+      }
+
+      // محدود کردن حرکت در انتها
+      if (currentTranslate > maxTranslate) {
+        const overflow = currentTranslate - maxTranslate;
+
+        currentTranslate = maxTranslate + overflow * 0.35;
+      }
+
+      slider.style.transform = `translate3d(${currentTranslate}px, 0, 0)`;
+    },
+    { passive: true },
+  );
+
+  slider.addEventListener("touchend", () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    const step = getStep();
+
+    if (!step) return;
+
+    const movedDistance = currentTranslate - startTranslate;
+
+    let targetIndex = Math.round(currentTranslate / step);
+
+    targetIndex = Math.max(0, Math.min(targetIndex, getMaxIndex()));
+
+    const threshold = Math.max(step * 0.15, 40);
+
+    if (Math.abs(movedDistance) < threshold) {
+      targetIndex = currentIndex;
+    }
+
+    setPosition(targetIndex, true);
+
+    startAutoPlay();
+  });
+
+  // ========================================
+  // جلوگیری از Drag شدن عکس‌ها
+  // ========================================
+
+  slider.querySelectorAll("img").forEach((img) => {
+    img.setAttribute("draggable", "false");
+  });
+
+  // ========================================
+  // جلوگیری از کلیک بعد از Drag
+  // ========================================
+
+  slider.addEventListener(
+    "click",
+    (event) => {
+      if (hasDragged) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        hasDragged = false;
+      }
+    },
+    true,
+  );
+
+  // ========================================
+  // Cursor
+  // ========================================
+
+  slider.style.cursor = "grab";
+
+  // ========================================
+  // Resize
+  // ========================================
+
+  window.addEventListener("resize", () => {
+    stopAutoPlay();
+
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+      currentIndex = 0;
+
+      setPosition(0, false);
+
+      startAutoPlay();
+    }, 200);
+  });
+
+  // ========================================
+  // شروع اولیه
+  // ========================================
+
+  setPosition(0, false);
 
   startAutoPlay();
-});
-
-// شروع اولیه اسلایدر
-startAutoPlay();
+}
 
 // ========================================
 // Sale Countdown
