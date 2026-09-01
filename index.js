@@ -170,3 +170,85 @@ updateSale();
 
 // به‌روزرسانی شمارش معکوس هر یک ثانیه
 setInterval(updateSale, 1000);
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+
+  const isAtTop = scrollTop <= 10;
+  const isAtBottom = scrollTop + windowHeight >= documentHeight - 250;
+
+  if (isAtTop || isAtBottom) {
+    backToTop.classList.remove(
+      "opacity-100",
+      "visible",
+      "translate-y-0"
+    );
+
+    backToTop.classList.add(
+      "opacity-0",
+      "invisible",
+      "translate-y-3"
+    );
+  } else {
+    backToTop.classList.remove(
+      "opacity-0",
+      "invisible",
+      "translate-y-3"
+    );
+
+    backToTop.classList.add(
+      "opacity-100",
+      "visible",
+      "translate-y-0"
+    );
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+//navbar
+const navbar = document.getElementById("mainNavbar");
+const navbarWrapper = document.getElementById("navbarWrapper");
+let lastScrollY = window.scrollY;
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > 15) {
+    navbar.classList.remove(
+      "rounded-tl-[0.9375rem]",
+      "rounded-tr-[0.9375rem]"
+    );
+  } else {
+    navbar.classList.add(
+      "rounded-tl-[0.9375rem]",
+      "rounded-tr-[0.9375rem]"
+    );
+  }
+  // رسیدن به ابتدای صفحه
+  if (currentScrollY <= 0) {
+    navbarWrapper.classList.remove("-translate-y-full");
+
+    lastScrollY = currentScrollY;
+    return;
+  }
+  // اسکرول به پایین بیشتر از 70px
+  if (
+    currentScrollY > lastScrollY &&
+    currentScrollY > 70
+  ) {
+    navbarWrapper.classList.add("-translate-y-full");
+  }
+  // اسکرول به بالا
+  else if (currentScrollY < lastScrollY) {
+    navbarWrapper.classList.remove("-translate-y-full");
+  }
+  lastScrollY = currentScrollY;
+});
