@@ -340,7 +340,6 @@ function openCareMenu() {
   careSubmenu.classList.remove("opacity-0");
   careSubmenu.classList.add("opacity-100");
 
-  // فلش به پایین
   careMenuArrow.classList.add("rotate-90");
 }
 
@@ -356,7 +355,6 @@ function closeCareMenu() {
   careSubmenu.classList.remove("opacity-100");
   careSubmenu.classList.add("opacity-0");
 
-  // فلش به حالت اولیه
   careMenuArrow.classList.remove("rotate-90");
 }
 
