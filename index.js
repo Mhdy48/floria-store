@@ -183,29 +183,13 @@ window.addEventListener("scroll", () => {
   const isAtBottom = scrollTop + windowHeight >= documentHeight - 250;
 
   if (isAtTop || isAtBottom) {
-    backToTop.classList.remove(
-      "opacity-100",
-      "visible",
-      "translate-y-0"
-    );
+    backToTop.classList.remove("opacity-100", "visible", "translate-y-0");
 
-    backToTop.classList.add(
-      "opacity-0",
-      "invisible",
-      "translate-y-3"
-    );
+    backToTop.classList.add("opacity-0", "invisible", "translate-y-3");
   } else {
-    backToTop.classList.remove(
-      "opacity-0",
-      "invisible",
-      "translate-y-3"
-    );
+    backToTop.classList.remove("opacity-0", "invisible", "translate-y-3");
 
-    backToTop.classList.add(
-      "opacity-100",
-      "visible",
-      "translate-y-0"
-    );
+    backToTop.classList.add("opacity-100", "visible", "translate-y-0");
   }
 });
 
@@ -223,15 +207,9 @@ let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {
   const currentScrollY = window.scrollY;
   if (currentScrollY > 15) {
-    navbar.classList.remove(
-      "rounded-tl-[0.9375rem]",
-      "rounded-tr-[0.9375rem]"
-    );
+    navbar.classList.remove("rounded-tl-[0.9375rem]", "rounded-tr-[0.9375rem]");
   } else {
-    navbar.classList.add(
-      "rounded-tl-[0.9375rem]",
-      "rounded-tr-[0.9375rem]"
-    );
+    navbar.classList.add("rounded-tl-[0.9375rem]", "rounded-tr-[0.9375rem]");
   }
   // رسیدن به ابتدای صفحه
   if (currentScrollY <= 0) {
@@ -241,10 +219,7 @@ window.addEventListener("scroll", () => {
     return;
   }
   // اسکرول به پایین بیشتر از 70px
-  if (
-    currentScrollY > lastScrollY &&
-    currentScrollY > 70
-  ) {
+  if (currentScrollY > lastScrollY && currentScrollY > 70) {
     navbarWrapper.classList.add("-translate-y-full");
   }
   // اسکرول به بالا
@@ -252,4 +227,93 @@ window.addEventListener("scroll", () => {
     navbarWrapper.classList.remove("-translate-y-full");
   }
   lastScrollY = currentScrollY;
+});
+
+// ========================================
+// Mobile Hamburger Menu
+// ========================================
+
+const menuButton = document.getElementById("menuButton");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+const mobileMenuClose = document.getElementById("mobileMenuClose");
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+let mobileMenuOpen = false;
+
+const openMobileMenu = () => {
+  if (mobileMenuOpen) return;
+
+  mobileMenuOpen = true;
+
+  // عرض واقعی scrollbar
+  const scrollbarWidth =
+    window.innerWidth - document.documentElement.clientWidth;
+
+  // رزرو فضای scrollbar بدون جابه‌جایی محتوا
+  if (scrollbarWidth > 0) {
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+  }
+
+  // حذف scrollbar اصلی
+  document.documentElement.classList.add("mobile-menu-open");
+  document.body.classList.add("mobile-menu-open");
+
+  // باز کردن Drawer
+  mobileMenu.classList.remove("translate-x-full");
+
+  // Overlay
+  mobileMenuOverlay.classList.remove("pointer-events-none", "opacity-0");
+
+  mobileMenuOverlay.classList.add("pointer-events-auto", "opacity-100");
+
+  // Accessibility
+  mobileMenu.setAttribute("aria-hidden", "false");
+  menuButton?.setAttribute("aria-expanded", "true");
+};
+
+const closeMobileMenu = () => {
+  if (!mobileMenuOpen) return;
+
+  mobileMenuOpen = false;
+
+  // بستن Drawer
+  mobileMenu.classList.add("translate-x-full");
+
+  // بستن Overlay
+  mobileMenuOverlay.classList.remove("pointer-events-auto", "opacity-100");
+
+  mobileMenuOverlay.classList.add("pointer-events-none", "opacity-0");
+
+  // Accessibility
+  mobileMenu.setAttribute("aria-hidden", "true");
+  menuButton?.setAttribute("aria-expanded", "false");
+
+  // برگرداندن scrollbar
+  document.documentElement.classList.remove("mobile-menu-open");
+  document.body.classList.remove("mobile-menu-open");
+
+  // حذف فضای رزرو شده
+  document.body.style.paddingRight = "";
+};
+
+// Hamburger
+menuButton?.addEventListener("click", openMobileMenu);
+
+// Close
+mobileMenuClose?.addEventListener("click", closeMobileMenu);
+
+// Overlay
+mobileMenuOverlay?.addEventListener("click", closeMobileMenu);
+
+// Links
+mobileMenuLinks.forEach((link) => {
+  link.addEventListener("click", closeMobileMenu);
+});
+
+// Escape
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && mobileMenuOpen) {
+    closeMobileMenu();
+  }
 });

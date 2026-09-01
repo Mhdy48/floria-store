@@ -252,3 +252,11 @@
 .comments-track:hover {
   animation-play-state: paused;
 }
+
+html.mobile-menu-open {
+  overflow: hidden;
+}
+
+body.mobile-menu-open {
+  overflow: hidden;
+}
