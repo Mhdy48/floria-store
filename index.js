@@ -85,7 +85,7 @@ startAutoPlay();
 
 // زمان شروع و پایان تخفیف
 const saleStart = new Date("2026-08-23T00:00:00");
-const saleEnd = new Date("2026-08-31T16:30:00");
+const saleEnd = new Date("2026-09-02T16:50:00");
 
 // عناصر مربوط به شمارش معکوس و وضعیت تخفیف
 const countdown = document.getElementById("countdown");
