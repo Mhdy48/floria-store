@@ -171,6 +171,7 @@ updateSale();
 // به‌روزرسانی شمارش معکوس هر یک ثانیه
 setInterval(updateSale, 1000);
 
+// baktop
 const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
