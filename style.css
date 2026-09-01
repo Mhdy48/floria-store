@@ -231,3 +231,24 @@
       transform: translateX(2.3px) scale(1.01);
     }
   }
+@keyframes comments-bounce {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(calc(10% + 100px));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.comments-track {
+  animation: comments-bounce 60s ease-in-out infinite;
+}
+
+.comments-track:hover {
+  animation-play-state: paused;
+}
