@@ -198,6 +198,436 @@
           </div>
         </header>
       </div>
+
+      <!-- ==================== Mobile Menu ==================== -->
+      <!-- Overlay -->
+      <div
+        id="mobileMenuOverlay"
+        class="pointer-events-none fixed inset-0 z-60 bg-[#121F1A]/45 opacity-0 backdrop-blur-[3px] transition-opacity duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden"
+      ></div>
+      <!-- Drawer -->
+      <aside
+        id="mobileMenu"
+        dir="rtl"
+        aria-hidden="true"
+        class="fixed top-0 right-0 z-70 h-dvh w-[84%] max-w-92.5 translate-x-full scrollbar-gutter-stable overflow-y-auto bg-[#F0E9E1] shadow-[-20px_0_50px_rgba(18,31,26,0.25)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden"
+      >
+        <div class="flex min-h-full flex-col">
+          <!-- ==================== Menu Header ==================== -->
+          <div
+            class="relative flex items-center justify-between border-b border-[#2F4F3E]/10 px-5 py-5 max-[399px]:px-4 max-[399px]:py-4"
+          >
+            <!-- Close Button -->
+            <button
+              id="mobileMenuClose"
+              type="button"
+              aria-label="بستن منو"
+              class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-[#2F4F3E] text-[#F0E9E1] max-[399px]:h-9 max-[399px]:w-9"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                class="h-5 w-5 max-[399px]:h-4.5 max-[399px]:w-4.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 6l12 12M18 6L6 18"
+                />
+              </svg>
+            </button>
+
+            <!-- Logo -->
+            <a
+              href="index.html"
+              class="absolute left-1/2 -translate-x-1/2 text-2xl font-medium tracking-tight text-[#2F4F3E] max-[399px]:text-xl"
+            >
+              فلوریا
+            </a>
+          </div>
+          <!-- ==================== Menu Items ==================== -->
+          <nav class="px-4 py-5 max-[399px]:px-3 max-[399px]:py-4">
+            <!-- خانه -->
+
+            <a
+              href="index.html"
+              class="mobile-menu-link group flex cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
+            >
+              <span
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/55 text-[#2F4F3E] max-[399px]:h-9 max-[399px]:w-9 max-[399px]:rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  class="h-5 w-5 max-[399px]:h-4.5 max-[399px]:w-4.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 10.5L12 3l9 7.5M5.5 9v10h13V9M9 19v-5h6v5"
+                  />
+                </svg>
+              </span>
+
+              <span
+                class="menu-text min-w-0 flex-1 text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+              >
+                خانه
+              </span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 max-[399px]:h-3.5 max-[399px]:w-3.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+
+            <!-- گیاهان -->
+
+            <a
+              href="#"
+              class="mobile-menu-link group flex cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
+            >
+              <span
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/55 text-[#2F4F3E] max-[399px]:h-9 max-[399px]:w-9 max-[399px]:rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  class="h-5 w-5 max-[399px]:h-4.5 max-[399px]:w-4.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 20V9M12 13c-3.5 0-6-2.3-6-5.5C9.5 7.5 12 9.5 12 13ZM12 11c0-3.3 2.5-5.5 6-5.5 0 3.2-2.5 5.5-6 5.5Z"
+                  />
+                </svg>
+              </span>
+
+              <span
+                class="menu-text min-w-0 flex-1 text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+              >
+                گیاهان
+              </span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 max-[399px]:h-3.5 max-[399px]:w-3.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+
+            <!-- دسته‌بندی‌ها -->
+
+            <a
+              href="#"
+              class="mobile-menu-link group flex cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
+            >
+              <span
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/55 text-[#2F4F3E] max-[399px]:h-9 max-[399px]:w-9 max-[399px]:rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  class="h-5 w-5 max-[399px]:h-4.5 max-[399px]:w-4.5"
+                >
+                  <rect x="4" y="4" width="6" height="6" rx="1.5" />
+                  <rect x="14" y="4" width="6" height="6" rx="1.5" />
+                  <rect x="4" y="14" width="6" height="6" rx="1.5" />
+                  <rect x="14" y="14" width="6" height="6" rx="1.5" />
+                </svg>
+              </span>
+
+              <span
+                class="menu-text min-w-0 flex-1 text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+              >
+                دسته‌بندی‌ها
+              </span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 max-[399px]:h-3.5 max-[399px]:w-3.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+
+            <!-- مقالات و نکات مراقبتی -->
+            <div class="mobile-care-menu">
+              <button
+                id="careMenuButton"
+                type="button"
+                aria-expanded="false"
+                aria-controls="careSubmenu"
+                class="flex w-full cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
+              >
+                <!-- آیکون -->
+                <span
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/55 text-[#2F4F3E] max-[399px]:h-9 max-[399px]:w-9 max-[399px]:rounded-lg"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    class="h-5 w-5 max-[399px]:h-4.5 max-[399px]:w-4.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v17H7.5A2.5 2.5 0 0 0 5 21.5v-17Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 4.5v17"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 6h7M9 9.5h7M9 13h5"
+                    />
+                  </svg>
+                </span>
+
+                <!-- متن -->
+                <span
+                  class="min-w-0 flex-1 text-right text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+                >
+                  مقالات و نکات مراقبتی
+                </span>
+
+                <!-- فلش -->
+                <svg
+                  id="careMenuArrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 transition-transform duration-300 max-[399px]:h-3.5 max-[399px]:w-3.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+
+              <!-- چهار مقاله -->
+              <div
+                id="careSubmenu"
+                class="overflow-hidden opacity-0 transition-[max-height,opacity] duration-300 ease-out"
+                style="max-height: 0px"
+              >
+                <div
+                  class="mr-14 border-r border-[#2F4F3E]/15 pr-4 pb-1 max-[399px]:mr-11 max-[399px]:pr-3"
+                >
+                  <a
+                    href="pages/repotting.html"
+                    class="mobile-menu-link block cursor-pointer py-2.5 text-right text-[13px] leading-6 text-[#121F1A] max-[399px]:py-2 max-[399px]:text-[11px] max-[399px]:leading-5"
+                  >
+                    آموزش تعویض گلدان
+                  </a>
+
+                  <a
+                    href="pages/Houseplants.html"
+                    class="mobile-menu-link block cursor-pointer py-2.5 text-right text-[13px] leading-6 text-[#121F1A] max-[399px]:py-2 max-[399px]:text-[11px] max-[399px]:leading-5"
+                  >
+                    بهترین گیاهان آپارتمانی
+                  </a>
+
+                  <a
+                    href="pages/Irrigation.html"
+                    class="mobile-menu-link block cursor-pointer py-2.5 text-right text-[13px] leading-6 text-[#121F1A] max-[399px]:py-2 max-[399px]:text-[11px] max-[399px]:leading-5"
+                  >
+                    راهنمای آبیاری گیاهان
+                  </a>
+
+                  <a
+                    href="#"
+                    class="mobile-menu-link block cursor-pointer py-2.5 text-right text-[13px] leading-6 text-[#121F1A] max-[399px]:py-2 max-[399px]:text-[11px] max-[399px]:leading-5"
+                  >
+                    راهنمای کامل نور برای گیاهان
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- درباره ما -->
+
+            <a
+              href="pages/about.html"
+              class="mobile-menu-link group flex cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
+            >
+              <span
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/55 text-[#2F4F3E] max-[399px]:h-9 max-[399px]:w-9 max-[399px]:rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  class="h-5 w-5 max-[399px]:h-4.5 max-[399px]:w-4.5"
+                >
+                  <circle cx="12" cy="12" r="8.5" />
+                  <path stroke-linecap="round" d="M12 10v5" />
+                  <circle
+                    cx="12"
+                    cy="7.2"
+                    r=".7"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </span>
+
+              <span
+                class="menu-text min-w-0 flex-1 text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+              >
+                درباره ما
+              </span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 max-[399px]:h-3.5 max-[399px]:w-3.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+
+            <!-- تماس با ما -->
+
+            <a
+              href="#"
+              class="mobile-menu-link group flex cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
+            >
+              <span
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/55 text-[#2F4F3E] max-[399px]:h-9 max-[399px]:w-9 max-[399px]:rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  class="h-5 w-5 max-[399px]:h-4.5 max-[399px]:w-4.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 4h3l1.5 4-2 1.5a13 13 0 0 0 5 5l1.5-2 4 1.5v3c0 1.1-.9 2-2 2C11.5 19 5 12.5 5 6c0-1.1.9-2 2-2Z"
+                  />
+                </svg>
+              </span>
+
+              <span
+                class="menu-text min-w-0 flex-1 text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+              >
+                تماس با ما
+              </span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 max-[399px]:h-3.5 max-[399px]:w-3.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+          </nav>
+          <!-- ==================== Bottom Card ==================== -->
+          <div
+            class="mt-auto px-5 pt-5 pb-6 max-[399px]:px-4 max-[399px]:pt-3 max-[399px]:pb-4"
+          >
+            <div
+              class="relative overflow-hidden rounded-[22px] bg-[#2F4F3E] p-5 text-[#F0E9E1] shadow-[0_12px_30px_rgba(47,79,62,0.18)] max-[399px]:rounded-[18px] max-[399px]:p-4"
+            >
+              <div
+                class="absolute -top-10 -left-10 h-28 w-28 rounded-full border border-[#F0E9E1]/10"
+              ></div>
+
+              <div
+                class="absolute -right-8 -bottom-10 h-24 w-24 rounded-full border border-[#F0E9E1]/10"
+              ></div>
+
+              <div class="relative z-10">
+                <div class="mb-2 flex items-center gap-2 max-[399px]:mb-1">
+                  <span class="text-lg max-[399px]:text-base"> 🌿 </span>
+
+                  <span class="text-base font-medium max-[399px]:text-sm">
+                    فلوریا
+                  </span>
+                </div>
+
+                <p
+                  class="text-[11px] leading-6 text-[#F0E9E1]/70 max-[399px]:text-[9px] max-[399px]:leading-5"
+                >
+                  با عشق برای گیاهان
+                  <br />
+                  همراه شما برای ساختن خانه‌ای سبزتر
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
       <!-- ==================== Main Content ==================== -->
       <main>
         <!-- ==================== Hero Section ==================== -->
@@ -2352,6 +2782,147 @@
           top: 0,
           behavior: "smooth",
         });
+      });
+      // ========================================
+      // Mobile Hamburger Menu
+      // ========================================
+
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+      const mobileMenuClose = document.getElementById("mobileMenuClose");
+      const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+      let mobileMenuOpen = false;
+
+      const openMobileMenu = () => {
+        if (mobileMenuOpen) return;
+
+        mobileMenuOpen = true;
+
+        // عرض واقعی scrollbar
+        const scrollbarWidth =
+          window.innerWidth - document.documentElement.clientWidth;
+
+        // رزرو فضای scrollbar بدون جابه‌جایی محتوا
+        if (scrollbarWidth > 0) {
+          document.body.style.paddingRight = `${scrollbarWidth}px`;
+        }
+
+        // حذف scrollbar اصلی
+        document.documentElement.classList.add("mobile-menu-open");
+        document.body.classList.add("mobile-menu-open");
+
+        // باز کردن Drawer
+        mobileMenu.classList.remove("translate-x-full");
+
+        // Overlay
+        mobileMenuOverlay.classList.remove("pointer-events-none", "opacity-0");
+
+        mobileMenuOverlay.classList.add("pointer-events-auto", "opacity-100");
+
+        // Accessibility
+        mobileMenu.setAttribute("aria-hidden", "false");
+        menuButton?.setAttribute("aria-expanded", "true");
+        mobileMenuClose?.focus();
+      };
+
+      const closeMobileMenu = () => {
+        if (!mobileMenuOpen) return;
+
+        mobileMenuOpen = false;
+
+        // بستن Drawer
+        mobileMenu.classList.add("translate-x-full");
+
+        // بستن Overlay
+        mobileMenuOverlay.classList.remove(
+          "pointer-events-auto",
+          "opacity-100",
+        );
+
+        mobileMenuOverlay.classList.add("pointer-events-none", "opacity-0");
+
+        // Accessibility
+        mobileMenu.setAttribute("aria-hidden", "true");
+        menuButton?.setAttribute("aria-expanded", "false");
+        menuButton?.focus();
+
+        // برگرداندن scrollbar
+        document.documentElement.classList.remove("mobile-menu-open");
+        document.body.classList.remove("mobile-menu-open");
+
+        // حذف فضای رزرو شده
+        document.body.style.paddingRight = "";
+      };
+
+      // Hamburger
+      menuButton?.addEventListener("click", openMobileMenu);
+
+      // Close
+      mobileMenuClose?.addEventListener("click", closeMobileMenu);
+
+      // Overlay
+      mobileMenuOverlay?.addEventListener("click", closeMobileMenu);
+
+      // Links
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+      // Escape
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && mobileMenuOpen) {
+          closeMobileMenu();
+        }
+      });
+
+      // ========================================
+      // Mobile Care Articles Accordion
+      // ========================================
+
+      const careMenuButton = document.getElementById("careMenuButton");
+      const careSubmenu = document.getElementById("careSubmenu");
+      const careMenuArrow = document.getElementById("careMenuArrow");
+
+      let careMenuOpen = false;
+
+      function openCareMenu() {
+        if (careMenuOpen) return;
+
+        careMenuOpen = true;
+
+        careMenuButton.setAttribute("aria-expanded", "true");
+
+        careSubmenu.style.maxHeight = `${careSubmenu.scrollHeight}px`;
+
+        careSubmenu.classList.remove("opacity-0");
+        careSubmenu.classList.add("opacity-100");
+
+        careMenuArrow.classList.add("rotate-90");
+      }
+
+      function closeCareMenu() {
+        if (!careMenuOpen) return;
+
+        careMenuOpen = false;
+
+        careMenuButton.setAttribute("aria-expanded", "false");
+
+        careSubmenu.style.maxHeight = "0px";
+
+        careSubmenu.classList.remove("opacity-100");
+        careSubmenu.classList.add("opacity-0");
+
+        careMenuArrow.classList.remove("rotate-90");
+      }
+
+      careMenuButton?.addEventListener("click", () => {
+        if (careMenuOpen) {
+          closeCareMenu();
+        } else {
+          openCareMenu();
+        }
       });
     </script>
   </body>
