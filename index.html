@@ -28,19 +28,25 @@
   <body class="font-vazir">
     <div class="container-web">
       <!-- ==================== Top Bar ==================== -->
-      <div class="flex w-full justify-between bg-[#121F1A] px-3 pt-1 pb-4 max-[360px]:gap-1">
+      <div
+        class="flex w-full justify-between bg-[#121F1A] px-3 pt-1 pb-4 max-[360px]:gap-1"
+      >
         <div
           class="flex items-center gap-1 text-[.6rem] text-[#F0E9E1] sm:text-[.8rem]"
         >
           <i class="fa-solid fa-phone text-[.6rem] sm:text-[.9rem]"></i>
-          <p class="selection:bg-[#F0E9E1] selection:text-[#121F1A] max-[360px]:text-[0.55rem]">
+          <p
+            class="selection:bg-[#F0E9E1] selection:text-[#121F1A] max-[360px]:text-[0.55rem]"
+          >
             پشتیبانی 24 ساعته
           </p>
         </div>
         <div
           class="flex items-center gap-1 text-[.6rem] text-[#F0E9E1] sm:text-[.8rem]"
         >
-          <p class="selection:bg-[#F0E9E1] selection:text-[#121F1A] max-[360px]:text-[0.55rem]">
+          <p
+            class="selection:bg-[#F0E9E1] selection:text-[#121F1A] max-[360px]:text-[0.55rem]"
+          >
             ارسال رایگان برای خرید های بالای 500هزار تومان
           </p>
           <i class="fa-regular fa-truck text-[.6rem] sm:text-[.9rem]"></i>
@@ -90,38 +96,46 @@
           >
             <a
               href="#"
+              data-page="home"
               class="group relative inline-block text-[#FFF5E6] transition-colors duration-300"
             >
               خانه
+
               <span
-                class="absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
+                class="nav-underline absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
               ></span>
             </a>
             <a
               href="pages/products.html"
+              data-page="products"
               class="group relative inline-block text-[#FFF5E6] transition-colors duration-300"
             >
               گیاهان
+
               <span
-                class="absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
+                class="nav-underline absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
               ></span>
             </a>
             <a
               href="#care"
+              data-page="care"
               class="group relative inline-block text-[#FFF5E6] transition-colors duration-300"
             >
               مراقبت
+
               <span
-                class="absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
+                class="nav-underline absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
               ></span>
             </a>
             <a
               href="pages/about.html"
+              data-page="about"
               class="group relative inline-block text-[#FFF5E6] transition-colors duration-300"
             >
               درباره ما
+
               <span
-                class="absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
+                class="nav-underline absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
               ></span>
             </a>
             <a
@@ -677,7 +691,7 @@
         </section>
         <!-- ==================== Categories Section ==================== -->
         <section
-          id="Categories" class="grid grid-cols-6 grid-rows-3 gap-3 p-5 md:grid-rows-2 md:p-7 lg:grid-cols-12 lg:grid-rows-2 lg:p-10"
+          class="grid grid-cols-6 grid-rows-3 gap-3 p-5 md:grid-rows-2 md:p-7 lg:grid-cols-12 lg:grid-rows-2 lg:p-10"
         >
           <!-- Hanging Plants Card -->
           <article
@@ -964,7 +978,7 @@
             <div
               id="deals-slider"
               dir="rtl"
-              class="touch-pan-y select-none flex gap-2 min-[550px]:gap-3 min-[900px]:gap-4 min-[1200px]:gap-5"
+              class="flex touch-pan-y gap-2 select-none min-[550px]:gap-3 min-[900px]:gap-4 min-[1200px]:gap-5"
             >
               <!-- Card 1 -->
               <div
@@ -2943,6 +2957,6 @@
       </span>
     </button>
     <!-- ==================== JavaScript ==================== -->
-    <script src="./index.js"></script>
+    <script type="module" src="../src/js/main.js"></script>
   </body>
 </html>

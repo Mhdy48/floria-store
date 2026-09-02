@@ -29,7 +29,7 @@
         class="relative h-150 w-full max-sm:h-75 sm:h-90 md:h-105 lg:h-147.5 xl:h-162.5"
       >
         <div
-          class="absolute top-4 left-4 z-99 flex cursor-pointer items-center gap-2 self-end rounded-full bg-[#2f4f3e] px-3 py-2 text-xs text-white hover:bg-[#121f1a] max-sm:text-[10px] sm:top-5 sm:left-7 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(240,233,225,0.18)]"
+          class="absolute top-4 left-4 z-99 flex cursor-pointer items-center gap-2 self-end rounded-full bg-[#2f4f3e] px-3 py-2 text-xs text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#121f1a] hover:shadow-[0_4px_12px_rgba(240,233,225,0.18)] max-sm:text-[10px] sm:top-5 sm:left-7"
         >
           <a href="../index.html">بازگشت به خانه</a>
           <i class="fa-solid fa-arrow-left"></i>
@@ -842,50 +842,6 @@
       </span>
     </button>
     <!-- ==================== JavaScript ==================== -->
-    <script>
-      const backToTop = document.getElementById("backToTop");
-
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const documentHeight = document.documentElement.scrollHeight;
-
-  const isAtTop = scrollTop <= 10;
-  const isAtBottom = scrollTop + windowHeight >= documentHeight - 5;
-
-  if (isAtTop || isAtBottom) {
-    backToTop.classList.remove(
-      "opacity-100",
-      "visible",
-      "translate-y-0"
-    );
-
-    backToTop.classList.add(
-      "opacity-0",
-      "invisible",
-      "translate-y-3"
-    );
-  } else {
-    backToTop.classList.remove(
-      "opacity-0",
-      "invisible",
-      "translate-y-3"
-    );
-
-    backToTop.classList.add(
-      "opacity-100",
-      "visible",
-      "translate-y-0"
-    );
-  }
-});
-
-backToTop.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
-    </script>
+    <script type="module" src="../src/js/main.js"></script>
   </body>
 </html>
