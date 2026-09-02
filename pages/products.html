@@ -27,7 +27,6 @@
 
   <body class="font-vazir">
     <div class="container-web">
-      <!-- ==================== Top Bar ==================== -->
       <div
         class="flex w-full justify-between bg-[#121F1A] px-3 pt-1 pb-4 max-[360px]:gap-1"
       >
@@ -95,39 +94,47 @@
             class="hidden h-11.25 items-center justify-between text-[#F0E9E1] selection:bg-[#F0E9E1] selection:text-[#2F4F3E] md:flex md:w-104 md:text-[0.85rem] lg:w-124 lg:text-[0.9rem] xl:w-xl xl:text-[1rem] 2xl:w-164 2xl:text-[1.1rem]"
           >
             <a
-              href="#"
+              href="../index.html"
+              data-page="home"
               class="group relative inline-block text-[#FFF5E6] transition-colors duration-300"
             >
               خانه
+
               <span
-                class="absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
+                class="nav-underline absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
               ></span>
             </a>
             <a
-              href="#"
+              href="pages/products.html"
+              data-page="products"
               class="group relative inline-block text-[#FFF5E6] transition-colors duration-300"
             >
               گیاهان
+
               <span
-                class="absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
+                class="nav-underline absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
               ></span>
             </a>
             <a
-              href="#care"
+              href="../index.html"
+              data-page="care"
               class="group relative inline-block text-[#FFF5E6] transition-colors duration-300"
             >
               مراقبت
+
               <span
-                class="absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
+                class="nav-underline absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
               ></span>
             </a>
             <a
-              href="pages/about.html"
+              href="../pages/about.html"
+              data-page="about"
               class="group relative inline-block text-[#FFF5E6] transition-colors duration-300"
             >
               درباره ما
+
               <span
-                class="absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
+                class="nav-underline absolute -bottom-1 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-[#FFF5E6] transition-all duration-300 ease-out group-hover:w-full"
               ></span>
             </a>
             <a
@@ -698,34 +705,56 @@
         </section>
 
         <!-- ==================== Category Section ==================== -->
-        <section class="flex items-center justify-center px-10 md:px-30 xl:px-40 pt-10 selection:bg-[#2F4F3E] selection:text-[#F0E9E1]">
-          <div class="mx-auto flex w-full max-w-340 min-w-0 items-center lg:justify-center gap-x-5 overflow-x-auto py-8 hide-scrollbar lg:gap-x-2 lg:overflow-x-visible 2xl:gap-x-5">
-            <a href="#all" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]">
+        <section
+          class="flex items-center justify-center px-10 pt-10 selection:bg-[#2F4F3E] selection:text-[#F0E9E1] md:px-30 xl:px-40"
+        >
+          <div
+            class="hide-scrollbar mx-auto flex w-full max-w-340 min-w-0 items-center gap-x-5 overflow-x-auto py-8 lg:justify-center lg:gap-x-2 lg:overflow-x-visible 2xl:gap-x-5"
+          >
+            <a
+              href="#all"
+              class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]"
+            >
               <span>▦</span>
               <span>همه</span>
             </a>
 
-            <a href="#houseplants" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]">
+            <a
+              href="#houseplants"
+              class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]"
+            >
               <span>🪴</span>
               <span>گیاهان آپارتمانی</span>
             </a>
 
-            <a href="#Sun-Loving-Plants" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]">
+            <a
+              href="#Sun-Loving-Plants"
+              class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]"
+            >
               <span>☀️</span>
               <span>گیاهان آفتاب‌دوست</span>
             </a>
 
-            <a href="#Cactus" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]">
+            <a
+              href="#Cactus"
+              class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]"
+            >
               <span>🌵</span>
               <span>کاکتوس</span>
             </a>
 
-            <a href="#Decorative-Plants" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]">
+            <a
+              href="#Decorative-Plants"
+              class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]"
+            >
               <span>🍃</span>
               <span>گیاهان دکوراتیو</span>
             </a>
 
-            <a href="#Tabletop-Plants" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]">
+            <a
+              href="#Tabletop-Plants"
+              class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 py-3 text-[14px] text-[#2F4F3E] shadow-[0_3px_14px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 lg:gap-2 lg:px-5 lg:py-3 2xl:text-[20px]"
+            >
               <span>🌿</span>
               <span>گیاهان رومیزی</span>
             </a>
@@ -2682,225 +2711,6 @@
       </span>
     </button>
     <!-- ==================== JavaScript ==================== -->
-    <script>
-      // ========================================
-      // Back to Top + Navbar Scroll
-      // ========================================
-
-      const backToTop = document.getElementById("backToTop");
-
-      const navbar = document.getElementById("mainNavbar");
-      const navbarWrapper = document.getElementById("navbarWrapper");
-
-      let lastScrollY = window.scrollY;
-
-      window.addEventListener("scroll", () => {
-        const scrollTop = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-
-        // ========================================
-        // Back to Top
-        // ========================================
-
-        const isAtTop = scrollTop <= 10;
-        const isAtBottom = scrollTop + windowHeight >= documentHeight - 250;
-
-        if (isAtTop || isAtBottom) {
-          backToTop.classList.remove("opacity-100", "visible", "translate-y-0");
-
-          backToTop.classList.add("opacity-0", "invisible", "translate-y-3");
-        } else {
-          backToTop.classList.remove("opacity-0", "invisible", "translate-y-3");
-
-          backToTop.classList.add("opacity-100", "visible", "translate-y-0");
-        }
-
-        // ========================================
-        // Navbar
-        // ========================================
-
-        if (scrollTop > 15) {
-          navbar.classList.remove(
-            "rounded-tl-[0.9375rem]",
-            "rounded-tr-[0.9375rem]",
-          );
-        } else {
-          navbar.classList.add(
-            "rounded-tl-[0.9375rem]",
-            "rounded-tr-[0.9375rem]",
-          );
-        }
-
-        // رسیدن به ابتدای صفحه
-        if (scrollTop <= 0) {
-          navbarWrapper.classList.remove("-translate-y-full");
-
-          lastScrollY = scrollTop;
-          return;
-        }
-
-        // اسکرول به پایین بیشتر از 70px
-        if (scrollTop > lastScrollY && scrollTop > 70) {
-          navbarWrapper.classList.add("-translate-y-full");
-        }
-
-        // اسکرول به بالا
-        else if (scrollTop < lastScrollY) {
-          navbarWrapper.classList.remove("-translate-y-full");
-        }
-
-        lastScrollY = scrollTop;
-      });
-
-      // Back to Top Click
-      backToTop.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-      // ========================================
-      // Mobile Hamburger Menu
-      // ========================================
-
-      const menuButton = document.getElementById("menuButton");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-      const mobileMenuClose = document.getElementById("mobileMenuClose");
-      const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
-
-      let mobileMenuOpen = false;
-
-      const openMobileMenu = () => {
-        if (mobileMenuOpen) return;
-
-        mobileMenuOpen = true;
-
-        // عرض واقعی scrollbar
-        const scrollbarWidth =
-          window.innerWidth - document.documentElement.clientWidth;
-
-        // رزرو فضای scrollbar بدون جابه‌جایی محتوا
-        if (scrollbarWidth > 0) {
-          document.body.style.paddingRight = `${scrollbarWidth}px`;
-        }
-
-        // حذف scrollbar اصلی
-        document.documentElement.classList.add("mobile-menu-open");
-        document.body.classList.add("mobile-menu-open");
-
-        // باز کردن Drawer
-        mobileMenu.classList.remove("translate-x-full");
-
-        // Overlay
-        mobileMenuOverlay.classList.remove("pointer-events-none", "opacity-0");
-
-        mobileMenuOverlay.classList.add("pointer-events-auto", "opacity-100");
-
-        // Accessibility
-        mobileMenu.setAttribute("aria-hidden", "false");
-        menuButton?.setAttribute("aria-expanded", "true");
-        mobileMenuClose?.focus();
-      };
-
-      const closeMobileMenu = () => {
-        if (!mobileMenuOpen) return;
-
-        mobileMenuOpen = false;
-
-        // بستن Drawer
-        mobileMenu.classList.add("translate-x-full");
-
-        // بستن Overlay
-        mobileMenuOverlay.classList.remove(
-          "pointer-events-auto",
-          "opacity-100",
-        );
-
-        mobileMenuOverlay.classList.add("pointer-events-none", "opacity-0");
-
-        // Accessibility
-        mobileMenu.setAttribute("aria-hidden", "true");
-        menuButton?.setAttribute("aria-expanded", "false");
-        menuButton?.focus();
-
-        // برگرداندن scrollbar
-        document.documentElement.classList.remove("mobile-menu-open");
-        document.body.classList.remove("mobile-menu-open");
-
-        // حذف فضای رزرو شده
-        document.body.style.paddingRight = "";
-      };
-
-      // Hamburger
-      menuButton?.addEventListener("click", openMobileMenu);
-
-      // Close
-      mobileMenuClose?.addEventListener("click", closeMobileMenu);
-
-      // Overlay
-      mobileMenuOverlay?.addEventListener("click", closeMobileMenu);
-
-      // Links
-      mobileMenuLinks.forEach((link) => {
-        link.addEventListener("click", closeMobileMenu);
-      });
-
-      // Escape
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && mobileMenuOpen) {
-          closeMobileMenu();
-        }
-      });
-
-      // ========================================
-      // Mobile Care Articles Accordion
-      // ========================================
-
-      const careMenuButton = document.getElementById("careMenuButton");
-      const careSubmenu = document.getElementById("careSubmenu");
-      const careMenuArrow = document.getElementById("careMenuArrow");
-
-      let careMenuOpen = false;
-
-      function openCareMenu() {
-        if (careMenuOpen) return;
-
-        careMenuOpen = true;
-
-        careMenuButton.setAttribute("aria-expanded", "true");
-
-        careSubmenu.style.maxHeight = `${careSubmenu.scrollHeight}px`;
-
-        careSubmenu.classList.remove("opacity-0");
-        careSubmenu.classList.add("opacity-100");
-
-        careMenuArrow.classList.add("rotate-90");
-      }
-
-      function closeCareMenu() {
-        if (!careMenuOpen) return;
-
-        careMenuOpen = false;
-
-        careMenuButton.setAttribute("aria-expanded", "false");
-
-        careSubmenu.style.maxHeight = "0px";
-
-        careSubmenu.classList.remove("opacity-100");
-        careSubmenu.classList.add("opacity-0");
-
-        careMenuArrow.classList.remove("rotate-90");
-      }
-
-      careMenuButton?.addEventListener("click", () => {
-        if (careMenuOpen) {
-          closeCareMenu();
-        } else {
-          openCareMenu();
-        }
-      });
-    </script>
+    <script type="module" src="../src/js/main.js"></script>
   </body>
 </html>
