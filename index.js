@@ -1,83 +1,383 @@
 // ========================================
-// Deals Slider
+// Deals Slider - FINAL RTL
+// Next Product = Move Track Left
+// Swipe Left = Previous
+// Swipe Right = Next
 // ========================================
 
 const slider = document.querySelector("#deals-slider");
 
-const cards = [...slider.querySelectorAll(".deal-card")];
+if (slider) {
+  const cards = [...slider.querySelectorAll(".deal-card")];
 
-let currentIndex = 0;
-let autoPlay;
+  let currentIndex = 0;
 
-// تعداد کارت‌های قابل نمایش
-function getCardsPerView() {
-  const width = window.innerWidth;
+  let isDragging = false;
+  let hasDragged = false;
 
-  if (width >= 1300) return 6;
-  if (width >= 900) return 4;
-  if (width >= 550) return 3;
-  return 2;
-}
+  let startX = 0;
+  let startTranslate = 0;
+  let currentTranslate = 0;
 
-// فاصله بین کارت‌ها
-function getGap() {
-  const width = window.innerWidth;
+  let autoPlay = null;
+  let resizeTimer = null;
 
-  if (width >= 1200) return 20;
-  if (width >= 900) return 16;
-  if (width >= 550) return 12;
-  return 8;
-}
+  // ========================================
+  // Responsive
+  // ========================================
 
-// حرکت اسلایدر به کارت بعدی
-function slideNext() {
-  const cardsPerView = getCardsPerView();
-  const lastIndex = Math.max(cards.length - cardsPerView, 0);
+  function getCardsPerView() {
+    const width = window.innerWidth;
 
-  currentIndex++;
+    if (width >= 1300) return 6;
+    if (width >= 1100) return 5;
+    if (width >= 900) return 4;
+    if (width >= 550) return 3;
 
-  // بازگشت به ابتدای لیست پس از رسیدن به آخرین موقعیت
-  if (currentIndex > lastIndex) {
-    currentIndex = 0;
+    return 2;
   }
 
-  const cardWidth = cards[0].offsetWidth;
-  const gap = getGap();
+  // ========================================
+  // Gap
+  // ========================================
 
-  // محاسبه فاصله حرکت بر اساس عرض کارت و فاصله بین کارت‌ها
-  const distance = currentIndex * (cardWidth + gap);
+  function getGap() {
+    const width = window.innerWidth;
 
-  slider.style.transform = `translate3d(${distance}px, 0, 0)`;
-}
+    if (width >= 1200) return 20;
+    if (width >= 900) return 16;
+    if (width >= 550) return 12;
 
-// شروع حرکت خودکار اسلایدر
-function startAutoPlay() {
-  stopAutoPlay();
+    return 8;
+  }
 
-  autoPlay = setInterval(slideNext, 3000);
-}
+  // ========================================
+  // Step
+  // ========================================
 
-// توقف حرکت خودکار اسلایدر
-function stopAutoPlay() {
-  clearInterval(autoPlay);
-}
+  function getStep() {
+    const card = cards[0];
 
-// توقف اسلایدر هنگام قرار گرفتن نشانگر روی کارت
-cards.forEach((card) => {
-  card.addEventListener("mouseenter", stopAutoPlay);
-  card.addEventListener("mouseleave", startAutoPlay);
-});
+    if (!card) return 0;
 
-// تنظیم مجدد اسلایدر هنگام تغییر اندازه صفحه
-window.addEventListener("resize", () => {
-  currentIndex = 0;
-  slider.style.transform = "translate3d(0, 0, 0)";
+    return card.getBoundingClientRect().width + getGap();
+  }
+
+  // ========================================
+  // Max Index
+  // ========================================
+
+  function getMaxIndex() {
+    return Math.max(cards.length - getCardsPerView(), 0);
+  }
+
+  // ========================================
+  // Position
+  // ========================================
+
+  function setPosition(index, animate = true) {
+    const step = getStep();
+
+    if (!step) return;
+
+    const maxIndex = getMaxIndex();
+
+    currentIndex = Math.max(0, Math.min(index, maxIndex));
+
+    currentTranslate = currentIndex * step;
+
+    slider.style.transition = animate
+      ? "transform 420ms cubic-bezier(0.22, 1, 0.36, 1)"
+      : "none";
+
+    slider.style.transform = `translate3d(${currentTranslate}px, 0, 0)`;
+  }
+
+  // ========================================
+  // NEXT
+  // ========================================
+
+  function slideNext() {
+    if (isDragging) return;
+
+    const maxIndex = getMaxIndex();
+
+    if (currentIndex < maxIndex) {
+      setPosition(currentIndex + 1, true);
+    } else {
+      setPosition(0, true);
+    }
+  }
+
+  // ========================================
+  // PREVIOUS
+  // ========================================
+
+  function slidePrevious() {
+    if (isDragging) return;
+
+    if (currentIndex > 0) {
+      setPosition(currentIndex - 1, true);
+    }
+  }
+
+  // ========================================
+  // AUTOPLAY
+  // ========================================
+
+  function stopAutoPlay() {
+    if (autoPlay !== null) {
+      clearInterval(autoPlay);
+
+      autoPlay = null;
+    }
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+
+    autoPlay = setInterval(() => {
+      slideNext();
+    }, 3500);
+  }
+
+  // ========================================
+  // POINTER DOWN
+  // ========================================
+
+  slider.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) {
+      return;
+    }
+
+    isDragging = true;
+    hasDragged = false;
+
+    startX = event.clientX;
+    startTranslate = currentTranslate;
+
+    stopAutoPlay();
+
+    slider.style.transition = "none";
+
+    slider.style.cursor = "grabbing";
+
+    slider.setPointerCapture?.(event.pointerId);
+  });
+
+  // ========================================
+  // POINTER MOVE
+  // ========================================
+
+  slider.addEventListener("pointermove", (event) => {
+    if (!isDragging) return;
+
+    const deltaX = event.clientX - startX;
+
+    if (Math.abs(deltaX) > 8) {
+      hasDragged = true;
+    }
+
+    let nextTranslate = startTranslate + deltaX;
+
+    const maxTranslate = getMaxIndex() * getStep();
+
+    // -----------------------------
+    // جلوگیری از خروج از ابتدای لیست
+    // -----------------------------
+
+    if (nextTranslate < 0) {
+      nextTranslate = nextTranslate * 0.2;
+    }
+
+    // -----------------------------
+    // جلوگیری از خروج از انتهای لیست
+    // -----------------------------
+
+    if (nextTranslate > maxTranslate) {
+      const overflow = nextTranslate - maxTranslate;
+
+      nextTranslate = maxTranslate + overflow * 0.2;
+    }
+
+    currentTranslate = nextTranslate;
+
+    slider.style.transform = `translate3d(${currentTranslate}px, 0, 0)`;
+  });
+
+  // ========================================
+  // FINISH DRAG
+  // ========================================
+
+  function finishDrag(event) {
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    slider.style.cursor = "grab";
+
+    try {
+      slider.releasePointerCapture?.(event.pointerId);
+    } catch {}
+
+    const step = getStep();
+
+    if (!step) {
+      startAutoPlay();
+
+      return;
+    }
+
+    const maxIndex = getMaxIndex();
+
+    const movedDistance = currentTranslate - startTranslate;
+
+    const threshold = Math.max(30, step * 0.15);
+
+    let targetIndex = Math.round(currentTranslate / step);
+
+    // ========================================
+    // Swipe Direction
+    // فقط جهت چپ و راست عوض شده
+    // ========================================
+
+    if (Math.abs(movedDistance) >= threshold) {
+      // 👈 دست به چپ = محصول قبلی
+
+      if (movedDistance < 0) {
+        targetIndex = currentIndex - 1;
+      }
+
+      // 👉 دست به راست = محصول بعدی
+      else {
+        targetIndex = currentIndex + 1;
+      }
+    }
+
+    targetIndex = Math.max(0, Math.min(targetIndex, maxIndex));
+
+    setPosition(targetIndex, true);
+
+    startAutoPlay();
+
+    setTimeout(() => {
+      hasDragged = false;
+    }, 120);
+  }
+
+  // ========================================
+  // POINTER EVENTS
+  // ========================================
+
+  slider.addEventListener("pointerup", finishDrag);
+
+  slider.addEventListener("pointercancel", finishDrag);
+
+  slider.addEventListener("lostpointercapture", () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    slider.style.cursor = "grab";
+
+    setPosition(currentIndex, true);
+
+    startAutoPlay();
+  });
+
+  // ========================================
+  // جلوگیری از کلیک بعد Drag
+  // ========================================
+
+  slider.addEventListener(
+    "click",
+    (event) => {
+      if (!hasDragged) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      hasDragged = false;
+    },
+    true,
+  );
+
+  // ========================================
+  // Images
+  // ========================================
+
+  cards.forEach((card) => {
+    const image = card.querySelector("img");
+
+    if (!image) return;
+
+    image.draggable = false;
+
+    image.style.userSelect = "none";
+
+    image.style.webkitUserDrag = "none";
+
+    image.style.pointerEvents = "none";
+  });
+
+  // ========================================
+  // Touch / Selection
+  // ========================================
+
+  slider.style.touchAction = "pan-y";
+
+  slider.style.userSelect = "none";
+
+  slider.style.webkitUserSelect = "none";
+
+  slider.style.willChange = "transform";
+
+  slider.style.cursor = "grab";
+
+  // ========================================
+  // Hover
+  // ========================================
+
+  slider.addEventListener("mouseenter", () => {
+    if (window.matchMedia("(hover: hover)").matches) {
+      stopAutoPlay();
+    }
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    if (!isDragging && window.matchMedia("(hover: hover)").matches) {
+      startAutoPlay();
+    }
+  });
+
+  // ========================================
+  // Resize
+  // ========================================
+
+  window.addEventListener("resize", () => {
+    stopAutoPlay();
+
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+      const maxIndex = getMaxIndex();
+
+      currentIndex = Math.min(currentIndex, maxIndex);
+
+      setPosition(currentIndex, false);
+
+      startAutoPlay();
+    }, 200);
+  });
+
+  // ========================================
+  // INIT
+  // ========================================
+
+  setPosition(0, false);
 
   startAutoPlay();
-});
-
-// شروع اولیه اسلایدر
-startAutoPlay();
+}
 
 // ========================================
 // Sale Countdown
