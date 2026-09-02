@@ -431,11 +431,26 @@ const updateSale = () => {
   );
 };
 
-// اجرای اولیه شمارش معکوس
-updateSale();
+// ========================================
+// Sale Countdown Timer
+// ========================================
 
-// به‌روزرسانی شمارش معکوس هر یک ثانیه
-setInterval(updateSale, 1000);
+let saleTimer = null;
+
+const runSaleTimer = () => {
+  updateSale();
+
+  if (new Date() >= saleEnd) {
+    saleTimer = null;
+    return;
+  }
+
+  saleTimer = setTimeout(runSaleTimer, 1000);
+};
+
+// اجرای اولیه و شروع تایمر
+runSaleTimer();
+
 
 // ========================================
 // Back to Top + Navbar Scroll
