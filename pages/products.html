@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" class="scroll-smooth">
   <head>
     <!-- ==================== Meta Information ==================== -->
     <meta charset="UTF-8" />
@@ -39,37 +39,37 @@
         <section></section>
 
         <!-- ==================== Category Section ==================== -->
-        <section class="px-10 md:px-30 xl:px-40">
+        <section class="px-10 md:px-30 xl:px-40 selection:bg-[#2F4F3E] selection:text-[#F0E9E1]">
           <div dir="rtl" class="mx-auto flex w-full max-w-340 items-center justify-center gap-x-5 overflow-x-auto py-8">
-            <button class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-colors duration-300 focus:bg-[#2F4F3E] focus:text-[#F0E9E1]">
+            <a href="#all" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-all duration-300 hover:-translate-y-1.5 shadow-[0_3px_14px_rgba(0,0,0,0.07)]">
               <span>▦</span>
               <span>همه</span>
-            </button>
+            </a>
 
-            <button class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-colors duration-300 focus:bg-[#2F4F3E] focus:text-[#F0E9E1]">
+            <a href="#houseplants" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-all duration-300 hover:-translate-y-1.5 shadow-[0_3px_14px_rgba(0,0,0,0.07)]">
               <span>🪴</span>
               <span>گیاهان آپارتمانی</span>
-            </button>
+            </a>
 
-            <button class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-colors duration-300 focus:bg-[#2F4F3E] focus:text-[#F0E9E1]">
+            <a href="#Sun-Loving-Plants" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-all duration-300 hover:-translate-y-1.5 shadow-[0_3px_14px_rgba(0,0,0,0.07)]">
               <span>☀️</span>
               <span>گیاهان آفتاب‌دوست</span>
-            </button>
+            </a>
 
-            <button class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-colors duration-300 focus:bg-[#2F4F3E] focus:text-[#F0E9E1]">
+            <a href="#Cactus" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-all duration-300 hover:-translate-y-1.5 shadow-[0_3px_14px_rgba(0,0,0,0.07)]">
               <span>🌵</span>
               <span>کاکتوس</span>
-            </button>
+            </a>
 
-            <button class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-colors duration-300 focus:bg-[#2F4F3E] focus:text-[#F0E9E1]">
+            <a href="#Decorative-Plants" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-all duration-300 hover:-translate-y-1.5 shadow-[0_3px_14px_rgba(0,0,0,0.07)]">
               <span>🍃</span>
               <span>گیاهان دکوراتیو</span>
-            </button>
+            </a>
 
-            <button class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-colors duration-300 focus:bg-[#2F4F3E] focus:text-[#F0E9E1]">
+            <a href="#Tabletop-Plants" class="flex shrink-0 items-center gap-2 rounded-xl bg-[#F0E9E1] px-5 sm:px-8 py-3 text-[14px] sm:text-[20px] text-[#2F4F3E] transition-all duration-300 hover:-translate-y-1.5 shadow-[0_3px_14px_rgba(0,0,0,0.07)]">
               <span>🌿</span>
               <span>گیاهان رومیزی</span>
-            </button>
+            </a>
           </div>
         </section>
 
@@ -77,21 +77,17 @@
         <section></section>
 
         <!-- ==================== Products Section ==================== -->
-        <section class="px-10 md:px-30 xl:px-40">
+        <section id="all" class="px-10 md:px-30 xl:px-40">
           <!-- Houseplants -->
-          <article>
+          <article id="houseplants">
             <div
               class="flex items-center gap-3 px-4 py-8 text-[#121F1A] max-[400px]:gap-1"
             >
               <div
                 class="flex shrink-0 items-center justify-center gap-2 p-2 md:gap-1"
               >
-                <img
-                  src="../assets/image/icon/flowerpot.png"
-                  alt=""
-                  class="h-5 w-5 select-none md:h-6 md:w-6"
-                />
-
+                <span class="text-xl select-none md:text-2xl">🪴</span>
+                
                 <h2
                   class="text-[17px] font-bold selection:bg-[#000000] selection:text-[#ffffff] max-[400px]:text-[14px]"
                 >
@@ -705,18 +701,14 @@
           </article>
 
           <!-- Sun Loving Plants -->
-          <article>
+          <article id="Sun-Loving-Plants">
             <div
               class="flex items-center gap-3 px-4 py-8 text-[#121F1A] max-[400px]:gap-1"
             >
               <div
                 class="flex shrink-0 items-center justify-center gap-2 p-2 md:gap-1"
               >
-                <img
-                  src="../assets/image/icon/flowerpot.png"
-                  alt=""
-                  class="h-5 w-5 select-none md:h-6 md:w-6"
-                />
+                <span class="text-xl select-none md:text-2xl">☀️</span>
 
                 <h2
                   class="text-[17px] font-bold selection:bg-[#000000] selection:text-[#ffffff] max-[400px]:text-[14px]"
@@ -1133,18 +1125,14 @@
           </article>
 
           <!-- Cactus -->
-          <article>
+          <article id="Cactus">
               <div
               class="flex items-center gap-3 px-4 py-8 text-[#121F1A] max-[400px]:gap-1"
             >
               <div
                 class="flex shrink-0 items-center justify-center gap-2 p-2 md:gap-1"
               >
-                <img
-                  src="../assets/image/icon/flowerpot.png"
-                  alt=""
-                  class="h-5 w-5 select-none md:h-6 md:w-6"
-                />
+                <span class="text-xl select-none md:text-2xl">🌵</span>
 
                 <h2
                   class="text-[17px] font-bold selection:bg-[#000000] selection:text-[#ffffff] max-[400px]:text-[14px]"
@@ -1330,18 +1318,14 @@
           </article>
 
           <!-- Decorative Plants -->
-          <article>
+          <article id="Decorative-Plants">
               <div
               class="flex items-center gap-3 px-4 py-8 text-[#121F1A] max-[400px]:gap-1"
             >
               <div
                 class="flex shrink-0 items-center justify-center gap-2 p-2 md:gap-1"
               >
-                <img
-                  src="../assets/image/icon/flowerpot.png"
-                  alt=""
-                  class="h-5 w-5 select-none md:h-6 md:w-6"
-                />
+                <span class="text-xl select-none md:text-2xl">🍃</span>
 
                 <h2
                   class="text-[17px] font-bold selection:bg-[#000000] selection:text-[#ffffff] max-[400px]:text-[14px]"
@@ -1626,18 +1610,14 @@
           </article>
 
           <!-- Tabletop Plants -->
-          <article>
+          <article id="Tabletop-Plants">
               <div
               class="flex items-center gap-3 px-4 py-8 text-[#121F1A] max-[400px]:gap-1"
             >
               <div
                 class="flex shrink-0 items-center justify-center gap-2 p-2 md:gap-1"
               >
-                <img
-                  src="../assets/image/icon/flowerpot.png"
-                  alt=""
-                  class="h-5 w-5 select-none md:h-6 md:w-6"
-                />
+                <span class="text-xl select-none md:text-2xl">🌿</span>
 
                 <h2
                   class="text-[17px] font-bold selection:bg-[#000000] selection:text-[#ffffff] max-[400px]:text-[14px]"
