@@ -1,10 +1,11 @@
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE و Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE و Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari */
+  display: none; /* Chrome, Safari */
+}
 @keyframes discount-swing {
   0% {
     transform: rotate(-4deg);
@@ -18,114 +19,114 @@
     transform: rotate(-4deg);
   }
 }
-  @keyframes cart-shake {
-    0%,
-    100% {
-      transform: rotate(0deg);
-    }
-
-    20% {
-      transform: rotate(-4deg);
-    }
-
-    40% {
-      transform: rotate(4deg);
-    }
-
-    60% {
-      transform: rotate(-3deg);
-    }
-
-    80% {
-      transform: rotate(2deg);
-    }
+@keyframes cart-shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
   }
 
-  @keyframes discount-float {
-    0% {
-      transform: translate3d(0, 0, 0) rotate(-0.8deg);
-    }
-
-    5% {
-      transform: translate3d(0.5px, -0.5px, 0) rotate(-0.6deg);
-    }
-
-    10% {
-      transform: translate3d(1px, -1px, 0) rotate(-0.3deg);
-    }
-
-    15% {
-      transform: translate3d(1.5px, -1px, 0) rotate(0deg);
-    }
-
-    20% {
-      transform: translate3d(2px, -0.5px, 0) rotate(0.3deg);
-    }
-
-    25% {
-      transform: translate3d(1.5px, 0, 0) rotate(0.6deg);
-    }
-
-    30% {
-      transform: translate3d(1px, 0.5px, 0) rotate(0.8deg);
-    }
-
-    35% {
-      transform: translate3d(0, 1px, 0) rotate(0.9deg);
-    }
-
-    40% {
-      transform: translate3d(-1px, 0.5px, 0) rotate(0.7deg);
-    }
-
-    45% {
-      transform: translate3d(-1.5px, 0, 0) rotate(0.4deg);
-    }
-
-    50% {
-      transform: translate3d(-2px, -0.5px, 0) rotate(0deg);
-    }
-
-    55% {
-      transform: translate3d(-1.5px, -1px, 0) rotate(-0.4deg);
-    }
-
-    60% {
-      transform: translate3d(-1px, -1px, 0) rotate(-0.7deg);
-    }
-
-    65% {
-      transform: translate3d(0, -0.5px, 0) rotate(-0.9deg);
-    }
-
-    70% {
-      transform: translate3d(1px, 0, 0) rotate(-0.8deg);
-    }
-
-    75% {
-      transform: translate3d(1.5px, 0.5px, 0) rotate(-0.5deg);
-    }
-
-    80% {
-      transform: translate3d(2px, 0, 0) rotate(-0.2deg);
-    }
-
-    85% {
-      transform: translate3d(1px, -0.5px, 0) rotate(0.2deg);
-    }
-
-    90% {
-      transform: translate3d(0.5px, -1px, 0) rotate(0.4deg);
-    }
-
-    95% {
-      transform: translate3d(0, -0.5px, 0) rotate(0deg);
-    }
-
-    100% {
-      transform: translate3d(0, 0, 0) rotate(-0.8deg);
-    }
+  20% {
+    transform: rotate(-4deg);
   }
+
+  40% {
+    transform: rotate(4deg);
+  }
+
+  60% {
+    transform: rotate(-3deg);
+  }
+
+  80% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes discount-float {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-0.8deg);
+  }
+
+  5% {
+    transform: translate3d(0.5px, -0.5px, 0) rotate(-0.6deg);
+  }
+
+  10% {
+    transform: translate3d(1px, -1px, 0) rotate(-0.3deg);
+  }
+
+  15% {
+    transform: translate3d(1.5px, -1px, 0) rotate(0deg);
+  }
+
+  20% {
+    transform: translate3d(2px, -0.5px, 0) rotate(0.3deg);
+  }
+
+  25% {
+    transform: translate3d(1.5px, 0, 0) rotate(0.6deg);
+  }
+
+  30% {
+    transform: translate3d(1px, 0.5px, 0) rotate(0.8deg);
+  }
+
+  35% {
+    transform: translate3d(0, 1px, 0) rotate(0.9deg);
+  }
+
+  40% {
+    transform: translate3d(-1px, 0.5px, 0) rotate(0.7deg);
+  }
+
+  45% {
+    transform: translate3d(-1.5px, 0, 0) rotate(0.4deg);
+  }
+
+  50% {
+    transform: translate3d(-2px, -0.5px, 0) rotate(0deg);
+  }
+
+  55% {
+    transform: translate3d(-1.5px, -1px, 0) rotate(-0.4deg);
+  }
+
+  60% {
+    transform: translate3d(-1px, -1px, 0) rotate(-0.7deg);
+  }
+
+  65% {
+    transform: translate3d(0, -0.5px, 0) rotate(-0.9deg);
+  }
+
+  70% {
+    transform: translate3d(1px, 0, 0) rotate(-0.8deg);
+  }
+
+  75% {
+    transform: translate3d(1.5px, 0.5px, 0) rotate(-0.5deg);
+  }
+
+  80% {
+    transform: translate3d(2px, 0, 0) rotate(-0.2deg);
+  }
+
+  85% {
+    transform: translate3d(1px, -0.5px, 0) rotate(0.2deg);
+  }
+
+  90% {
+    transform: translate3d(0.5px, -1px, 0) rotate(0.4deg);
+  }
+
+  95% {
+    transform: translate3d(0, -0.5px, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-0.8deg);
+  }
+}
 
 @keyframes orbit {
   from {
@@ -229,15 +230,15 @@
   animation: guide-light 5s ease-in-out infinite;
 }
 @keyframes arrow-move {
-    0%,
-    100% {
-      transform: translateX(0) scale(1);
-    }
-
-    50% {
-      transform: translateX(2.3px) scale(1.01);
-    }
+  0%,
+  100% {
+    transform: translateX(0) scale(1);
   }
+
+  50% {
+    transform: translateX(2.3px) scale(1.01);
+  }
+}
 @keyframes comments-bounce {
   0% {
     transform: translateX(0);
