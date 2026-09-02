@@ -537,6 +537,7 @@ const openMobileMenu = () => {
   // Accessibility
   mobileMenu.setAttribute("aria-hidden", "false");
   menuButton?.setAttribute("aria-expanded", "true");
+  mobileMenuClose?.focus();
 };
 
 const closeMobileMenu = () => {
@@ -555,6 +556,7 @@ const closeMobileMenu = () => {
   // Accessibility
   mobileMenu.setAttribute("aria-hidden", "true");
   menuButton?.setAttribute("aria-expanded", "false");
+  menuButton?.focus();
 
   // برگرداندن scrollbar
   document.documentElement.classList.remove("mobile-menu-open");
