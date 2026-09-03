@@ -1,5 +1,5 @@
 export function initSaleCountdown() {
-  const countdown = document.getElementById("saleCountdown");
+  const countdown = document.getElementById("countdown");
 
   if (!countdown) {
     return;
@@ -9,7 +9,7 @@ export function initSaleCountdown() {
   // ========================================
 
   const saleStart = new Date("2026-08-23T00:00:00");
-  const saleEnd = new Date("2026-09-02T16:50:00");
+  const saleEnd = new Date("2026-09-08T16:50:00");
   const saleStatus = document.getElementById("sale-status");
   const daysElement = document.getElementById("days");
   const hoursElement = document.getElementById("hours");
