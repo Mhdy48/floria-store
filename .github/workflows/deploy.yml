@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,13 +36,30 @@ jobs:
 
       - name: Create deployment folder
         run: |
-          mkdir deploy
+          rm -rf deploy
+          mkdir -p deploy/src/js
           cp index.html deploy/
-          cp index.js deploy/
           cp style.css deploy/
           cp -r assets deploy/
-          cp -r src deploy/
           cp -r pages deploy/
+          cp src/output.css deploy/src/
+          cp src/input.css deploy/src/
+          cp -r src/js/. deploy/src/js/
+
+          # index.html lives at the deployment root, so its JS path must be root-relative.
+          sed -i 's#src="../src/js/main.js"#src="./src/js/main.js"#g' deploy/index.html
+
+      - name: Verify deployment files
+        run: |
+          test -f deploy/src/js/main.js
+          test -f deploy/src/js/navbar.js
+          test -f deploy/src/js/mobileMenu.js
+          test -f deploy/src/js/backToTop.js
+          test -f deploy/src/js/careAccordion.js
+          test -f deploy/src/js/dealsSlider.js
+          test -f deploy/src/js/saleCountdown.js
+          grep -q 'src="./src/js/main.js"' deploy/index.html
+          echo "JavaScript files and root index path verified successfully."
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
