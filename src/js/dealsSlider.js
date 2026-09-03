@@ -1,5 +1,5 @@
 export function initDealsSlider() {
-  const slider = document.getElementById("dealsSlider");
+  const slider = document.getElementById("deals-slider");
 
   if (!slider) {
     return;
