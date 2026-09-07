@@ -1,5 +1,5 @@
 export function initCareAccordion() {
-  const accordion = document.getElementById("careAccordion");
+  const accordion = document.getElementById("careMenuButton");
 
   if (!accordion) {
     return;
