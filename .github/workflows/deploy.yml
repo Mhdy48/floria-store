@@ -46,9 +46,6 @@ jobs:
           cp src/input.css deploy/src/
           cp -r src/js/. deploy/src/js/
 
-          # index.html lives at the deployment root, so its JS path must be root-relative.
-          sed -i 's#src="../src/js/main.js"#src="./src/js/main.js"#g' deploy/index.html
-
       - name: Verify deployment files
         run: |
           test -f deploy/src/js/main.js
@@ -58,7 +55,7 @@ jobs:
           test -f deploy/src/js/careAccordion.js
           test -f deploy/src/js/dealsSlider.js
           test -f deploy/src/js/saleCountdown.js
-          grep -q 'src="./src/js/main.js"' deploy/index.html
+          grep -q 'src="src/js/main.js"' deploy/index.html
           echo "JavaScript files and root index path verified successfully."
 
       - name: Setup Pages
