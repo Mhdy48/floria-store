@@ -8,13 +8,26 @@ export function initSaleCountdown() {
   // Sale Countdown
   // ========================================
 
-  const saleStart = new Date("2026-08-23T00:00:00");
-  const saleEnd = new Date("2026-09-08T16:50:00");
+  const saleStart = new Date(countdown.dataset.saleStart);
+  const saleEnd = new Date(countdown.dataset.saleEnd);
   const saleStatus = document.getElementById("sale-status");
   const daysElement = document.getElementById("days");
   const hoursElement = document.getElementById("hours");
   const minutesElement = document.getElementById("minutes");
   const secondsElement = document.getElementById("seconds");
+
+  const hasValidSchedule =
+    !Number.isNaN(saleStart.getTime()) &&
+    !Number.isNaN(saleEnd.getTime()) &&
+    saleEnd > saleStart;
+
+  if (!hasValidSchedule) {
+    countdown.classList.add("hidden");
+    saleStatus.classList.remove("hidden");
+    saleStatus.classList.add("flex");
+    saleStatus.textContent = "زمان‌بندی تخفیف مشخص نشده است";
+    return;
+  }
 
   const toPersianNumbers = (number) => {
     return String(number).replace(/\d/g, (digit) => "۰۱۲۳۴۵۶۷۸۹"[digit]);
