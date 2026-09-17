@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@custom-variant hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @slot;
+    }
+  }
+}
+
 @font-face {
   font-family: "lalezar";
   src: url("../assets/fonts/Lalezar/Lalezar-Regular.ttf") format("truetype");
