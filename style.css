@@ -257,8 +257,10 @@
   animation: comments-bounce 60s ease-in-out infinite;
 }
 
-.comments-track:hover {
-  animation-play-state: paused;
+@media (hover: hover) and (pointer: fine) {
+  .comments-track:hover {
+    animation-play-state: paused;
+  }
 }
 
 html.mobile-menu-open {
