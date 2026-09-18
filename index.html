@@ -427,12 +427,8 @@
 
             <!-- مقالات و نکات مراقبتی -->
             <div class="mobile-care-menu">
-              <button
-                id="careMenuButton"
-                type="button"
-                aria-expanded="false"
-                aria-controls="careSubmenu"
-                class="flex w-full cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
+              <div
+                class="flex w-full items-center gap-4 rounded-2xl px-4 py-3.5 max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
               >
                 <!-- آیکون -->
                 <span
@@ -465,29 +461,39 @@
                 </span>
 
                 <!-- متن -->
-                <span
-                  class="min-w-0 flex-1 text-right text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+                <a
+                  href="pages/Houseplants.html"
+                  class="min-w-0 flex-1 text-right text-sm leading-6 font-medium text-[#121F1A] transition-colors hover:text-[#2F4F3E] max-[399px]:text-[12px] max-[399px]:leading-5"
                 >
                   مقالات و نکات مراقبتی
-                </span>
+                </a>
 
                 <!-- فلش -->
-                <svg
-                  id="careMenuArrow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.7"
-                  class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 transition-transform duration-300 max-[399px]:h-3.5 max-[399px]:w-3.5"
+                <button
+                  id="careMenuButton"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="careSubmenu"
+                  aria-label="نمایش مقالات و نکات مراقبتی"
+                  class="flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-lg text-[#2F4F3E]/50 transition-colors hover:bg-[#2F4F3E]/5 hover:text-[#2F4F3E] focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:h-7 max-[399px]:w-7"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    id="careMenuArrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 transition-transform duration-300 max-[399px]:h-3.5 max-[399px]:w-3.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
 
               <!-- چهار مقاله -->
               <div
