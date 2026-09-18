@@ -7,13 +7,22 @@
 
     <!-- ==================== Page Information ==================== -->
     <title>محصولات | فلوریا استور</title>
-    <meta name="description" content="مشاهده محصولات و گیاهان فلوریا استور و انتخاب گزینه مناسب برای خانه و فضای سبز." />
+    <meta
+      name="description"
+      content="مشاهده محصولات و گیاهان فلوریا استور و انتخاب گزینه مناسب برای خانه و فضای سبز."
+    />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://floriastore.ir/pages/products.html" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="محصولات | فلوریا استور" />
-    <meta property="og:description" content="مشاهده محصولات و گیاهان فلوریا استور و انتخاب گزینه مناسب برای خانه و فضای سبز." />
-    <meta property="og:url" content="https://floriastore.ir/pages/products.html" />
+    <meta
+      property="og:description"
+      content="مشاهده محصولات و گیاهان فلوریا استور و انتخاب گزینه مناسب برای خانه و فضای سبز."
+    />
+    <meta
+      property="og:url"
+      content="https://floriastore.ir/pages/products.html"
+    />
     <meta property="og:locale" content="fa_IR" />
 
     <!-- ==================== Favicon ==================== -->
@@ -363,49 +372,85 @@
 
             <!-- دسته‌بندی‌ها -->
 
-            <a
-              href="../index.html"
-              class="mobile-menu-link group flex cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
-            >
-              <span
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/55 text-[#2F4F3E] max-[399px]:h-9 max-[399px]:w-9 max-[399px]:rounded-lg"
+            <div class="mobile-care-menu">
+              <button
+                id="categoryMenuButton"
+                type="button"
+                aria-expanded="false"
+                aria-controls="categorySubmenu"
+                class="flex w-full cursor-pointer items-center gap-4 rounded-2xl px-4 py-3.5 focus-visible:ring-2 focus-visible:ring-[#2F4F3E]/30 focus-visible:outline-none max-[399px]:gap-2.5 max-[399px]:rounded-xl max-[399px]:px-2.5 max-[399px]:py-2.5"
               >
+                <span
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/55 text-[#2F4F3E] max-[399px]:h-9 max-[399px]:w-9 max-[399px]:rounded-lg"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    class="h-5 w-5"
+                  >
+                    <rect x="4" y="4" width="6" height="6" rx="1.5" />
+                    <rect x="14" y="4" width="6" height="6" rx="1.5" />
+                    <rect x="4" y="14" width="6" height="6" rx="1.5" />
+                    <rect x="14" y="14" width="6" height="6" rx="1.5" /></svg
+                ></span>
+                <span
+                  class="min-w-0 flex-1 text-right text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+                  >دسته‌بندی‌ها</span
+                >
                 <svg
+                  id="categoryMenuArrow"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.7"
-                  class="h-5 w-5 max-[399px]:h-4.5 max-[399px]:w-4.5"
+                  class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 transition-transform duration-300"
                 >
-                  <rect x="4" y="4" width="6" height="6" rx="1.5" />
-                  <rect x="14" y="4" width="6" height="6" rx="1.5" />
-                  <rect x="4" y="14" width="6" height="6" rx="1.5" />
-                  <rect x="14" y="14" width="6" height="6" rx="1.5" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
-              </span>
-
-              <span
-                class="menu-text min-w-0 flex-1 text-sm leading-6 font-medium text-[#121F1A] max-[399px]:text-[12px] max-[399px]:leading-5"
+              </button>
+              <div
+                id="categorySubmenu"
+                class="overflow-hidden opacity-0 transition-[max-height,opacity] duration-300 ease-out"
+                style="max-height: 0px"
               >
-                دسته‌بندی‌ها
-              </span>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                class="h-4 w-4 shrink-0 text-[#2F4F3E]/40 max-[399px]:h-3.5 max-[399px]:w-3.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </a>
+                <div
+                  class="mr-14 border-r border-[#2F4F3E]/15 pr-4 pb-1 max-[399px]:mr-11 max-[399px]:pr-3"
+                >
+                  <a
+                    href="../pages/products.html#houseplants"
+                    class="mobile-menu-link block py-2.5 text-right text-[13px] leading-6 text-[#121F1A]"
+                    >گیاهان آپارتمانی</a
+                  >
+                  <a
+                    href="../pages/products.html#Sun-Loving-Plants"
+                    class="mobile-menu-link block py-2.5 text-right text-[13px] leading-6 text-[#121F1A]"
+                    >گیاهان آفتاب‌دوست</a
+                  >
+                  <a
+                    href="../pages/products.html#Cactus"
+                    class="mobile-menu-link block py-2.5 text-right text-[13px] leading-6 text-[#121F1A]"
+                    >کاکتوس و ساکولنت</a
+                  >
+                  <a
+                    href="../pages/products.html#Decorative-Plants"
+                    class="mobile-menu-link block py-2.5 text-right text-[13px] leading-6 text-[#121F1A]"
+                    >گیاهان تزئینی</a
+                  >
+                  <a
+                    href="../pages/products.html#Tabletop-Plants"
+                    class="mobile-menu-link block py-2.5 text-right text-[13px] leading-6 text-[#121F1A]"
+                    >گیاهان رومیزی</a
+                  >
+                </div>
+              </div>
+            </div>
 
             <!-- مقالات و نکات مراقبتی -->
             <div class="mobile-care-menu">
