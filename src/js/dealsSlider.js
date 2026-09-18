@@ -198,8 +198,7 @@ export function initDealsSlider() {
 
       if (movedDistance < -threshold) {
         targetIndex = currentIndex - 1;
-      }
-      else if (movedDistance > threshold) {
+      } else if (movedDistance > threshold) {
         targetIndex = currentIndex + 1;
       }
       targetIndex = Math.max(0, Math.min(targetIndex, maxIndex));
