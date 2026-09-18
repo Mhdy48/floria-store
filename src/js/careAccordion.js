@@ -1,12 +1,14 @@
+// ========================================
+// Care Articles Accordion
+// Controls the mobile accordion for care articles and its visual state.
+// ========================================
+
 export function initCareAccordion() {
   const accordion = document.getElementById("careMenuButton");
 
   if (!accordion) {
     return;
   }
-  // ========================================
-  // Mobile Care Articles Accordion
-  // ========================================
 
   const careMenuButton = document.getElementById("careMenuButton");
   const careSubmenu = document.getElementById("careSubmenu");

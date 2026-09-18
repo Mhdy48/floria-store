@@ -1,13 +1,14 @@
-﻿export function initCategoryAccordion() {
+// ========================================
+// Category Accordion
+// Controls the mobile accordion for product categories and its visual state.
+// ========================================
+
+export function initCategoryAccordion() {
   const categoryMenuButton = document.getElementById("categoryMenuButton");
 
   if (!categoryMenuButton) {
     return;
   }
-
-  // ========================================
-  // Mobile Categories Accordion
-  // ========================================
 
   const categorySubmenu = document.getElementById("categorySubmenu");
   const categoryMenuArrow = document.getElementById("categoryMenuArrow");

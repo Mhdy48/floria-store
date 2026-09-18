@@ -1,3 +1,8 @@
+// ========================================
+// Back To Top
+// Handles the visibility and smooth scrolling behavior of the back-to-top button.
+// ========================================
+
 export function initBackToTop() {
   const backToTop = document.getElementById("backToTop");
 

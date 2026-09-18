@@ -1,35 +1,27 @@
 // ========================================
 // Navbar
+// Handles active navigation states and navbar behavior while scrolling.
 // ========================================
+
+// Navbar Initialization
 
 export function initNavbar() {
   const navbar = document.getElementById("mainNavbar");
   const navbarWrapper = document.getElementById("navbarWrapper");
-
-  // اگر Navbar در صفحه وجود نداشت، اجرای این فایل متوقف شود
   if (!navbar || !navbarWrapper) {
     return;
   }
 
-  // ========================================
-  // Active Navigation
-  // ========================================
-
+  // Set the active navigation item.
   setActiveNav();
 
-  // ========================================
-  // Navbar Scroll
-  // ========================================
-
+  // Track the previous scroll position.
   let lastScrollY = window.scrollY;
 
   window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
 
-    // ========================================
-    // Navbar Rounded Corners
-    // ========================================
-
+    // Update rounded corners while scrolling.
     if (scrollTop > 15) {
       navbar.classList.remove(
         "rounded-tl-[0.9375rem]",
@@ -39,10 +31,7 @@ export function initNavbar() {
       navbar.classList.add("rounded-tl-[0.9375rem]", "rounded-tr-[0.9375rem]");
     }
 
-    // ========================================
-    // Reached Top
-    // ========================================
-
+    // Keep the navbar visible at the top of the page.
     if (scrollTop <= 0) {
       navbarWrapper.classList.remove("-translate-y-full");
 
@@ -51,17 +40,11 @@ export function initNavbar() {
       return;
     }
 
-    // ========================================
-    // Scroll Down
-    // ========================================
-
+    // Hide the navbar while scrolling down.
     if (scrollTop > lastScrollY && scrollTop > 70) {
       navbarWrapper.classList.add("-translate-y-full");
     }
-
-    // ========================================
-    // Scroll Up
-    // ========================================
+    // Show the navbar while scrolling up.
     else if (scrollTop < lastScrollY) {
       navbarWrapper.classList.remove("-translate-y-full");
     }
@@ -70,14 +53,11 @@ export function initNavbar() {
   });
 }
 
-// ========================================
 // Active Navigation
-// ========================================
 
 function setActiveNav() {
   const navLinks = document.querySelectorAll("[data-page]");
-
-  // اگر لینک‌های Navbar وجود نداشتند
+  // Stop when the page has no navigation links.
   if (!navLinks.length) {
     return;
   }
@@ -87,50 +67,28 @@ function setActiveNav() {
   navLinks.forEach((link) => {
     const page = link.dataset.page;
     const underline = link.querySelector(".nav-underline");
-
-    // اگر underline وجود نداشت
     if (!underline) {
       return;
     }
 
     let isActive = false;
 
-    // ========================================
-    // Home
-    // ========================================
-
     if (page === "home") {
       isActive = currentPath === "/" || currentPath.endsWith("/index.html");
     }
-
-    // ========================================
-    // Products
-    // ========================================
 
     if (page === "products") {
       isActive = currentPath.endsWith("/products.html");
     }
 
-    // ========================================
-    // About
-    // ========================================
-
     if (page === "about") {
       isActive = currentPath.endsWith("/about.html");
     }
-
-    // ========================================
-    // Care
-    // ========================================
 
     if (page === "care") {
       isActive =
         currentPath.includes("care") || window.location.hash === "#care";
     }
-
-    // ========================================
-    // Active / Inactive
-    // ========================================
 
     if (isActive) {
       underline.classList.add("w-full");

@@ -1,13 +1,16 @@
+// ========================================
+// Sale Countdown
+// Controls the sale schedule, countdown display, and Persian number formatting.
+// ========================================
+
 export function initSaleCountdown() {
   const countdown = document.getElementById("countdown");
 
   if (!countdown) {
     return;
   }
-  // ========================================
-  // Sale Countdown
-  // ========================================
 
+  // Read and validate the sale schedule.
   const saleStart = new Date(countdown.dataset.saleStart);
   const saleEnd = new Date(countdown.dataset.saleEnd);
   const saleStatus = document.getElementById("sale-status");
@@ -29,10 +32,12 @@ export function initSaleCountdown() {
     return;
   }
 
+  // Convert Latin digits to Persian digits for the UI.
   const toPersianNumbers = (number) => {
     return String(number).replace(/\d/g, (digit) => "۰۱۲۳۴۵۶۷۸۹"[digit]);
   };
 
+  // Update the countdown or the current sale status.
   const updateSale = () => {
     const now = new Date();
     if (now < saleStart) {
@@ -79,10 +84,7 @@ export function initSaleCountdown() {
     );
   };
 
-  // ========================================
-  // Sale Countdown Timer
-  // ========================================
-
+  // Run the countdown once per second until the sale ends.
   let saleTimer = null;
 
   const runSaleTimer = () => {

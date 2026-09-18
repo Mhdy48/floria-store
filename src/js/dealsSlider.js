@@ -1,3 +1,8 @@
+// ========================================
+// Deals Slider
+// Handles responsive layout, dragging, autoplay, navigation, and resizing for the deals slider.
+// ========================================
+
 export function initDealsSlider() {
   const slider = document.getElementById("deals-slider");
 
@@ -20,9 +25,7 @@ export function initDealsSlider() {
     let autoPlay = null;
     let resizeTimer = null;
 
-    // ========================================
-    // Responsive
-    // ========================================
+    // Responsive Settings
 
     function getCardsPerView() {
       const width = window.innerWidth;
@@ -57,9 +60,7 @@ export function initDealsSlider() {
       return Math.max(cards.length - getCardsPerView(), 0);
     }
 
-    // ========================================
-    // Position
-    // ========================================
+    // Slider Position
 
     function setPosition(index, animate = true) {
       const step = getStep();
@@ -79,9 +80,7 @@ export function initDealsSlider() {
       slider.style.transform = `translate3d(${currentTranslate}px, 0, 0)`;
     }
 
-    // ========================================
-    // Next
-    // ========================================
+    // Navigation
 
     function slideNext() {
       if (isDragging) return;
@@ -95,10 +94,6 @@ export function initDealsSlider() {
       }
     }
 
-    // ========================================
-    // Previous
-    // ========================================
-
     function slidePrevious() {
       if (isDragging) return;
 
@@ -107,9 +102,7 @@ export function initDealsSlider() {
       }
     }
 
-    // ========================================
-    // Auto Play
-    // ========================================
+    // Autoplay
 
     function stopAutoPlay() {
       if (autoPlay !== null) {
@@ -126,10 +119,7 @@ export function initDealsSlider() {
       }, 3500);
     }
 
-    // ========================================
-    // Pointer Drag
-    // Pointer Events
-    // ========================================
+    // Pointer Dragging
 
     slider.addEventListener("pointerdown", (event) => {
       if (event.pointerType === "mouse" && event.button !== 0) {
@@ -178,9 +168,7 @@ export function initDealsSlider() {
       slider.style.transform = `translate3d(${currentTranslate}px, 0, 0)`;
     });
 
-    // ========================================
-    // Drag end
-    // ========================================
+    // Drag Completion
 
     function finishDrag(event) {
       if (!isDragging) return;
@@ -208,19 +196,9 @@ export function initDealsSlider() {
 
       let targetIndex = currentIndex;
 
-      // ========================================
-      // Swipe Left = Next
-      // deltaX < 0
-      // ========================================
-
       if (movedDistance < -threshold) {
         targetIndex = currentIndex - 1;
       }
-
-      // ========================================
-      // Swipe Right = Previous
-      // deltaX > 0
-      // ========================================
       else if (movedDistance > threshold) {
         targetIndex = currentIndex + 1;
       }
@@ -274,19 +252,13 @@ export function initDealsSlider() {
       image.style.pointerEvents = "none";
     });
 
-    // ========================================
-    // Slider Settings
-    // ========================================
-
     slider.style.touchAction = "pan-y";
     slider.style.userSelect = "none";
     slider.style.webkitUserSelect = "none";
     slider.style.willChange = "transform";
     slider.style.cursor = "grab";
 
-    // ========================================
-    // Hover
-    // ========================================
+    // Hover Behavior
 
     slider.addEventListener("mouseenter", () => {
       if (window.matchMedia("(hover: hover)").matches) {
@@ -300,9 +272,7 @@ export function initDealsSlider() {
       }
     });
 
-    // ========================================
-    // Resize
-    // ========================================
+    // Resize Handling
 
     window.addEventListener("resize", () => {
       stopAutoPlay();
@@ -320,9 +290,7 @@ export function initDealsSlider() {
       }, 200);
     });
 
-    // ========================================
-    // Start
-    // ========================================
+    // Initialize Slider
 
     setPosition(0, false);
 

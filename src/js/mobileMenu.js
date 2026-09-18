@@ -1,3 +1,8 @@
+// ========================================
+// Mobile Menu
+// Controls the mobile navigation drawer, overlay, accessibility state, and nested menus.
+// ========================================
+
 export function initMobileMenu() {
   const menuButton = document.getElementById("menuButton");
   const mobileMenu = document.getElementById("mobileMenu");
@@ -5,16 +10,13 @@ export function initMobileMenu() {
   if (!menuButton || !mobileMenu) {
     return;
   }
-
-  // ========================================
-  // Mobile Hamburger Menu
-  // ========================================
   const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
   const mobileMenuClose = document.getElementById("mobileMenuClose");
   const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
 
   let mobileMenuOpen = false;
 
+  // Reset all nested menus whenever the mobile menu closes.
   const resetMobileSubmenus = () => {
     const submenuButtons = mobileMenu.querySelectorAll(
       "#careMenuButton, #categoryMenuButton",
@@ -43,6 +45,7 @@ export function initMobileMenu() {
     categoryMenuArrow?.classList.remove("rotate-90");
   };
 
+  // Open the mobile navigation drawer.
   const openMobileMenu = () => {
     if (mobileMenuOpen) return;
 
@@ -65,12 +68,11 @@ export function initMobileMenu() {
     mobileMenuClose?.focus();
   };
 
+  // Close the drawer and restore its initial state.
   const closeMobileMenu = () => {
     if (!mobileMenuOpen) return;
 
     mobileMenuOpen = false;
-
-    // Always reset nested menus when the hamburger menu closes.
     resetMobileSubmenus();
 
     mobileMenu.classList.add("translate-x-full");
